@@ -10,6 +10,7 @@
     "tests:unit": "mocha --recursive test/unit",
     "test": "run-s lint:* coverage",
     "coverage": "nyc run-s tests:unit",
+    "build": "webpack --env production",
     "commitmsg": "validate-commit-msg",
     "precommit": "npm test"
   },
@@ -20,6 +21,11 @@
   },
   "devDependencies": {
     "@travi/any": "1.0.2",
+    "babel-loader": "6.2.10",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-es2015-node": "6.1.1",
+    "babel-preset-react": "6.16.0",
+    "babel-register": "6.18.0",
     "chai": "3.5.0",
     "cz-conventional-changelog": "1.2.0",
     "globstar": "1.0.0",
@@ -28,6 +34,13 @@
     "mocha": "3.2.0",
     "npm-run-all": "4.0.0",
     "nyc": "10.0.0",
-    "validate-commit-msg": "2.8.2"
+    "validate-commit-msg": "2.8.2",
+    "webpack": "2.2.0-rc.3",
+    "webpack-config-utils": "2.3.0"
+  },
+  "dependencies": {
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "spectacle": "1.2.5"
   }
 }
