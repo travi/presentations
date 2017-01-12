@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default function() {
-  return <div/>;
+export default function Presentation() {
+  return <div />;
 }
+
+Presentation.displayName = 'Presentation';
