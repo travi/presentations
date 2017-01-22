@@ -5,6 +5,7 @@ import AssetsPlugin from 'assets-webpack-plugin';
 import Visualizer from 'webpack-visualizer-plugin';
 import LodashModuleReplacementPlugin from 'lodash-webpack-plugin';
 import CleanPlugin from 'clean-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default function (env) {
   const {ifDevelopment, ifProduction} = getIfUtils(env);
@@ -49,6 +50,10 @@ export default function (env) {
         {
           test: /\.svg$/,
           loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
+        },
+        {
+          test: /\.mustache$/,
+          loader: 'mustache-loader'
         }
       ]
     },
@@ -76,7 +81,10 @@ export default function (env) {
       //   }
       // })),
       ifProduction(new Visualizer()),
-      ifProduction(new LodashModuleReplacementPlugin())
+      ifProduction(new LodashModuleReplacementPlugin()),
+      new HtmlWebpackPlugin({
+        template: 'src/index.mustache'
+      })
     ])
   };
 }
