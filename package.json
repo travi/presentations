@@ -10,7 +10,7 @@
     "lint:md": "globstar --node -- markdownlint **/*.md",
     "test": "run-s lint:*",
     "build": "webpack --env production",
-    "deploy": "gh-pages -r \"https://$GH_TOKEN@github.com/travi/presentations\" -d lib/",
+    "deploy": "gh-pages -r \"https://$GH_TOKEN@github.com/travi/presentations.git\" -d lib/",
     "commitmsg": "validate-commit-msg",
     "precommit": "npm test"
   },
