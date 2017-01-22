@@ -62,8 +62,7 @@ export default function (env) {
       new AssetsPlugin(),
       new webpack.DefinePlugin({
         'process.env': {
-          // NODE_ENV: JSON.stringify(env)
-          NODE_ENV: JSON.stringify('production')
+          NODE_ENV: JSON.stringify(env)
         }
       }),
       ifDevelopment(new webpack.NamedModulesPlugin()),
@@ -74,12 +73,12 @@ export default function (env) {
       //   minimize: true,
       //   debug: false
       // })),
-      // ifProduction(new webpack.optimize.UglifyJsPlugin({
-      //   compress: {
-      //     screw_ie8: true,
-      //     warnings: false
-      //   }
-      // })),
+      ifProduction(new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          screw_ie8: true,
+          warnings: false
+        }
+      })),
       ifProduction(new Visualizer()),
       ifProduction(new LodashModuleReplacementPlugin()),
       new HtmlWebpackPlugin({

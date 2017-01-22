@@ -9,7 +9,7 @@
     "lint:js": "eslint .",
     "lint:md": "globstar --node -- markdownlint **/*.md",
     "test": "run-s lint:*",
-    "build": "webpack -p --env production",
+    "build": "webpack --env production",
     "commitmsg": "validate-commit-msg",
     "precommit": "npm test"
   },
