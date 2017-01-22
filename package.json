@@ -8,10 +8,8 @@
   "scripts": {
     "lint:js": "eslint .",
     "lint:md": "globstar --node -- markdownlint **/*.md",
-    "tests:unit": "mocha --recursive test/unit",
-    "test": "run-s lint:* coverage",
-    "coverage": "nyc run-s tests:unit",
-    "build": "webpack -p --progress --env production",
+    "test": "run-s lint:*",
+    "build": "webpack -p --env production",
     "commitmsg": "validate-commit-msg",
     "precommit": "npm test"
   },
@@ -43,9 +41,7 @@
     "husky": "0.12.0",
     "lodash-webpack-plugin": "0.11.0",
     "markdownlint-cli": "0.2.0",
-    "mocha": "3.2.0",
     "npm-run-all": "4.0.1",
-    "nyc": "10.1.2",
     "raw-loader": "0.5.1",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
