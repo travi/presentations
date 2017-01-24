@@ -44,7 +44,20 @@ export default function (env) {
         },
         {
           test: /\.(png|jpg|gif)$/,
-          loader: 'url-loader?limit=8192'
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                limit: 8192
+              }
+            },
+            {
+              loader: 'img-loader',
+              options: {
+                progressive: true
+              }
+            }
+          ]
         },
         {
           test: /\.svg$/,
