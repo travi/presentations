@@ -50,7 +50,7 @@
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
     "validate-commit-msg": "2.8.2",
-    "webpack": "2.2.0-rc.3",
+    "webpack": "2.2.0",
     "webpack-config-utils": "2.3.0",
     "webpack-visualizer-plugin": "0.1.10"
   },

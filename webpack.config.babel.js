@@ -12,8 +12,7 @@ export default function (env) {
   const assetsPath = './lib';
 
   return {
-    // devtool: ifDevelopment('eval-source-map', 'source-map'),
-    devtool: false,
+    devtool: ifDevelopment('eval-source-map', 'source-map'),
     entry: {
       example: './src/index',
       vendor: ['react', 'react-dom', 'spectacle']
@@ -28,7 +27,7 @@ export default function (env) {
           test: /\.js$/,
           exclude: /node_modules/,
           loader: 'babel-loader',
-          query: {
+          options: {
             presets: [['es2015', {modules: false}], 'react'],
             plugins: removeEmpty([
               ifProduction('transform-react-remove-prop-types'),
@@ -69,11 +68,12 @@ export default function (env) {
       new webpack.optimize.CommonsChunkPlugin({
         names: ['vendor', 'manifest']
       }),
-      // ifProduction(new webpack.LoaderOptionsPlugin({
-      //   minimize: true,
-      //   debug: false
-      // })),
+      ifProduction(new webpack.LoaderOptionsPlugin({
+        minimize: true,
+        debug: false
+      })),
       ifProduction(new webpack.optimize.UglifyJsPlugin({
+        sourceMap: true,
         compress: {
           screw_ie8: true,
           warnings: false
