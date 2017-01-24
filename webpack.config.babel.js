@@ -15,12 +15,12 @@ export default function (env) {
   return {
     devtool: ifDevelopment('eval-source-map', 'source-map'),
     entry: {
-      'example/index': './src/index',
+      'example/index': './src/example',
       vendor: ['react', 'react-dom', 'spectacle']
     },
     output: {
       path: assetsPath,
-      filename: '[name].js'
+      filename: '[name]-[hash].js'
     },
     module: {
       rules: [

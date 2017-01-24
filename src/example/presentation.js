@@ -27,10 +27,10 @@ const theme = createTheme({
 });
 
 const images = {
-  city: require('../assets/city.jpg'),
-  kat: require('../assets/kat.png'),
-  logo: require('../assets/formidable-logo.svg'),
-  markdown: require('../assets/markdown.png')
+  city: require('../../assets/city.jpg'),
+  kat: require('../../assets/kat.png'),
+  logo: require('../../assets/formidable-logo.svg'),
+  markdown: require('../../assets/markdown.png')
 };
 
 export default function Presentation() {
