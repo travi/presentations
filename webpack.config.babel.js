@@ -10,11 +10,12 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 export default function (env) {
   const {ifDevelopment, ifProduction} = getIfUtils(env);
   const assetsPath = './lib';
+  const defaultChunks = ['vendor', 'manifest'];
 
   return {
     devtool: ifDevelopment('eval-source-map', 'source-map'),
     entry: {
-      example: './src/index',
+      'example/index': './src/index',
       vendor: ['react', 'react-dom', 'spectacle']
     },
     output: {
@@ -48,7 +49,8 @@ export default function (env) {
             {
               loader: 'file-loader',
               options: {
-                limit: 8192
+                limit: 8192,
+                publicPath: '..//'
               }
             },
             {
@@ -79,7 +81,7 @@ export default function (env) {
       }),
       ifDevelopment(new webpack.NamedModulesPlugin()),
       new webpack.optimize.CommonsChunkPlugin({
-        names: ['vendor', 'manifest']
+        names: defaultChunks
       }),
       ifProduction(new webpack.LoaderOptionsPlugin({
         minimize: true,
@@ -95,6 +97,8 @@ export default function (env) {
       ifProduction(new Visualizer()),
       ifProduction(new LodashModuleReplacementPlugin()),
       new HtmlWebpackPlugin({
+        chunks: [...defaultChunks, 'example/index'],
+        filename: 'example/index.html',
         template: 'src/index.mustache'
       })
     ])
