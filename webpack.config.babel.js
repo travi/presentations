@@ -16,6 +16,7 @@ export default function (env) {
     devtool: ifDevelopment('eval-source-map', 'source-map'),
     entry: {
       'example/index': './src/example',
+      'component-library/index': './src/component-library',
       'continuous-deployment/index': './src/continuous-deployment',
       'continuous-deployment-dsmjs-june-2017/index': './src/continuous-deployment-dsmjs-june-2017',
       vendor: removeEmpty([
@@ -126,6 +127,11 @@ export default function (env) {
         filename: 'continuous-deployment-dsmjs-june-2017/index.html',
         template: 'src/index.mustache',
         title: 'Continuous Deployment'
+      }),
+      new HtmlWebpackPlugin({
+        chunks: [...defaultChunks, 'component-library/index'],
+        filename: 'component-library/index.html',
+        template: 'src/index.mustache'
       })
     ])
   };
