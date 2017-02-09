@@ -20,7 +20,7 @@ export default function (env) {
     },
     output: {
       path: assetsPath,
-      filename: '[name]-[hash].js'
+      filename: '[name]-[chunkhash].js'
     },
     module: {
       rules: [
