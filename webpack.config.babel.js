@@ -6,10 +6,11 @@ import Visualizer from 'webpack-visualizer-plugin';
 import LodashModuleReplacementPlugin from 'lodash-webpack-plugin';
 import CleanPlugin from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import path from 'path';
 
 export default function (env) {
   const {ifDevelopment, ifProduction} = getIfUtils(env);
-  const assetsPath = './lib';
+  const assetsPath = path.resolve(__dirname, './lib');
   const defaultChunks = ['vendor', 'manifest'];
 
   return {
