@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "normalize.css": "6.0.0",
-    "react": "15.5.3",
+    "react": "15.5.4",
     "react-dom": "15.5.0",
     "spectacle": "2.0.0"
   }
