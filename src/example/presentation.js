@@ -19,8 +19,8 @@ import {
   Text
 } from 'spectacle';
 
-require('normalize.css');
-require('spectacle/lib/themes/default/index.css');
+import 'normalize.css';
+import 'spectacle/lib/themes/default/index.css';
 
 const theme = createTheme({
   primary: '#c80000'
