@@ -8,7 +8,7 @@
   "scripts": {
     "lint:js": "eslint .",
     "lint:md": "globstar --node -- markdownlint **/*.md",
-    "test": "run-s lint:*",
+    "test": "run-s lint:* build",
     "build": "webpack --env production",
     "deploy": "gh-pages --silent -r \"https://$GH_TOKEN@github.com/travi/presentations.git\" -d lib/",
     "commitmsg": "validate-commit-msg",
