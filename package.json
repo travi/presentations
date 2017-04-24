@@ -8,7 +8,7 @@
   "scripts": {
     "lint:js": "eslint .",
     "lint:md": "globstar --node -- markdownlint **/*.md",
-    "test:smoke": "mocha --timeout 3000 --recursive test",
+    "test:smoke": "mocha --timeout 5000 --recursive test",
     "test": "run-s lint:* test:* build",
     "build": "webpack --env production",
     "build:dev": "webpack --env development",
