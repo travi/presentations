@@ -1,4 +1,4 @@
-import jsdom from 'jsdom';
+import {JSDOM} from 'jsdom';
 
 const importAsString = module => {
   module.exports = '';    // eslint-disable-line no-param-reassign
@@ -13,8 +13,9 @@ require.extensions['.svg'] = importAsString;
 
 console.error = message => { throw new Error(message); };   // eslint-disable-line no-console
 
-global.document = jsdom.jsdom('<!doctype html><html><body></body></html>', {url: 'http://localhost'});
-global.window = document.defaultView;
+const dom = new JSDOM('<!doctype html><html><body></body></html>', {url: 'http://localhost'});
+global.document = dom.window.document;
+global.window = dom.window;
 Object.keys(document.defaultView).forEach(property => {
   if ('undefined' === typeof global[property]) {
     global[property] = document.defaultView[property];
