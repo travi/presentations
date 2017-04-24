@@ -3,7 +3,6 @@ import webpack from 'webpack';
 import {getIfUtils, removeEmpty} from 'webpack-config-utils';
 import AssetsPlugin from 'assets-webpack-plugin';
 import Visualizer from 'webpack-visualizer-plugin';
-import LodashModuleReplacementPlugin from 'lodash-webpack-plugin';
 import CleanPlugin from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
@@ -34,8 +33,7 @@ export default function (env) {
             plugins: removeEmpty([
               ifProduction('transform-react-remove-prop-types'),
               ifDevelopment('transform-react-jsx-source'),
-              'transform-runtime',
-              'lodash'
+              'transform-runtime'
             ]),
             comments: false,
             cacheDirectory: true
@@ -96,7 +94,6 @@ export default function (env) {
         }
       })),
       ifProduction(new Visualizer()),
-      ifProduction(new LodashModuleReplacementPlugin()),
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'example/index'],
         filename: 'example/index.html',
