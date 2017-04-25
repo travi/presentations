@@ -4,6 +4,8 @@ import Presentation from '../../src/component-library/presentation';
 
 suite('smoke tests for the component-library presentation', () => {
   test('that the presentation renders', () => {
-    mount(<Presentation />);
+    const wrapper = mount(<Presentation />);
+
+    wrapper.unmount();
   });
 });
