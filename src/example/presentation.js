@@ -54,7 +54,8 @@ export default function Presentation() {
         <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
       </Slide>
       <Slide
-        transition={['slide']} bgColor="black"
+        transition={['slide']}
+        bgColor="black"
         notes="You can even put notes on your slide. How awesome is that?"
       >
         <Image src={images.kat.replace('/', '')} margin="0px auto 40px" height="293px" />
