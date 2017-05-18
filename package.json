@@ -66,6 +66,7 @@
     "normalize.css": "7.0.0",
     "react": "15.4.2",
     "react-dom": "15.4.2",
+    "react-emojione": "3.1.10",
     "spectacle": "2.0.0"
   }
 }

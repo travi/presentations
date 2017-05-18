@@ -16,6 +16,7 @@ export default function (env) {
     devtool: ifDevelopment('eval-source-map', 'source-map'),
     entry: {
       'example/index': './src/example',
+      'continuous-deployment/index': './src/continuous-deployment',
       vendor: ['react', 'react-dom', 'spectacle']
     },
     output: {
@@ -97,6 +98,11 @@ export default function (env) {
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'example/index'],
         filename: 'example/index.html',
+        template: 'src/index.mustache'
+      }),
+      new HtmlWebpackPlugin({
+        chunks: [...defaultChunks, 'continuous-deployment/index'],
+        filename: 'continuous-deployment/index.html',
         template: 'src/index.mustache'
       })
     ])

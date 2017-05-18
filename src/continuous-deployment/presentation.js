@@ -1,6 +1,7 @@
 import React from 'react';
 import createTheme from 'spectacle/lib/themes/default';
 import {Deck, Slide, Heading, Link, Text} from 'spectacle';
+import Emojify from 'react-emojione';
 import 'normalize.css';
 import 'spectacle/lib/themes/default/index.css';
 
@@ -25,6 +26,31 @@ export default function Presentation() {
           <Text bold caps textColor="tertiary">View on Github</Text>
         </Link>
         <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
+      </Slide>
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Continuous Integration
+        </Heading>
+      </Slide>
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Continuous Delivery
+        </Heading>
+      </Slide>
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Continuous Deployment
+        </Heading>
+      </Slide>
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Your test suite
+        </Heading>
+      </Slide>
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Greenkeeper <Emojify>:palm_tree:</Emojify>
+        </Heading>
       </Slide>
     </Deck>
   );
