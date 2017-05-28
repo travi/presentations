@@ -17,7 +17,7 @@ const images = {
 preloader(images);
 
 const notesForInternalPackagesSlide = "If managing thirdparty dependencies in your app isn't enough, lets take a look" +
-  'at how we can handle internal packages.';
+  ' at how we can handle internal packages.';
 
 export default function Presentation() {
   return (
@@ -60,8 +60,9 @@ export default function Presentation() {
           Travis CI
         </Heading>
         <List textColor="white">
-          <Appear><ListItem>Strongly encourages continuous deployment</ListItem></Appear>
           <Appear><ListItem>Tight integration with GitHub</ListItem></Appear>
+          <Appear><ListItem>Strongly encourages continuous deployment</ListItem></Appear>
+          <Appear><ListItem>Any CI server could be configured this way, but Travis is by default</ListItem></Appear>
         </List>
       </Slide>
       <Slide bgColor="white" transition={['slide']}>
@@ -95,6 +96,9 @@ export default function Presentation() {
           <Appear><ListItem>Commit statuses all pass</ListItem></Appear>
           <Appear><ListItem>PR merged</ListItem></Appear>
           <Appear><ListItem>Branch automatically deleted</ListItem></Appear>
+          <Appear>
+            <ListItem>Commit to <Code textColor="white">master</Code> triggers production deploy</ListItem>
+          </Appear>
         </List>
       </Slide>
       <Slide
