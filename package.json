@@ -6,7 +6,7 @@
   "bugs": "https://github.com/travi/presentations/issues",
   "homepage": "htpps://presentations.travi.org",
   "scripts": {
-    "lint:js": "eslint .",
+    "lint:js": "eslint . --cache",
     "lint:md": "globstar --node -- markdownlint **/*.md",
     "test:smoke": "mocha --timeout 5000 --recursive test",
     "test": "run-s lint:* test:* build",
