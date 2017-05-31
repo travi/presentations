@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "lint:md": "globstar --node -- markdownlint **/*.md",
+    "lint:js": "eslint . .storybook --cache",
+    "test:unit": "mocha --recursive test/unit -r ./test/helpers/mocha-setup.js",
+    "tests:integration": "cucumber.js test/integration --compiler js:babel-register --tags 'not @wip'",
+    "test": "run-s lint:* test:* build",
+    "commitmsg": "validate-commit-msg",
+    "precommit": "npm test",
+    "prepublish": "run-s build",
+    "sr:pre": "semantic-release pre",
+    "sr:post": "semantic-release post",
+    "semantic-release": "sr:pre && npm publish && sr:post"
+  }
+}

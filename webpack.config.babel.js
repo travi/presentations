@@ -39,7 +39,12 @@ export default function (env) {
             comments: false,
             cacheDirectory: true
           }
-        }, {
+        },
+        {
+          test: /\.example$/,
+          use: 'raw-loader'
+        },
+        {
           test: /\.css$/,
           loader: 'style-loader!css-loader'
         },

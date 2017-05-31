@@ -36,8 +36,11 @@
     "babel-register": "6.24.1",
     "chai": "3.5.0",
     "clean-webpack-plugin": "0.1.16",
+    "component-emitter": "1.2.1",
+    "component-type": "1.2.1",
     "css-loader": "0.28.3",
     "cz-conventional-changelog": "2.0.0",
+    "ease-component": "1.0.0",
     "enzyme": "2.8.2",
     "eslint": "3.19.0",
     "file-loader": "0.11.1",
@@ -53,6 +56,7 @@
     "mq-polyfill": "1.1.8",
     "mustache-loader": "0.4.1",
     "npm-run-all": "4.0.2",
+    "quibble": "0.5.1",
     "raw-loader": "0.5.1",
     "react-addons-test-utils": "15.4.2",
     "style-loader": "0.18.1",
@@ -67,6 +71,7 @@
     "react": "15.4.2",
     "react-dom": "15.4.2",
     "react-emojione": "3.1.10",
-    "spectacle": "2.0.0"
+    "spectacle": "2.0.0",
+    "spectacle-code-slide": "0.4.0"
   }
 }

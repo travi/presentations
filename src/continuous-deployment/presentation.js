@@ -1,6 +1,7 @@
 import React from 'react';
 import createTheme from 'spectacle/lib/themes/default';
 import {Deck, Slide, Heading, Text, Image, Code, List, ListItem, Appear} from 'spectacle';
+import CodeSlide from 'spectacle-code-slide';
 import preloader from 'spectacle/lib/utils/preloader';
 import Emojify from 'react-emojione';
 import 'normalize.css';
@@ -65,6 +66,28 @@ export default function Presentation() {
           <Appear><ListItem>Any CI server could be configured this way, but Travis is by default</ListItem></Appear>
         </List>
       </Slide>
+      <CodeSlide
+        lang="yaml"
+        code={require('../../assets/travis.example')}
+        ranges={[
+          {
+            loc: [1, 2],
+            title: 'Verification',
+            note: 'This is the default for node project, so inclusion is optional if npm test runs your verification'
+          },
+          {loc: [3, 7], title: 'Heroku'},
+          {loc: [7, 12], title: 'App Engine'}
+        ]}
+      />
+      <CodeSlide
+        lang="json"
+        code={require('../../assets/package.example')}
+        ranges={[
+          {loc: [6, 7], note: 'the verification task'},
+          {loc: [2, 4], note: 'multiple lint tasks, like JavaScript and Markdown', title: 'Lint'},
+          {loc: [4, 6], note: 'multiple test tasks, like unit and integration', title: 'Tests'}
+        ]}
+      />
       <Slide bgColor="white" transition={['slide']}>
         <Image src={images.greenkeeper.replace('/', '')} margin="0px auto 40px" />
       </Slide>
@@ -141,6 +164,46 @@ export default function Presentation() {
           </Appear>
         </List>
       </Slide>
+      <CodeSlide
+        lang="json"
+        code={require('../../assets/package.example')}
+        ranges={[
+          {loc: [7, 8], note: 'Ensure the commit message is compatible with semantic-release'},
+          {loc: [8, 9], note: 'Ensure the build passes before each commit'}
+        ]}
+      />
+      <CodeSlide
+        lang="yaml"
+        code={require('../../assets/travis.example')}
+        ranges={[
+          {
+            loc: [2, 3],
+            title: 'Publish',
+            note: 'The semantic-release task bumps the version, publishes, and compiles release notes'
+          }
+        ]}
+      />
+      <CodeSlide
+        lang="json"
+        code={require('../../assets/package.example')}
+        ranges={[
+          {
+            loc: [12, 13],
+            note: 'The semantic-release task bumps the version, publishes, and compiles release notes',
+            title: 'Publish'
+          },
+          {
+            loc: [10, 11],
+            title: 'Pre',
+            note: 'The pre task bumps the version based on the last release and the commmit messages since'
+          },
+          {
+            loc: [11, 12],
+            title: 'Post',
+            note: 'The post task pushes the tag and release notes to GitHub'
+          }
+        ]}
+      />
     </Deck>
   );
 }
