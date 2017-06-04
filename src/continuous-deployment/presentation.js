@@ -36,10 +36,16 @@ export default function Presentation() {
         <Heading size={2} caps fit textColor="primary" textFont="primary">
           Continuous Integration
         </Heading>
+        <Heading size={1} fit>
+          favoring code in <Code textColor="white">master</Code> over long-lived branches
+        </Heading>
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">
           Continuous Delivery
+        </Heading>
+        <Heading size={1} fit>
+          <Code textColor="white">master</Code> is always deployable
         </Heading>
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
@@ -63,6 +69,7 @@ export default function Presentation() {
         <List textColor="white">
           <Appear><ListItem>Tight integration with GitHub</ListItem></Appear>
           <Appear><ListItem>Strongly encourages continuous deployment</ListItem></Appear>
+          <Appear><ListItem>Config is versioned with the project</ListItem></Appear>
           <Appear><ListItem>Any CI server could be configured this way, but Travis is by default</ListItem></Appear>
         </List>
       </Slide>
@@ -73,19 +80,21 @@ export default function Presentation() {
           {
             loc: [1, 2],
             title: 'Verification',
-            note: 'This is the default for node project, so inclusion is optional if npm test runs your verification'
+            note: 'This is the default for node projects, so inclusion is optional'
           },
           {loc: [3, 7], title: 'Heroku'},
           {loc: [7, 12], title: 'App Engine'}
         ]}
       />
       <CodeSlide
+        textSize=".8em"
         lang="json"
         code={require('../../assets/package.example')}
         ranges={[
           {loc: [6, 7], note: 'the verification task'},
           {loc: [2, 4], note: 'multiple lint tasks, like JavaScript and Markdown', title: 'Lint'},
-          {loc: [4, 6], note: 'multiple test tasks, like unit and integration', title: 'Tests'}
+          {loc: [4, 6], note: 'multiple test tasks, like unit and integration', title: 'Tests'},
+          {loc: [7, 10], note: 'multiple build tasks, like server and client', title: 'Build'}
         ]}
       />
       <Slide bgColor="white" transition={['slide']}>
@@ -96,7 +105,7 @@ export default function Presentation() {
           Greenkeeper <Emojify>:palm_tree:</Emojify>
         </Heading>
         <List>
-          <Appear><ListItem>React publishes a new version to npm</ListItem></Appear>
+          <Appear><ListItem>React (for example) publishes a new version to npm</ListItem></Appear>
           <Appear><ListItem>Greenkeeper sends a PR to your application&apos;s repo</ListItem></Appear>
         </List>
       </Slide>
@@ -168,8 +177,8 @@ export default function Presentation() {
         lang="json"
         code={require('../../assets/package.example')}
         ranges={[
-          {loc: [7, 8], note: 'Ensure the commit message is compatible with semantic-release'},
-          {loc: [8, 9], note: 'Ensure the build passes before each commit'}
+          {loc: [10, 11], note: 'Ensure the commit message is compatible with semantic-release'},
+          {loc: [11, 12], note: 'Ensure the build passes before each commit'}
         ]}
       />
       <CodeSlide
@@ -184,21 +193,27 @@ export default function Presentation() {
         ]}
       />
       <CodeSlide
+        textSize=".75em"
         lang="json"
         code={require('../../assets/package.example')}
         ranges={[
           {
-            loc: [12, 13],
+            loc: [15, 16],
             note: 'The semantic-release task bumps the version, publishes, and compiles release notes',
-            title: 'Publish'
+            title: 'Release'
           },
           {
-            loc: [10, 11],
+            loc: [13, 14],
             title: 'Pre',
-            note: 'The pre task bumps the version based on the last release and the commmit messages since'
+            note: 'The pre task bumps the version based on the last release and the commit messages since'
           },
           {
-            loc: [11, 12],
+            loc: [12, 13],
+            title: 'Pre-publish',
+            note: 'Any npm script can have a pre or post script. This script builds the bundled modules before publish'
+          },
+          {
+            loc: [14, 15],
             title: 'Post',
             note: 'The post task pushes the tag and release notes to GitHub'
           }

@@ -1,15 +1,21 @@
 {
   "scripts": {
-    "lint:md": "globstar --node -- markdownlint **/*.md",
+    "lint:md": "markdownlint **/*.md",
     "lint:js": "eslint . .storybook --cache",
-    "test:unit": "mocha --recursive test/unit -r ./test/helpers/mocha-setup.js",
-    "tests:integration": "cucumber.js test/integration --compiler js:babel-register --tags 'not @wip'",
-    "test": "run-s lint:* test:* build",
+    "test:unit": "mocha --recursive test/unit",
+    "test:int": "cucumber.js test/int",
+    "test": "run-s lint:* test:* build:*",
+    "build:server": "babel src/server -d lib/server",
+    "build:shared": "babel src/shared -d lib/shared",
+    "build:client": "webpack --env production",
     "commitmsg": "validate-commit-msg",
     "precommit": "npm test",
     "prepublish": "run-s build",
     "sr:pre": "semantic-release pre",
     "sr:post": "semantic-release post",
     "semantic-release": "sr:pre && npm publish && sr:post"
-  }
+  },
+  "version": "0.0.0-semantically-released",
+  "main": "lib/bundle.cjs.js",
+  "module": "lib/bundle.es.js"
 }
