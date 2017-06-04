@@ -9,13 +9,6 @@
     "build:shared": "babel src/shared -d lib/shared",
     "build:client": "webpack --env production",
     "commitmsg": "validate-commit-msg",
-    "precommit": "npm test",
-    "prepublish": "run-s build",
-    "sr:pre": "semantic-release pre",
-    "sr:post": "semantic-release post",
-    "semantic-release": "sr:pre && npm publish && sr:post"
-  },
-  "version": "0.0.0-semantically-released",
-  "main": "lib/bundle.cjs.js",
-  "module": "lib/bundle.es.js"
+    "precommit": "npm test"
+  }
 }

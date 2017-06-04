@@ -75,21 +75,21 @@ export default function Presentation() {
       </Slide>
       <CodeSlide
         lang="yaml"
-        code={require('../../assets/travis.example')}
+        code={require('../../assets/travis.app.example')}
         ranges={[
           {
             loc: [1, 2],
             title: 'Verification',
             note: 'This is the default for node projects, so inclusion is optional'
           },
-          {loc: [3, 7], title: 'Heroku'},
-          {loc: [7, 12], title: 'App Engine'}
+          {loc: [2, 6], title: 'Heroku'},
+          {loc: [6, 11], title: 'App Engine'}
         ]}
       />
       <CodeSlide
         textSize=".8em"
         lang="json"
-        code={require('../../assets/package.example')}
+        code={require('../../assets/package.app.example')}
         ranges={[
           {loc: [6, 7], note: 'the verification task'},
           {loc: [2, 4], note: 'multiple lint tasks, like JavaScript and Markdown', title: 'Lint'},
@@ -175,18 +175,18 @@ export default function Presentation() {
       </Slide>
       <CodeSlide
         lang="json"
-        code={require('../../assets/package.example')}
+        code={require('../../assets/package.npm.example')}
         ranges={[
-          {loc: [10, 11], note: 'Ensure the commit message is compatible with semantic-release'},
-          {loc: [11, 12], note: 'Ensure the build passes before each commit'}
+          {loc: [8, 9], note: 'Ensure the commit message is compatible with semantic-release'},
+          {loc: [9, 10], note: 'Ensure the build passes before each commit'}
         ]}
       />
       <CodeSlide
         lang="yaml"
-        code={require('../../assets/travis.example')}
+        code={require('../../assets/travis.npm.example')}
         ranges={[
           {
-            loc: [2, 3],
+            loc: [1, 2],
             title: 'Publish',
             note: 'The semantic-release task bumps the version, publishes, and compiles release notes'
           }
@@ -195,25 +195,25 @@ export default function Presentation() {
       <CodeSlide
         textSize=".75em"
         lang="json"
-        code={require('../../assets/package.example')}
+        code={require('../../assets/package.npm.example')}
         ranges={[
           {
-            loc: [15, 16],
+            loc: [13, 14],
             note: 'The semantic-release task bumps the version, publishes, and compiles release notes',
             title: 'Release'
           },
           {
-            loc: [13, 14],
+            loc: [11, 12],
             title: 'Pre',
             note: 'The pre task bumps the version based on the last release and the commit messages since'
           },
           {
-            loc: [12, 13],
+            loc: [10, 11],
             title: 'Pre-publish',
             note: 'Any npm script can have a pre or post script. This script builds the bundled modules before publish'
           },
           {
-            loc: [14, 15],
+            loc: [12, 13],
             title: 'Post',
             note: 'The post task pushes the tag and release notes to GitHub'
           }
