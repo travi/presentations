@@ -10,5 +10,9 @@
     "build:client": "webpack --env production",
     "commitmsg": "validate-commit-msg",
     "precommit": "npm test"
+  },
+  "devDependencies": {
+    "husky": "0.13.4",
+    "npm-run-all": "4.0.2"
   }
 }

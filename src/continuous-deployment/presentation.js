@@ -57,11 +57,36 @@ export default function Presentation() {
         </Heading>
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
+        <Heading size={1} fit>
+          Enough confidence to deploy without human intervention
+        </Heading>
         <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Your test suite
+          Trust your test suite
         </Heading>
         <Text textSize="1em" margin="20px 0px 0px" bold>Confidently deploy without human intervention</Text>
       </Slide>
+      <CodeSlide
+        textSize=".8em"
+        lang="json"
+        code={require('../../assets/package.app.example')}
+        ranges={[
+          {loc: [6, 7], note: 'the verification task'},
+          {loc: [2, 4], note: 'multiple lint tasks, like JavaScript and Markdown', title: 'Lint'},
+          {loc: [4, 6], note: 'multiple test tasks, like unit and integration', title: 'Tests'},
+          {loc: [7, 10], note: 'multiple build tasks, like server and client', title: 'Build'}
+        ]}
+      />
+      <CodeSlide
+        textSize=".8em"
+        lang="json"
+        code={require('../../assets/package.app.example')}
+        ranges={[
+          {loc: [15, 16], note: 'improves ability to chain npm scripts', title: 'npm-run-all'},
+          {loc: [6, 7], note: 'run-s runs the tasks synchronously. run-p is also available for running in parallel'},
+          {loc: [14, 15], note: 'connects npm scripts to git hooks', title: 'husky'},
+          {loc: [11, 12], note: 'automatically run npm test before each commit', title: 'husky'}
+        ]}
+      />
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">
           Travis CI
@@ -86,17 +111,14 @@ export default function Presentation() {
           {loc: [6, 11], title: 'App Engine'}
         ]}
       />
-      <CodeSlide
-        textSize=".8em"
-        lang="json"
-        code={require('../../assets/package.app.example')}
-        ranges={[
-          {loc: [6, 7], note: 'the verification task'},
-          {loc: [2, 4], note: 'multiple lint tasks, like JavaScript and Markdown', title: 'Lint'},
-          {loc: [4, 6], note: 'multiple test tasks, like unit and integration', title: 'Tests'},
-          {loc: [7, 10], note: 'multiple build tasks, like server and client', title: 'Build'}
-        ]}
-      />
+      <Slide
+        bgColor="green"
+        transition={['slide']}
+      >
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Dependencies
+        </Heading>
+      </Slide>
       <Slide bgColor="white" transition={['slide']}>
         <Image src={images.greenkeeper.replace('/', '')} margin="0px auto 40px" />
       </Slide>
@@ -153,6 +175,19 @@ export default function Presentation() {
           <Appear><ListItem>Pushes the tag and release notes to GitHub</ListItem></Appear>
         </List>
       </Slide>
+      <Slide
+        bgColor="green"
+        transition={['slide']}
+      >
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Patch, feature, breakage
+        </Heading>
+        <List textColor="white">
+          <Appear><ListItem><Code>fix</Code></ListItem></Appear>
+          <Appear><ListItem><Code>feat</Code></ListItem></Appear>
+          <Appear><ListItem><Code>BREAKING CHANGE: </Code></ListItem></Appear>
+        </List>
+      </Slide>
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">
           Dependencies of Dependencies
@@ -177,8 +212,16 @@ export default function Presentation() {
         lang="json"
         code={require('../../assets/package.npm.example')}
         ranges={[
-          {loc: [8, 9], note: 'Ensure the commit message is compatible with semantic-release'},
-          {loc: [9, 10], note: 'Ensure the build passes before each commit'}
+          {
+            loc: [27, 30],
+            note: 'provides a wizard to simplify matching the expected commit pattern',
+            title: 'commitizen'
+          },
+          {
+            loc: [8, 9],
+            note: 'Ensure the commit message is compatible with semantic-release',
+            title: 'Commit pattern verification'
+          }
         ]}
       />
       <CodeSlide
@@ -193,7 +236,7 @@ export default function Presentation() {
         ]}
       />
       <CodeSlide
-        textSize=".75em"
+        textSize=".85em"
         lang="json"
         code={require('../../assets/package.npm.example')}
         ranges={[
@@ -208,15 +251,22 @@ export default function Presentation() {
             note: 'The pre task bumps the version based on the last release and the commit messages since'
           },
           {
+            loc: [20, 21],
+            title: 'Version',
+            note: 'Only defined to prevent a cli warning. It is overwritten by semantic-release before publishing'
+          },
+          {
             loc: [10, 11],
             title: 'Pre-publish',
             note: 'Any npm script can have a pre or post script. This script builds the bundled modules before publish'
           },
+          {loc: [7, 8], title: 'Rollup', note: 'Build bundles for distribution'},
           {
-            loc: [12, 13],
-            title: 'Post',
-            note: 'The post task pushes the tag and release notes to GitHub'
-          }
+            loc: [21, 23],
+            title: 'Bundles',
+            note: '`main` defines the common-js bundle. `module` defines the es module'
+          },
+          {loc: [12, 13], title: 'Post', note: 'The post task pushes the tag and release notes to GitHub'}
         ]}
       />
     </Deck>
