@@ -32,6 +32,41 @@ export default function Presentation() {
         </Heading>
         <Text textSize="1em" margin="20px 0px 0px" bold>Matt Travi</Text>
       </Slide>
+      <Slide
+        bgColor="green"
+        transition={['slide']}
+      >
+        <Heading size={1} fit>
+          JS Fatigue
+        </Heading>
+      </Slide>
+      <Slide
+        bgColor="green"
+        transition={['slide']}
+      >
+        <Heading size={1} fit>
+          Positive side to the explosion of packages
+        </Heading>
+      </Slide>
+      <Slide
+        bgColor="green"
+        transition={['slide']}
+      >
+        <Heading size={1} fit>
+          Payoff from automated test suite
+        </Heading>
+      </Slide>
+      <Slide
+        bgColor="green"
+        transition={['slide']}
+      >
+        <Heading size={1} fit>
+          First, some terminology...
+        </Heading>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Continuous Integration vs. Continuous Delivery vs. Continuous Deployment
+        </Heading>
+      </Slide>
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">
           Continuous Integration
@@ -95,7 +130,7 @@ export default function Presentation() {
           <Appear><ListItem>Tight integration with GitHub</ListItem></Appear>
           <Appear><ListItem>Strongly encourages continuous deployment</ListItem></Appear>
           <Appear><ListItem>Config is versioned with the project</ListItem></Appear>
-          <Appear><ListItem>Any CI server could be configured this way, but Travis is by default</ListItem></Appear>
+          <Appear><ListItem>CD by default on Travis, but any CI server could be configured this way</ListItem></Appear>
         </List>
       </Slide>
       <CodeSlide
@@ -129,6 +164,20 @@ export default function Presentation() {
         <List>
           <Appear><ListItem>React (for example) publishes a new version to npm</ListItem></Appear>
           <Appear><ListItem>Greenkeeper sends a PR to your application&apos;s repo</ListItem></Appear>
+          <Appear><ListItem>If all goes well, you only have to click merge</ListItem></Appear>
+        </List>
+      </Slide>
+      <Slide
+        bgColor="green"
+        transition={['slide']}
+      >
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Caveats
+        </Heading>
+        <List>
+          <Appear><ListItem>Is a GitHub (only) integration</ListItem></Appear>
+          <Appear><ListItem>No developer to look at the execution before pushing</ListItem></Appear>
+          <Appear><ListItem>Unit tests alone might not provide enough confidence</ListItem></Appear>
         </List>
       </Slide>
       <Slide bgColor="white" transition={['slide']}>
@@ -139,6 +188,9 @@ export default function Presentation() {
       <Slide bgColor="white" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">
           So many PRs!!!
+        </Heading>
+        <Heading size={1} textColor="black" fit>
+          Isn&apos;t this worse than before&#63;
         </Heading>
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
@@ -163,6 +215,23 @@ export default function Presentation() {
         <Heading size={2} caps fit textColor="primary" textFont="primary">
           Internal packages
         </Heading>
+      </Slide>
+      <Slide
+        bgColor="green"
+        transition={['slide']}
+      >
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          What does &quot;done&quot; mean&#63;
+        </Heading>
+        <List textColor="white">
+          <Appear><ListItem>Change is in <Code>master</Code> of the package repo&#63;</ListItem></Appear>
+          <Appear><ListItem>New version of package published, updated in consuming apps&#63;</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              What if we could apply the idea of &quot;<Code>master</Code> means production&quot; to packages&#63;
+            </ListItem>
+          </Appear>
+        </List>
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">
@@ -269,6 +338,38 @@ export default function Presentation() {
           {loc: [12, 13], title: 'Post', note: 'The post task pushes the tag and release notes to GitHub'}
         ]}
       />
+      <Slide
+        bgColor="green"
+        transition={['slide']}
+      >
+        <Heading size={1} fit>
+          Continuous Deployment isn&apos;t an option on my team
+        </Heading>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          How can I dial this back&#63;
+        </Heading>
+        <List textColor="white">
+          <Appear><ListItem>Continuously deploy packages, but not the application</ListItem></Appear>
+          <Appear><ListItem>Consider starting with semantic-release, but introduce greenkeeper later</ListItem></Appear>
+        </List>
+      </Slide>
+      <Slide
+        bgColor="green"
+        transition={['slide']}
+      >
+        <Heading size={1} fit>
+          Services
+        </Heading>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Value has made investment in specific services worthwhile
+        </Heading>
+        <List textColor="white">
+          <Appear><ListItem>GitHub</ListItem></Appear>
+          <Appear><ListItem>Travis CI</ListItem></Appear>
+          <Appear><ListItem>Private npm</ListItem></Appear>
+        </List>
+      </Slide>
+
     </Deck>
   );
 }
