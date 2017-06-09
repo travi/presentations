@@ -12,6 +12,7 @@
     "test": "run-s lint:* test:* build",
     "build": "webpack --env production",
     "build:dev": "webpack --env development",
+    "start": "babel-node webpack-dev-server.js",
     "deploy": "gh-pages --silent -r \"https://$GH_TOKEN@github.com/travi/presentations.git\" -d lib/",
     "commitmsg": "validate-commit-msg",
     "precommit": "npm test"
@@ -64,6 +65,8 @@
     "validate-commit-msg": "2.12.1",
     "webpack": "2.6.1",
     "webpack-config-utils": "2.3.0",
+    "webpack-dev-server": "2.4.5",
+    "webpack-hot-middleware": "2.18.0",
     "webpack-visualizer-plugin": "0.1.11"
   },
   "dependencies": {

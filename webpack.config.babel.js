@@ -17,11 +17,17 @@ export default function (env) {
     entry: {
       'example/index': './src/example',
       'continuous-deployment/index': './src/continuous-deployment',
-      vendor: ['react', 'react-dom', 'spectacle']
+      vendor: removeEmpty([
+        // ifDevelopment('webpack-hot-middleware/client'),
+        'react',
+        'react-dom',
+        'spectacle'
+      ])
     },
     output: {
       path: assetsPath,
-      filename: '[name]-[chunkhash].js'
+      filename: ifProduction('[name]-[chunkhash].js', '[name].js'),
+      publicPath: '/'
     },
     module: {
       rules: [
@@ -78,13 +84,15 @@ export default function (env) {
     },
     plugins: removeEmpty([
       ifProduction(new CleanPlugin([assetsPath], {root: __dirname})),
+      // ifDevelopment(new webpack.HotModuleReplacementPlugin()),
+      ifDevelopment(new webpack.NamedModulesPlugin()),
+      ifDevelopment(new webpack.NoEmitOnErrorsPlugin()),
       new AssetsPlugin(),
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify(env)
         }
       }),
-      ifDevelopment(new webpack.NamedModulesPlugin()),
       new webpack.optimize.CommonsChunkPlugin({
         names: defaultChunks
       }),
