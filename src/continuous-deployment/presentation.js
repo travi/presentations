@@ -114,12 +114,14 @@ export default function Presentation() {
       <CodeSlide
         textSize=".8em"
         lang="json"
+        notes="want to show a couple of tools that are helpful"
         code={require('../../assets/package.app.example')}
         ranges={[
-          {loc: [15, 16], note: 'improves ability to chain npm scripts', title: 'npm-run-all'},
-          {loc: [6, 7], note: 'run-s runs the tasks synchronously. run-p is also available for running in parallel'},
-          {loc: [14, 15], note: 'connects npm scripts to git hooks', title: 'husky'},
-          {loc: [11, 12], note: 'automatically run npm test before each commit', title: 'husky'}
+          {loc: [20, 21], note: 'improves ability to chain npm scripts', title: 'npm-run-all'},
+          {loc: [6, 7], note: 'run-s runs the tasks synchronously', title: 'npm-run-all'},
+          {loc: [14, 15], note: 'run-p runs tasks in parallel', title: 'npm-run-all'},
+          {loc: [19, 20], note: 'connects npm scripts to git hooks', title: 'husky'},
+          {loc: [16, 17], note: 'automatically run npm test before each commit', title: 'husky'}
         ]}
       />
       <Slide bgColor="black" transition={['slide']}>
@@ -186,7 +188,7 @@ export default function Presentation() {
         </Heading>
       </Slide>
       <Slide bgColor="white" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
+        <Heading size={2} fit textColor="primary" textFont="primary">
           So many PRs!!!
         </Heading>
         <Heading size={1} textColor="black" fit>
@@ -207,11 +209,7 @@ export default function Presentation() {
           </Appear>
         </List>
       </Slide>
-      <Slide
-        bgColor="green"
-        transition={['slide']}
-        notes={notesForInternalPackagesSlide}
-      >
+      <Slide bgColor="green" transition={['slide']} notes={notesForInternalPackagesSlide}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">
           Internal packages
         </Heading>
@@ -244,10 +242,7 @@ export default function Presentation() {
           <Appear><ListItem>Pushes the tag and release notes to GitHub</ListItem></Appear>
         </List>
       </Slide>
-      <Slide
-        bgColor="green"
-        transition={['slide']}
-      >
+      <Slide bgColor="green" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">
           Patch, feature, breakage
         </Heading>
@@ -290,9 +285,19 @@ export default function Presentation() {
             loc: [8, 9],
             note: 'Ensure the commit message is compatible with semantic-release',
             title: 'Commit pattern verification'
+          },
+          {
+            loc: [9, 10],
+            note: 'Ensure the commit passes all tests before committing',
+            title: 'Verification'
           }
         ]}
       />
+      <Slide bgColor="green" transition={['slide']}>
+        <Heading size={1} caps fit>
+          Commitizen Example
+        </Heading>
+      </Slide>
       <CodeSlide
         lang="yaml"
         code={require('../../assets/travis.npm.example')}
@@ -338,10 +343,7 @@ export default function Presentation() {
           {loc: [12, 13], title: 'Post', note: 'The post task pushes the tag and release notes to GitHub'}
         ]}
       />
-      <Slide
-        bgColor="green"
-        transition={['slide']}
-      >
+      <Slide bgColor="green" transition={['slide']}>
         <Heading size={1} fit>
           Continuous Deployment isn&apos;t an option on my team
         </Heading>
@@ -353,10 +355,7 @@ export default function Presentation() {
           <Appear><ListItem>Consider starting with semantic-release, but introduce greenkeeper later</ListItem></Appear>
         </List>
       </Slide>
-      <Slide
-        bgColor="green"
-        transition={['slide']}
-      >
+      <Slide bgColor="green" transition={['slide']}>
         <Heading size={1} fit>
           Services
         </Heading>
