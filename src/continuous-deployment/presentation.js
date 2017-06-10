@@ -362,6 +362,11 @@ export default function Presentation() {
         <List textColor="white">
           <Appear><ListItem>Continuously deploy packages, but not the application</ListItem></Appear>
           <Appear><ListItem>Consider starting with semantic-release, but introduce greenkeeper later</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              Using Greenkeeper without greenkeeper-keeper could generate more debt than its worth
+            </ListItem>
+          </Appear>
         </List>
       </Slide>
       <Slide bgColor="green" transition={['slide']}>
