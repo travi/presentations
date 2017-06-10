@@ -231,6 +231,15 @@ export default function Presentation() {
           </Appear>
         </List>
       </Slide>
+      <Slide bgColor="green" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          What are the road blocks for getting a change deployed to a user&#63;
+        </Heading>
+        <List textColor="white">
+          <Appear><ListItem>Bundling changes into a release</ListItem></Appear>
+          <Appear><ListItem>Limiting major/breaking releases</ListItem></Appear>
+        </List>
+      </Slide>
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">
           Semantic-Release
