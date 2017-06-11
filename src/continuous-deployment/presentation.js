@@ -405,8 +405,9 @@ export default function Presentation() {
                 </div>
                 <div style={{color: '#00afff'}}>&nbsp;Add column sort</div>
                 <div><span style={{color: '#00ff00'}}>?</span> Provide a longer description of the change:</div>
-                <div><Typist cursor={cursor}>&nbsp;Acending and decending sort orders were added</Typist></div>
+                <div>&nbsp;Acending and decending sort orders were added</div>
                 <div><span style={{color: '#00ff00'}}>?</span> List any breaking changes:</div>
+                <div><Typist cursor={cursor}>&nbsp;Adds a new required prop</Typist></div>
               </div>,
               <div key="sixth cz step">
                 <div>cz-cli@2.9.5, cz-conventional-changelog@2.0.0</div>
@@ -428,9 +429,9 @@ export default function Presentation() {
                 </div>
                 <div style={{color: '#00afff'}}>&nbsp;Add column sort</div>
                 <div><span style={{color: '#00ff00'}}>?</span> Provide a longer description of the change:</div>
-                <div><Typist cursor={cursor}>&nbsp;Acending and decending sort orders were added</Typist></div>
+                <div style={{color: '#00afff'}}>&nbsp;Acending and decending sort orders were added</div>
                 <div><span style={{color: '#00ff00'}}>?</span> List any breaking changes:</div>
-                <div />
+                <div style={{color: '#00afff'}}>&nbsp;Adds a new required prop</div>
                 <div><span style={{color: '#00ff00'}}>?</span> List any issues closed by this change:</div>
                 <div><Typist cursor={cursor}>&nbsp;closes #123</Typist></div>
               </div>,
