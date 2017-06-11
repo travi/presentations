@@ -1,6 +1,8 @@
 import React from 'react';
 import createTheme from 'spectacle/lib/themes/default';
 import {Deck, Slide, Heading, Text, Image, Code, List, ListItem, Appear} from 'spectacle';
+import Terminal from 'spectacle-terminal';
+import Typist from 'react-typist';
 import CodeSlide from 'spectacle-code-slide';
 import preloader from 'spectacle/lib/utils/preloader';
 import Emojify from 'react-emojione';
@@ -20,6 +22,8 @@ preloader(images);
 const notesForInternalPackagesSlide = "If managing thirdparty dependencies in your app isn't enough, lets take a look" +
   ' at how we can handle internal packages.';
 
+const cursor = {show: false, blink: true, element: '|', hideWhenDone: false, hideWhenDoneDelay: 1000};
+
 export default function Presentation() {
   return (
     <Deck transition={['zoom', 'slide']} transitionDuration={500} theme={theme}>
@@ -32,34 +36,22 @@ export default function Presentation() {
         </Heading>
         <Text textSize="1em" margin="20px 0px 0px" bold>Matt Travi</Text>
       </Slide>
-      <Slide
-        bgColor="green"
-        transition={['slide']}
-      >
+      <Slide bgColor="green" transition={['slide']}>
         <Heading size={1} fit>
           JS Fatigue
         </Heading>
       </Slide>
-      <Slide
-        bgColor="green"
-        transition={['slide']}
-      >
+      <Slide bgColor="green" transition={['slide']}>
         <Heading size={1} fit>
           Positive side to the explosion of packages
         </Heading>
       </Slide>
-      <Slide
-        bgColor="green"
-        transition={['slide']}
-      >
+      <Slide bgColor="green" transition={['slide']}>
         <Heading size={1} fit>
           Payoff from automated test suite
         </Heading>
       </Slide>
-      <Slide
-        bgColor="green"
-        transition={['slide']}
-      >
+      <Slide bgColor="green" transition={['slide']}>
         <Heading size={1} fit>
           First, some terminology...
         </Heading>
@@ -306,6 +298,146 @@ export default function Presentation() {
         <Heading size={1} caps fit>
           Commitizen Example
         </Heading>
+        <Terminal
+          title="~/development/gain/front-end/react-components @ Travi-MBP"
+          output={[
+            <Typist cursor={cursor} key="cz command">git cz</Typist>,
+            [
+              <div key="inital cz step">
+                <div>cz-cli@2.9.5, cz-conventional-changelog@2.0.0</div>
+
+                <div style={{padding: '40px 0 20px 0'}}>
+                  Line 1 will be cropped at 100 characters. All other lines will be wrapped after 100 characters.
+                </div>
+                <div>
+                  <span style={{color: '#00ff00'}}>&#63;</span> Select the type of change that you&apos;re committing:
+                  (Use arrow keys)
+                </div>
+                <div style={{color: '#00afff'}}>❯ feat: A new feature</div>
+                <div>&nbsp;&nbsp;fix: A bug fix</div>
+                <div>&nbsp;&nbsp;docs: Documentation only changes</div>
+                <div>
+                  &nbsp;&nbsp;style: Changes that do not affect the meaning of the code (white-space, formatting,
+                  missing semi-colons, etc)
+                </div>
+                <div>&nbsp;&nbsp;refactor: A code change that neither fixes a bug nor adds a feature</div>
+                <div>&nbsp;&nbsp;perf: A code change that improves performance</div>
+                <div>&nbsp;&nbsp;test: Adding missing tests or correcting existing tests</div>
+                <div>(Move up and down to reveal more choices)</div>
+              </div>,
+              <div key="second cz step">
+                <div>cz-cli@2.9.5, cz-conventional-changelog@2.0.0</div>
+
+                <div style={{padding: '40px 0 20px 0'}}>
+                  Line 1 will be cropped at 100 characters. All other lines will be wrapped after 100 characters.
+                </div>
+                <div>
+                  <span style={{color: '#00ff00'}}>&#63;</span> Select the type of change that you&apos;re committing:
+                  <span style={{color: '#00afff'}}>&nbsp;feat:&nbsp;&nbsp;&nbsp;&nbsp;A new feature</span>
+                </div>
+                <div>
+                  <span style={{color: '#00ff00'}}>&#63;</span> Denote the scope of this change ($location, $browser,
+                  $compile, etc.):
+                </div>
+                <div><Typist cursor={cursor}>&nbsp;table-component</Typist></div>
+              </div>,
+              <div key="third cz step">
+                <div>cz-cli@2.9.5, cz-conventional-changelog@2.0.0</div>
+
+                <div style={{padding: '40px 0 20px 0'}}>
+                  Line 1 will be cropped at 100 characters. All other lines will be wrapped after 100 characters.
+                </div>
+                <div>
+                  <span style={{color: '#00ff00'}}>&#63;</span> Select the type of change that you&apos;re committing:
+                  <span style={{color: '#00afff'}}>&nbsp;feat:&nbsp;&nbsp;&nbsp;&nbsp;A new feature</span>
+                </div>
+                <div>
+                  <span style={{color: '#00ff00'}}>&#63;</span> Denote the scope of this change ($location, $browser,
+                  $compile, etc.):
+                </div>
+                <div style={{color: '#00afff'}}>&nbsp;table-component</div>
+                <div>
+                  <span style={{color: '#00ff00'}}>&#63;</span> Write a short, imperative tense description of the
+                  change:
+                </div>
+                <div><Typist cursor={cursor}>&nbsp;Add column sort</Typist></div>
+              </div>,
+              <div key="forth cz step">
+                <div>cz-cli@2.9.5, cz-conventional-changelog@2.0.0</div>
+
+                <div style={{padding: '40px 0 20px 0'}}>
+                  Line 1 will be cropped at 100 characters. All other lines will be wrapped after 100 characters.
+                </div>
+                <div>
+                  <span style={{color: '#00ff00'}}>&#63;</span> Select the type of change that you&apos;re committing:
+                  <span style={{color: '#00afff'}}>&nbsp;feat:&nbsp;&nbsp;&nbsp;&nbsp;A new feature</span>
+                </div>
+                <div>
+                  <span style={{color: '#00ff00'}}>&#63;</span> Denote the scope of this change ($location, $browser,
+                  $compile, etc.):
+                </div>
+                <div style={{color: '#00afff'}}>&nbsp;table-component</div>
+                <div>
+                  <span style={{color: '#00ff00'}}>&#63;</span> Write a short, imperative tense description of the
+                  change:
+                </div>
+                <div style={{color: '#00afff'}}>&nbsp;Add column sort</div>
+                <div><span style={{color: '#00ff00'}}>&#63;</span> Provide a longer description of the change:</div>
+                <div><Typist cursor={cursor}>&nbsp;Acending and decending sort orders were added</Typist></div>
+              </div>,
+              <div key="fifth cz step">
+                <div>cz-cli@2.9.5, cz-conventional-changelog@2.0.0</div>
+
+                <div style={{padding: '40px 0 20px 0'}}>
+                  Line 1 will be cropped at 100 characters. All other lines will be wrapped after 100 characters.
+                </div>
+                <div>
+                  <span style={{color: '#00ff00'}}>?</span> Select the type of change that you&apos;re committing:
+                  <span style={{color: '#00afff'}}>&nbsp;feat:&nbsp;&nbsp;&nbsp;&nbsp;A new feature</span>
+                </div>
+                <div>
+                  <span style={{color: '#00ff00'}}>?</span> Denote the scope of this change ($location, $browser,
+                  $compile, etc.):
+                </div>
+                <div style={{color: '#00afff'}}>&nbsp;table-component</div>
+                <div>
+                  <span style={{color: '#00ff00'}}>?</span> Write a short, imperative tense description of the change:
+                </div>
+                <div style={{color: '#00afff'}}>&nbsp;Add column sort</div>
+                <div><span style={{color: '#00ff00'}}>?</span> Provide a longer description of the change:</div>
+                <div><Typist cursor={cursor}>&nbsp;Acending and decending sort orders were added</Typist></div>
+                <div><span style={{color: '#00ff00'}}>?</span> List any breaking changes:</div>
+              </div>,
+              <div key="sixth cz step">
+                <div>cz-cli@2.9.5, cz-conventional-changelog@2.0.0</div>
+
+                <div style={{padding: '40px 0 20px 0'}}>
+                  Line 1 will be cropped at 100 characters. All other lines will be wrapped after 100 characters.
+                </div>
+                <div>
+                  <span style={{color: '#00ff00'}}>&#63;</span> Select the type of change that you&apos;re committing:
+                  <span style={{color: '#00afff'}}>&nbsp;feat:&nbsp;&nbsp;&nbsp;&nbsp;A new feature</span>
+                </div>
+                <div>
+                  <span style={{color: '#00ff00'}}>?</span> Denote the scope of this change ($location, $browser,
+                  $compile, etc.):
+                </div>
+                <div style={{color: '#00afff'}}>&nbsp;table-component</div>
+                <div>
+                  <span style={{color: '#00ff00'}}>?</span> Write a short, imperative tense description of the change:
+                </div>
+                <div style={{color: '#00afff'}}>&nbsp;Add column sort</div>
+                <div><span style={{color: '#00ff00'}}>?</span> Provide a longer description of the change:</div>
+                <div><Typist cursor={cursor}>&nbsp;Acending and decending sort orders were added</Typist></div>
+                <div><span style={{color: '#00ff00'}}>?</span> List any breaking changes:</div>
+                <div />
+                <div><span style={{color: '#00ff00'}}>?</span> List any issues closed by this change:</div>
+                <div><Typist cursor={cursor}>&nbsp;closes #123</Typist></div>
+              </div>,
+              <div key="hack to prevent showing the last item too early" />
+            ]
+          ]}
+        />
       </Slide>
       <CodeSlide
         lang="yaml"
