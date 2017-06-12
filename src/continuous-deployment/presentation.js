@@ -21,6 +21,8 @@ preloader(images);
 
 const notesForInternalPackagesSlide = "If managing thirdparty dependencies in your app isn't enough, lets take a look" +
   ' at how we can handle internal packages.';
+const notesForCommitizen = 'https://github.com/conventional-changelog-archived-repos/conventional-changelog-angular/' +
+  'blob/e32d954eac0766916b9b7408efed95d643a198a9/convention.md';
 
 const cursor = {show: false, blink: true, element: '|', hideWhenDone: false, hideWhenDoneDelay: 1000};
 
@@ -440,6 +442,33 @@ export default function Presentation() {
           ]}
         />
       </Slide>
+      <CodeSlide
+        lang="git"
+        code={require('../../assets/commit.example')}
+        notes={notesForCommitizen}
+        ranges={[
+          {
+            loc: [6, 7],
+            title: 'Header',
+            note: 'The commit type, scope, and short description (subject) are combined into the header'
+          },
+          {
+            loc: [8, 9],
+            title: 'Body',
+            note: 'The longer description is added as the commit body'
+          },
+          {
+            loc: [10, 11],
+            title: 'Breaking Changes',
+            note: 'The breaking changes are added as a footer line, prefixed with `BREAKING CHANGE: `'
+          },
+          {
+            loc: [12, 13],
+            title: 'Issue Reference',
+            note: 'The issue reference is added as another footer line'
+          }
+        ]}
+      />
       <CodeSlide
         lang="yaml"
         code={require('../../assets/travis.npm.example')}
