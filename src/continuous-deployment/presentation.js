@@ -19,6 +19,8 @@ const images = {
 
 preloader(images);
 
+const notesForFatigue = 'There has been a lot said about JS Fatigue lately... Node Community is known for lots of ' +
+  'small packages. This, plus the frequency of updates contributes to fatigue';
 const notesForInternalPackagesSlide = "If managing thirdparty dependencies in your app isn't enough, lets take a look" +
   ' at how we can handle internal packages.';
 const notesForCommitizen = 'https://github.com/conventional-changelog-archived-repos/conventional-changelog-angular/' +
@@ -30,27 +32,30 @@ export default function Presentation() {
   return (
     <Deck transition={['zoom', 'slide']} transitionDuration={500} theme={theme}>
       <Slide transition={['zoom']} bgColor="primary">
-        <Heading size={2} fit caps lineHeight={1} textColor="black">
+        <Heading size={1} fit caps lineHeight={1} textColor="black">
           Continuous Deployment
         </Heading>
         <Heading size={1} fit>
           of npm packages
         </Heading>
-        <Text textSize="1em" margin="20px 0px 0px" bold>Matt Travi</Text>
+        <Text textSize="1em" margin="40px 0px 0px" bold>Matt Travi</Text>
       </Slide>
-      <Slide bgColor="green" transition={['slide']}>
-        <Heading size={1} fit>
-          JS Fatigue
-        </Heading>
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={1} fit textColor="primary" caps>Payoff from Automated Testing Practices</Heading>
+        <List textColor="white">
+          <Appear><ListItem>Automate to give confidence</ListItem></Appear>
+          <Appear><ListItem>Easy to question ROI of automated testing practices</ListItem></Appear>
+          <Appear><ListItem>I hope to show a big potential payoff</ListItem></Appear>
+          <Appear><ListItem>Only do this with enough automated coverage for confidence</ListItem></Appear>
+          <Appear><ListItem>The payoff can be valuable to increase your coverage</ListItem></Appear>
+        </List>
+      </Slide>
+      <Slide bgColor="green" transition={['slide']} notes={notesForFatigue}>
+        <Heading size={1} fit>JS Fatigue</Heading>
       </Slide>
       <Slide bgColor="green" transition={['slide']}>
         <Heading size={1} fit>
           Positive side to the explosion of packages
-        </Heading>
-      </Slide>
-      <Slide bgColor="green" transition={['slide']}>
-        <Heading size={1} fit>
-          Payoff from automated test suite
         </Heading>
       </Slide>
       <Slide bgColor="green" transition={['slide']}>
