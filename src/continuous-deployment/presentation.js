@@ -57,13 +57,13 @@ export default function Presentation() {
           Positive side to the explosion of packages
         </Heading>
       </Slide>
-      <Slide bgColor="green" transition={['slide']}>
-        <Heading size={1} fit>
-          First, some terminology...
-        </Heading>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Continuous Integration vs. Continuous Delivery vs. Continuous Deployment
-        </Heading>
+      <Slide transition={['slide']}>
+        <Heading size={1} fit>First, some terminology...</Heading>
+        <List>
+          <Appear><ListItem>Continuous Integration</ListItem></Appear>
+          <Appear><ListItem>Continuous Delivery</ListItem></Appear>
+          <Appear><ListItem>Continuous Deployment</ListItem></Appear>
+        </List>
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">
@@ -97,6 +97,14 @@ export default function Presentation() {
           Trust your test suite
         </Heading>
         <Text textSize="1em" margin="20px 0px 0px" bold>Confidently deploy without human intervention</Text>
+      </Slide>
+      <Slide>
+        <Heading size={1} fit caps lineHeight={1} textColor="black">
+          Continuous Deployment
+        </Heading>
+        <Heading size={1} fit>
+          of applications
+        </Heading>
       </Slide>
       <CodeSlide
         textSize=".8em"
@@ -191,9 +199,12 @@ export default function Presentation() {
           <Appear><ListItem>Unit tests alone might not provide enough confidence</ListItem></Appear>
         </List>
       </Slide>
-      <Slide bgColor="green" transition={['slide']} notes={notesForInternalPackagesSlide}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Internal packages
+      <Slide>
+        <Heading size={1} fit caps lineHeight={1} textColor="black" notes={notesForInternalPackagesSlide}>
+          Continuous Deployment
+        </Heading>
+        <Heading size={1} fit>
+          of internal packages
         </Heading>
       </Slide>
       <Slide
