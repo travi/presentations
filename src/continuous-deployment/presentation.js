@@ -576,10 +576,12 @@ export default function Presentation() {
         </Heading>
         <List textColor="white">
           <Appear><ListItem>Continuously deploy packages, but not the application</ListItem></Appear>
-          <Appear><ListItem>Consider starting with semantic-release, but introduce greenkeeper later</ListItem></Appear>
+          <Appear><ListItem>Consider starting with semantic-release</ListItem></Appear>
+          <Appear><ListItem>Introduce greenkeeper later</ListItem></Appear>
+          <Appear><ListItem>Consider the debt of opening PRs, but accepting later</ListItem></Appear>
           <Appear>
             <ListItem>
-              Using Greenkeeper without greenkeeper-keeper could generate more debt than its worth
+              Consider waiting on Greenkeeper until you have a greenkeeper-keeper instance
             </ListItem>
           </Appear>
         </List>
