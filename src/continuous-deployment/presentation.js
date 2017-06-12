@@ -283,16 +283,6 @@ export default function Presentation() {
             loc: [27, 30],
             note: 'provides a wizard to simplify matching the expected commit pattern',
             title: 'commitizen'
-          },
-          {
-            loc: [8, 9],
-            note: 'Ensure the commit message is compatible with semantic-release',
-            title: 'Commit pattern verification'
-          },
-          {
-            loc: [9, 10],
-            note: 'Ensure the commit passes all tests before committing',
-            title: 'Verification'
           }
         ]}
       />
@@ -446,6 +436,7 @@ export default function Presentation() {
         lang="git"
         code={require('../../assets/commit.example')}
         notes={notesForCommitizen}
+        showLineNumbers={false}
         ranges={[
           {
             loc: [6, 7],
@@ -469,6 +460,53 @@ export default function Presentation() {
           }
         ]}
       />
+      <Slide bgColor="green" transition={['slide']}>
+        <Heading size={1} fit>It&apos;s Easy to Forget to Follow the Format</Heading>
+      </Slide>
+      <CodeSlide
+        lang="json"
+        code={require('../../assets/package.npm.example')}
+        ranges={[
+          {
+            loc: [17, 18],
+            note: 'husky can be used for more git hooks',
+            title: 'husky'
+          },
+          {
+            loc: [9, 10],
+            note: 'Ensure the commit passes all tests before committing',
+            title: 'Verification'
+          },
+          {
+            loc: [8, 9],
+            note: 'Ensure the commit message is compatible with semantic-release',
+            title: 'Commit pattern verification'
+          }
+        ]}
+      />
+      <Slide bgColor="green" transition={['slide']}>
+        <Heading size={1} caps fit>Commit Message Validation Failure</Heading>
+        <Terminal
+          title="~/development/gain/front-end/react-components @ Travi-MBP"
+          output={[
+            <Typist cursor={cursor} key="bad commit">git commit -m &apos;foo&apos;</Typist>,
+            <div key="invalid commit warning">
+              <div>Now using node v7.4.0 (npm v4.0.5)</div>
+              <div />
+              <div>&gt; husky - npm run -s commitmsg</div>
+              <div />
+              <div>INVALID COMMIT MSG: does not match &quot;&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;&quot; !</div>
+              <div>foo</div>
+              <div />
+              <div>&gt; husky - commit-msg hook failed (add --no-verify to bypass)</div>
+              <div>&gt; husky - to debug, use &apos;npm run commitmsg&apos;</div>
+            </div>
+          ]}
+        />
+      </Slide>
+      <Slide bgColor="green" transition={['slide']}>
+        <Heading size={1} fit>Start the commit message with <Code>WIP</Code> to skip validation</Heading>
+      </Slide>
       <CodeSlide
         lang="yaml"
         code={require('../../assets/travis.npm.example')}
