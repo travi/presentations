@@ -1,11 +1,10 @@
 import React from 'react';
 import createTheme from 'spectacle/lib/themes/default';
-import {Deck, Slide, Heading, Text, Image, Code, List, ListItem, Appear} from 'spectacle';
+import {Appear, Code, Deck, Heading, List, ListItem, Slide, Text} from 'spectacle';
 import Terminal from 'spectacle-terminal';
 import Typist from 'react-typist';
 import CodeSlide from 'spectacle-code-slide';
 import preloader from 'spectacle/lib/utils/preloader';
-import Emojify from 'react-emojione';
 import 'normalize.css';
 import 'spectacle/lib/themes/default/index.css';
 
@@ -147,44 +146,22 @@ export default function Presentation() {
           {loc: [6, 11], title: 'App Engine'}
         ]}
       />
+      <Slide transition={['slide']}>
+        <Heading size={1} caps fit textFont="primary">Keeping Application Dependencies</Heading>
+        <Heading size={2} caps fit textFont="primary">Up to Date</Heading>
+      </Slide>
       <Slide
-        bgColor="green"
+        bgColor="white"
+        bgDarken={0.75}
+        bgImage={images.greenkeeper.replace('/', '')}
+        textColor="white"
         transition={['slide']}
       >
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Dependencies
-        </Heading>
-      </Slide>
-      <Slide bgColor="white" transition={['slide']}>
-        <Image src={images.greenkeeper.replace('/', '')} margin="0px auto 40px" />
-      </Slide>
-      <Slide bgColor="white" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Greenkeeper <Emojify>:palm_tree:</Emojify>
-        </Heading>
         <List>
           <Appear><ListItem>React (for example) publishes a new version to npm</ListItem></Appear>
           <Appear><ListItem>Greenkeeper sends a PR to your application&apos;s repo</ListItem></Appear>
           <Appear><ListItem>If all goes well, you only have to click merge</ListItem></Appear>
         </List>
-      </Slide>
-      <Slide
-        bgColor="green"
-        transition={['slide']}
-      >
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Caveats
-        </Heading>
-        <List>
-          <Appear><ListItem>Is a GitHub (only) integration</ListItem></Appear>
-          <Appear><ListItem>No developer to look at the execution before pushing</ListItem></Appear>
-          <Appear><ListItem>Unit tests alone might not provide enough confidence</ListItem></Appear>
-        </List>
-      </Slide>
-      <Slide bgColor="white" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Is a GitHub (only) integration
-        </Heading>
       </Slide>
       <Slide bgColor="white" transition={['slide']}>
         <Heading size={2} fit textColor="primary" textFont="primary">
@@ -195,9 +172,7 @@ export default function Presentation() {
         </Heading>
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Greenkeeper-keeper
-        </Heading>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">Greenkeeper-keeper</Heading>
         <List textColor="white">
           <Appear><ListItem>PR verified to be from Greenkeeper</ListItem></Appear>
           <Appear><ListItem>Commit statuses all pass</ListItem></Appear>
@@ -206,6 +181,14 @@ export default function Presentation() {
           <Appear>
             <ListItem>Commit to <Code textColor="white">master</Code> triggers production deploy</ListItem>
           </Appear>
+        </List>
+      </Slide>
+      <Slide bgColor="green" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">Caveats</Heading>
+        <List>
+          <Appear><ListItem>Greenkeeper is a GitHub (only) integration</ListItem></Appear>
+          <Appear><ListItem>No developer to look at the execution before pushing</ListItem></Appear>
+          <Appear><ListItem>Unit tests alone might not provide enough confidence</ListItem></Appear>
         </List>
       </Slide>
       <Slide bgColor="green" transition={['slide']} notes={notesForInternalPackagesSlide}>
