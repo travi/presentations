@@ -208,29 +208,37 @@ export default function Presentation() {
         </Heading>
       </Slide>
       <Slide
-        bgColor="green"
+        bgColor="black"
         transition={['slide']}
+        notes="If a team isn't practicing CD, this is a complicated question"
       >
         <Heading size={2} caps fit textColor="primary" textFont="primary">
           What does &quot;done&quot; mean&#63;
         </Heading>
         <List textColor="white">
-          <Appear><ListItem>Change is in <Code>master</Code> of the package repo&#63;</ListItem></Appear>
-          <Appear><ListItem>New version of package published, updated in consuming apps&#63;</ListItem></Appear>
           <Appear>
             <ListItem>
-              What if we could apply the idea of &quot;<Code>master</Code> means production&quot; to packages&#63;
+              Change is in <Code textColor="white">master</Code> of the package repo&#63;
+            </ListItem>
+          </Appear>
+          <Appear><ListItem>New version of package published&#63;</ListItem></Appear>
+          <Appear><ListItem>Updated in consuming apps&#63;</ListItem></Appear>
+          <Appear><ListItem>Consuming apps deployed&#63;</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              How could we apply &quot;<Code textColor="white">master</Code> means production&quot;&#63;
             </ListItem>
           </Appear>
         </List>
       </Slide>
-      <Slide bgColor="green" transition={['slide']}>
+      <Slide bgColor="black" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">
-          What are the road blocks for getting a change deployed to a user&#63;
+          Traditional Road Blocks
         </Heading>
         <List textColor="white">
           <Appear><ListItem>Bundling changes into a release</ListItem></Appear>
           <Appear><ListItem>Limiting major/breaking releases</ListItem></Appear>
+          <Appear><ListItem>Updating and deploying the consuming application</ListItem></Appear>
         </List>
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
@@ -239,7 +247,7 @@ export default function Presentation() {
         </Heading>
         <List textColor="white">
           <Appear><ListItem>Determines the previously released version from the registry</ListItem></Appear>
-          <Appear><ListItem>Bumps the version (semver compatible) based on commit messages</ListItem></Appear>
+          <Appear><ListItem>Bumps the version based on commit messages</ListItem></Appear>
           <Appear><ListItem>Publishes to the registry</ListItem></Appear>
           <Appear><ListItem>Pushes the tag and release notes to GitHub</ListItem></Appear>
         </List>
@@ -254,25 +262,8 @@ export default function Presentation() {
           <Appear><ListItem><Code>BREAKING CHANGE: </Code></ListItem></Appear>
         </List>
       </Slide>
-      <Slide bgColor="black" transition={['slide']}>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Dependencies of Dependencies
-        </Heading>
-        <Heading size={1} caps fit>
-          Greenkeeper uses semantic-release compatible commit messages
-        </Heading>
-        <List textColor="white">
-          <Appear>
-            <ListItem>
-              <Code textColor="white">devDependencies</Code> are committed as <Code textColor="white">chore</Code>
-            </ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>
-              <Code textColor="white">dependencies</Code> are committed as <Code textColor="white">fix</Code>
-            </ListItem>
-          </Appear>
-        </List>
+      <Slide bgColor="green" transition={['slide']}>
+        <Heading size={1} fit>Formatting the Commit for Semantic-Release Can Be Complex</Heading>
       </Slide>
       <CodeSlide
         lang="json"
@@ -551,11 +542,36 @@ export default function Presentation() {
           {loc: [12, 13], title: 'Post', note: 'The post task pushes the tag and release notes to GitHub'}
         ]}
       />
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">
+          Dependencies of Dependencies
+        </Heading>
+        <Heading size={1} caps fit>
+          Greenkeeper uses semantic-release compatible commit messages
+        </Heading>
+        <List textColor="white">
+          <Appear>
+            <ListItem>
+              <Code textColor="white">devDependencies</Code> are committed as <Code textColor="white">chore</Code>
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              <Code textColor="white">dependencies</Code> are committed as <Code textColor="white">fix</Code>
+            </ListItem>
+          </Appear>
+        </List>
+      </Slide>
       <Slide bgColor="green" transition={['slide']}>
+        <Heading size={1} fit>
+          Cascading Dependency Updates
+        </Heading>
+      </Slide>
+      <Slide transition={['slide']}>
         <Heading size={1} fit>
           Continuous Deployment isn&apos;t an option on my team
         </Heading>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
+        <Heading size={2} caps fit textFont="primary">
           How can I dial this back&#63;
         </Heading>
         <List textColor="white">
