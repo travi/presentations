@@ -93,6 +93,14 @@ export default function Presentation() {
           <Code textColor="white">master</Code> means production
         </Heading>
       </Slide>
+      <Slide transition={['zoom']}>
+        <Heading size={1} fit caps lineHeight={1} textColor="black">
+          Continuous Deployment
+        </Heading>
+        <Heading size={1} fit>
+          of applications
+        </Heading>
+      </Slide>
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={1} fit>
           Enough confidence to deploy without human intervention
@@ -101,14 +109,6 @@ export default function Presentation() {
           Trust your test suite
         </Heading>
         <Text textSize="1em" margin="20px 0px 0px" bold>Confidently deploy without human intervention</Text>
-      </Slide>
-      <Slide>
-        <Heading size={1} fit caps lineHeight={1} textColor="black">
-          Continuous Deployment
-        </Heading>
-        <Heading size={1} fit>
-          of applications
-        </Heading>
       </Slide>
       <CodeSlide
         textSize=".8em"
@@ -158,7 +158,7 @@ export default function Presentation() {
           {loc: [6, 11], title: 'App Engine'}
         ]}
       />
-      <Slide transition={['slide']}>
+      <Slide transition={['zoom']}>
         <Heading size={1} caps fit textFont="primary">Keeping Application Dependencies</Heading>
         <Heading size={2} caps fit textFont="primary">Up to Date</Heading>
       </Slide>
@@ -209,13 +209,13 @@ export default function Presentation() {
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">Caveats</Heading>
-        <List>
+        <List textColor="white">
           <Appear><ListItem>Greenkeeper is a GitHub (only) integration</ListItem></Appear>
           <Appear><ListItem>No developer to look at the execution before pushing</ListItem></Appear>
           <Appear><ListItem>Unit tests alone might not provide enough confidence</ListItem></Appear>
         </List>
       </Slide>
-      <Slide>
+      <Slide transition={['zoom']}>
         <Heading size={1} fit caps lineHeight={1} textColor="black" notes={notesForInternalPackagesSlide}>
           Continuous Deployment
         </Heading>
@@ -602,11 +602,11 @@ export default function Presentation() {
           </Appear>
         </List>
       </Slide>
-      <Slide bgColor="green" transition={['slide']}>
+      <Slide transition={['slide']}>
         <Heading size={1} fit>
           Services
         </Heading>
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
+        <Heading size={2} caps fit textFont="primary">
           Value has made investment in specific services worthwhile
         </Heading>
         <List textColor="white">
