@@ -286,6 +286,10 @@ export default function Presentation() {
         code={require('../../assets/package.npm.example')}
         ranges={[
           {
+            loc: [16, 17],
+            title: 'commitizen'
+          },
+          {
             loc: [27, 30],
             note: 'provides a wizard to simplify matching the expected commit pattern',
             title: 'commitizen'
