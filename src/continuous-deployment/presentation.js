@@ -606,11 +606,7 @@ export default function Presentation() {
           <Appear><ListItem>Consider starting with semantic-release</ListItem></Appear>
           <Appear><ListItem>Introduce greenkeeper later</ListItem></Appear>
           <Appear><ListItem>Consider the debt of opening PRs, but accepting later</ListItem></Appear>
-          <Appear>
-            <ListItem>
-              Consider waiting on Greenkeeper until you have a greenkeeper-keeper instance
-            </ListItem>
-          </Appear>
+          <Appear><ListItem>greenkeeper-keeper instance before Greenkeeper</ListItem></Appear>
         </List>
       </Slide>
       <Slide transition={['slide']}>
