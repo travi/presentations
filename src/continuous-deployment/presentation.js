@@ -55,10 +55,10 @@ export default function Presentation() {
           <Appear><ListItem>The payoff can be valuable to increase your coverage</ListItem></Appear>
         </List>
       </Slide>
-      <Slide bgColor="green" transition={['slide']} notes={notesForFatigue}>
+      <Slide bgColor="black" transition={['slide']} notes={notesForFatigue}>
         <Heading size={1} fit>JS Fatigue</Heading>
       </Slide>
-      <Slide bgColor="green" transition={['slide']}>
+      <Slide bgColor="black" transition={['slide']}>
         <Heading size={1} fit>
           Positive side to the explosion of packages
         </Heading>
@@ -273,18 +273,19 @@ export default function Presentation() {
           <Appear><ListItem>Pushes the tag and release notes to GitHub</ListItem></Appear>
         </List>
       </Slide>
-      <Slide bgColor="green" transition={['slide']}>
+      <Slide bgColor="black" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">
           Patch, feature, breakage
         </Heading>
         <List textColor="white">
-          <Appear><ListItem><Code>fix</Code></ListItem></Appear>
-          <Appear><ListItem><Code>feat</Code></ListItem></Appear>
-          <Appear><ListItem><Code>BREAKING CHANGE: </Code></ListItem></Appear>
+          <Appear><ListItem><Code textColor="white">fix</Code></ListItem></Appear>
+          <Appear><ListItem><Code textColor="white">feat</Code></ListItem></Appear>
+          <Appear><ListItem><Code textColor="white">BREAKING CHANGE: </Code></ListItem></Appear>
         </List>
       </Slide>
-      <Slide bgColor="green" transition={['slide']}>
-        <Heading size={1} fit>Formatting the Commit for Semantic-Release Can Be Complex</Heading>
+      <Slide transition={['slide']}>
+        <Heading size={1} fit>Formatting the Commit for Semantic-Release</Heading>
+        <Heading size={2} fit>Can Be Complex</Heading>
       </Slide>
       <CodeSlide
         lang="json"
@@ -301,7 +302,7 @@ export default function Presentation() {
           }
         ]}
       />
-      <Slide bgColor="green" transition={['slide']}>
+      <Slide transition={['slide']}>
         <Heading size={1} caps fit>
           Commitizen Example
         </Heading>
@@ -475,8 +476,9 @@ export default function Presentation() {
           }
         ]}
       />
-      <Slide bgColor="green" transition={['slide']}>
-        <Heading size={1} fit>It&apos;s Easy to Forget to Follow the Format</Heading>
+      <Slide transition={['slide']}>
+        <Heading size={1} fit>It&apos;s Easy to Forget to</Heading>
+        <Heading size={2} fit>Follow the Format</Heading>
       </Slide>
       <CodeSlide
         lang="json"
@@ -499,7 +501,7 @@ export default function Presentation() {
           }
         ]}
       />
-      <Slide bgColor="green" transition={['slide']}>
+      <Slide transition={['slide']}>
         <Heading size={1} caps fit>Commit Message Validation Failure</Heading>
         <Terminal
           title="~/development/gain/front-end/react-components @ Travi-MBP"
@@ -519,7 +521,7 @@ export default function Presentation() {
           ]}
         />
       </Slide>
-      <Slide bgColor="green" transition={['slide']}>
+      <Slide transition={['slide']}>
         <Heading size={1} fit>Start the commit message with <Code>WIP</Code> to skip validation</Heading>
       </Slide>
       <CodeSlide
