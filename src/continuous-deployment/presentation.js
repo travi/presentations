@@ -17,7 +17,9 @@ const images = {
   greenkeeper: require('../../assets/greenkeeper.png'),
   checksPassed: require('../../assets/checks-passed.png'),
   checksFailed: require('../../assets/checks-failed.png'),
-  pr: require('../../assets/pr.png')
+  pr: require('../../assets/pr.png'),
+  lotsOfPrs: require('../../assets/lots-of-prs.png'),
+  cascade: require('../../assets/cascade.png')
 };
 
 preloader(images);
@@ -188,6 +190,9 @@ export default function Presentation() {
         <Heading size={1} textColor="black" fit>
           Isn&apos;t this worse than before&#63;
         </Heading>
+      </Slide>
+      <Slide bgColor="white">
+        <ImageSlide title="A common day of PRs" image={images.lotsOfPrs.replace('/', '')} />
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">Greenkeeper-keeper</Heading>
@@ -586,6 +591,9 @@ export default function Presentation() {
         <Heading size={1} fit>
           Cascading Dependency Updates
         </Heading>
+      </Slide>
+      <Slide bgColor="white">
+        <ImageSlide title="Cascade" image={images.cascade.replace('/', '')} />
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">Caveats</Heading>
