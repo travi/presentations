@@ -16,7 +16,8 @@ const theme = createTheme({
 const images = {
   greenkeeper: require('../../assets/greenkeeper.png'),
   checksPassed: require('../../assets/checks-passed.png'),
-  checksFailed: require('../../assets/checks-failed.png')
+  checksFailed: require('../../assets/checks-failed.png'),
+  pr: require('../../assets/pr.png')
 };
 
 preloader(images);
@@ -173,6 +174,9 @@ export default function Presentation() {
           <Appear><ListItem>Greenkeeper sends a PR to your application&apos;s repo</ListItem></Appear>
           <Appear><ListItem>If all goes well, you only have to click merge</ListItem></Appear>
         </List>
+      </Slide>
+      <Slide bgColor="white">
+        <ImageSlide title="Greenkeeper sends a PR" image={images.pr.replace('/', '')} />
       </Slide>
       <Slide bgColor="white">
         <ImageSlide title="All Commit Checks Passed" image={images.checksPassed.replace('/', '')} />
