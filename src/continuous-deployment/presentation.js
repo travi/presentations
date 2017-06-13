@@ -4,6 +4,7 @@ import {Appear, Code, Deck, Heading, List, ListItem, Slide, Text} from 'spectacl
 import Terminal from 'spectacle-terminal';
 import Typist from 'react-typist';
 import CodeSlide from 'spectacle-code-slide';
+import ImageSlide from 'spectacle-image-slide';
 import preloader from 'spectacle/lib/utils/preloader';
 import 'normalize.css';
 import 'spectacle/lib/themes/default/index.css';
@@ -13,7 +14,9 @@ const theme = createTheme({
 });
 
 const images = {
-  greenkeeper: require('../../assets/greenkeeper.png')
+  greenkeeper: require('../../assets/greenkeeper.png'),
+  checksPassed: require('../../assets/checks-passed.png'),
+  checksFailed: require('../../assets/checks-failed.png')
 };
 
 preloader(images);
@@ -171,6 +174,9 @@ export default function Presentation() {
           <Appear><ListItem>If all goes well, you only have to click merge</ListItem></Appear>
         </List>
       </Slide>
+      <Slide bgColor="white">
+        <ImageSlide title="All Commit Checks Passed" image={images.checksPassed.replace('/', '')} />
+      </Slide>
       <Slide bgColor="white" transition={['slide']}>
         <Heading size={2} fit textColor="primary" textFont="primary">
           So many PRs!!!
@@ -191,7 +197,13 @@ export default function Presentation() {
           </Appear>
         </List>
       </Slide>
-      <Slide bgColor="green" transition={['slide']}>
+      <Slide bgColor="white">
+        <ImageSlide
+          title="greenkeeper-keeper will only merge if all checks pass"
+          image={images.checksFailed.replace('/', '')}
+        />
+      </Slide>
+      <Slide bgColor="black" transition={['slide']}>
         <Heading size={2} caps fit textColor="primary" textFont="primary">Caveats</Heading>
         <List>
           <Appear><ListItem>Greenkeeper is a GitHub (only) integration</ListItem></Appear>
