@@ -582,10 +582,17 @@ export default function Presentation() {
           </Appear>
         </List>
       </Slide>
-      <Slide bgColor="green" transition={['slide']}>
+      <Slide transition={['zoom']}>
         <Heading size={1} fit>
           Cascading Dependency Updates
         </Heading>
+      </Slide>
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={2} caps fit textColor="primary" textFont="primary">Caveats</Heading>
+        <List textColor="white">
+          <Appear><ListItem>PRs for private packages only triggered by private npm</ListItem></Appear>
+          <Appear><ListItem>Other registries like Nexus or Artifactory are not supported</ListItem></Appear>
+        </List>
       </Slide>
       <Slide transition={['slide']}>
         <Heading size={1} fit>
