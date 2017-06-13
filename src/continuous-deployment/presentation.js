@@ -1,6 +1,6 @@
 import React from 'react';
 import createTheme from 'spectacle/lib/themes/default';
-import {Appear, Code, Deck, Heading, List, ListItem, Slide, Text} from 'spectacle';
+import {Appear, Code, Deck, Heading, Image, Link, List, ListItem, Slide, Text} from 'spectacle';
 import Terminal from 'spectacle-terminal';
 import Typist from 'react-typist';
 import CodeSlide from 'spectacle-code-slide';
@@ -12,6 +12,7 @@ import 'spectacle/lib/themes/default/index.css';
 const theme = createTheme({
   primary: '#C12127'
 });
+const logoSize = 400;
 
 const images = {
   greenkeeper: require('../../assets/greenkeeper.png'),
@@ -632,7 +633,30 @@ export default function Presentation() {
           <Appear><ListItem>Private npm</ListItem></Appear>
         </List>
       </Slide>
-
+      <Slide bgColor="white">
+        <Heading size={1} fit textColor="rgb(13,114,185)" textFont="Impact" style={{fontVariant: 'small-caps'}}>
+          Matt Travi
+        </Heading>
+        <Image
+          src="https://storage.googleapis.com/static.gaincompliance.com/logo-square.svg"
+          height={logoSize}
+          width={logoSize}
+          style={{float: 'right'}}
+        />
+        <List textColor="rgb(0,165,225)">
+          <ListItem>
+            <Link textColor="rgb(0,165,225)" href="https://matt.travi.org">https://matt.travi.org</Link>
+          </ListItem>
+          <ListItem>
+            <Link textColor="rgb(0,165,225)" href="https://presentations.travi.org">
+              https://presentations.travi.org
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link textColor="rgb(0,165,225)" href="https://gaincompliance.com">https://gaincompliance.com</Link>
+          </ListItem>
+        </List>
+      </Slide>
     </Deck>
   );
 }
