@@ -17,6 +17,7 @@ export default function (env) {
     entry: {
       'example/index': './src/example',
       'continuous-deployment/index': './src/continuous-deployment',
+      'continuous-deployment-dsmjs-june-2017/index': './src/continuous-deployment-dsmjs-june-2017',
       vendor: removeEmpty([
         // ifDevelopment('webpack-hot-middleware/client'),
         'react',
@@ -116,6 +117,11 @@ export default function (env) {
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'continuous-deployment/index'],
         filename: 'continuous-deployment/index.html',
+        template: 'src/index.mustache'
+      }),
+      new HtmlWebpackPlugin({
+        chunks: [...defaultChunks, 'continuous-deployment-dsmjs-june-2017/index'],
+        filename: 'continuous-deployment-dsmjs-june-2017/index.html',
         template: 'src/index.mustache'
       })
     ])
