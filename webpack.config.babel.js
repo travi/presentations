@@ -16,11 +16,18 @@ export default function (env) {
     devtool: ifDevelopment('eval-source-map', 'source-map'),
     entry: {
       'example/index': './src/example',
-      vendor: ['react', 'react-dom', 'spectacle']
+      'continuous-deployment/index': './src/continuous-deployment',
+      vendor: removeEmpty([
+        // ifDevelopment('webpack-hot-middleware/client'),
+        'react',
+        'react-dom',
+        'spectacle'
+      ])
     },
     output: {
       path: assetsPath,
-      filename: '[name]-[chunkhash].js'
+      filename: ifProduction('[name]-[chunkhash].js', '[name].js'),
+      publicPath: '/'
     },
     module: {
       rules: [
@@ -38,7 +45,12 @@ export default function (env) {
             comments: false,
             cacheDirectory: true
           }
-        }, {
+        },
+        {
+          test: /\.example$/,
+          use: 'raw-loader'
+        },
+        {
           test: /\.css$/,
           loader: 'style-loader!css-loader'
         },
@@ -72,13 +84,15 @@ export default function (env) {
     },
     plugins: removeEmpty([
       ifProduction(new CleanPlugin([assetsPath], {root: __dirname})),
+      // ifDevelopment(new webpack.HotModuleReplacementPlugin()),
+      ifDevelopment(new webpack.NamedModulesPlugin()),
+      ifDevelopment(new webpack.NoEmitOnErrorsPlugin()),
       new AssetsPlugin(),
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify(env)
         }
       }),
-      ifDevelopment(new webpack.NamedModulesPlugin()),
       new webpack.optimize.CommonsChunkPlugin({
         names: defaultChunks
       }),
@@ -97,6 +111,11 @@ export default function (env) {
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'example/index'],
         filename: 'example/index.html',
+        template: 'src/index.mustache'
+      }),
+      new HtmlWebpackPlugin({
+        chunks: [...defaultChunks, 'continuous-deployment/index'],
+        filename: 'continuous-deployment/index.html',
         template: 'src/index.mustache'
       })
     ])

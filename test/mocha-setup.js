@@ -1,4 +1,8 @@
 import {JSDOM} from 'jsdom';
+import quibble from 'quibble';
+import emmitter from 'component-emitter';
+import ease from 'ease-component';
+import type from 'component-type';
 
 const importAsString = module => {
   module.exports = '';    // eslint-disable-line no-param-reassign
@@ -7,11 +11,18 @@ const importAsString = module => {
 };
 
 require.extensions['.css'] = () => undefined;
+require.extensions['.example'] = () => undefined;
 require.extensions['.jpg'] = importAsString;
 require.extensions['.png'] = importAsString;
 require.extensions['.svg'] = importAsString;
 
-console.error = message => { throw new Error(message); };   // eslint-disable-line no-console
+quibble('emitter', emmitter);
+quibble('type', type);
+quibble('ease', ease);
+
+console.error = message => {   // eslint-disable-line no-console
+  if (!message.includes('CodeSlide')) throw new Error(message);
+};
 
 const dom = new JSDOM('<!doctype html><html><body></body></html>', {url: 'http://localhost'});
 global.document = dom.window.document;

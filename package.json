@@ -6,12 +6,13 @@
   "bugs": "https://github.com/travi/presentations/issues",
   "homepage": "htpps://presentations.travi.org",
   "scripts": {
-    "lint:js": "eslint .",
+    "lint:js": "eslint . --cache",
     "lint:md": "globstar --node -- markdownlint **/*.md",
     "test:smoke": "mocha --timeout 5000 --recursive test",
     "test": "run-s lint:* test:* build",
     "build": "webpack --env production",
     "build:dev": "webpack --env development",
+    "start": "babel-node webpack-dev-server.js",
     "deploy": "gh-pages --silent -r \"https://$GH_TOKEN@github.com/travi/presentations.git\" -d lib/",
     "commitmsg": "validate-commit-msg",
     "precommit": "npm test"
@@ -36,8 +37,11 @@
     "babel-register": "6.24.1",
     "chai": "4.0.2",
     "clean-webpack-plugin": "0.1.16",
+    "component-emitter": "1.2.1",
+    "component-type": "1.2.1",
     "css-loader": "0.28.4",
     "cz-conventional-changelog": "2.0.0",
+    "ease-component": "1.0.0",
     "enzyme": "2.8.2",
     "eslint": "3.19.0",
     "file-loader": "0.11.2",
@@ -53,6 +57,7 @@
     "mq-polyfill": "1.1.8",
     "mustache-loader": "0.4.1",
     "npm-run-all": "4.0.2",
+    "quibble": "0.5.1",
     "raw-loader": "0.5.1",
     "react-addons-test-utils": "15.4.2",
     "style-loader": "0.18.2",
@@ -60,12 +65,19 @@
     "validate-commit-msg": "2.12.2",
     "webpack": "2.6.1",
     "webpack-config-utils": "2.3.0",
+    "webpack-dev-server": "2.4.5",
+    "webpack-hot-middleware": "2.18.0",
     "webpack-visualizer-plugin": "0.1.11"
   },
   "dependencies": {
     "normalize.css": "7.0.0",
     "react": "15.4.2",
     "react-dom": "15.4.2",
-    "spectacle": "2.0.0"
+    "react-emojione": "3.1.10",
+    "react-typist": "1.1.1",
+    "spectacle": "2.0.0",
+    "spectacle-code-slide": "0.4.0",
+    "spectacle-image-slide": "1.0.1",
+    "spectacle-terminal": "0.3.0"
   }
 }
