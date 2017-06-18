@@ -1,6 +1,21 @@
 import React from 'react';
 import createTheme from 'spectacle/lib/themes/default';
-import {Appear, BlockQuote, Cite, Code, Deck, Heading, Link, List, ListItem, Quote, S, Slide, Text} from 'spectacle';
+import {
+  Appear,
+  BlockQuote,
+  Cite,
+  Code,
+  CodePane,
+  Deck,
+  Heading,
+  Link,
+  List,
+  ListItem,
+  Quote,
+  S,
+  Slide,
+  Text
+} from 'spectacle';
 import ImageSlide from 'spectacle-image-slide';
 import preloader from 'spectacle/lib/utils/preloader';
 import 'normalize.css';
@@ -259,6 +274,17 @@ export default function Presentation() {
             </ListItem>
           </Appear>
         </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>CSS Modules</Heading>
+        <Heading size={3} fit textColor="#888" textFont="primary">Namespace CSS rules to a single component</Heading>
+
+        <CodePane lang="jsx" source={require('../../assets/css-module.example')} />
+
+        Results in:
+
+        <CodePane lang="javascript" source={require('../../assets/css-module-html.example')} />
       </Slide>
 
     </Deck>
