@@ -287,6 +287,90 @@ export default function Presentation() {
         <CodePane lang="javascript" source={require('../../assets/css-module-html.example')} />
       </Slide>
 
+      <Slide>
+        <Heading size={1} fit>Aligned, right?</Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Not Quite</Heading>
+        <Heading size={3} fit textColor="#888" textFont="primary">
+          Most teams start falling apart with this goal after aligning on dogma
+        </Heading>
+
+        <List>
+          <Appear><ListItem>Prototype and production app are separate implementations</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              Desire to share style sheets
+              <List style={{marginLeft: 50}}>
+                <Appear>
+                  <ListItem>Management was confident that this would significantly improve velocity</ListItem>
+                </Appear>
+                <Appear><ListItem>Hesitation to give up ownership of styles</ListItem></Appear>
+                <Appear><ListItem>Quickly became difficult because of diverging markup</ListItem></Appear>
+              </List>
+            </ListItem>
+          </Appear>
+          <Appear><ListItem>Team was learning and updating previous decisions</ListItem></Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Misaligned Priorities</Heading>
+
+        <List>
+          <Appear><ListItem>Design team far ahead</ListItem></Appear>
+          <Appear><ListItem>Once an engineering priority, many decisions already made without input</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              Design team had moved on to new priorities, making changes to the styles that they owned difficult
+            </ListItem>
+          </Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Shared Codebase</Heading>
+        <Heading size={3} fit textColor="#888" textFont="primary">A chance of success</Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Realignment on Componentization</Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Working Software Over</Heading>
+        <Heading size={1} fit>Comprehensive Documentation</Heading>
+
+        <List>
+          <Appear>
+            <ListItem>Details that aren’t in the production implementation are a form of documentation</ListItem>
+          </Appear>
+          <Appear><ListItem>Whether a design spec, style guide, component library, or prototype</ListItem></Appear>
+          <Appear>
+            <ListItem>If it needs to be translated to production code, details can and will be lost</ListItem>
+          </Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Get Over the Traditional</Heading>
+        <Heading size={1} fit>Separation-of-Concerns Mentality</Heading>
+
+        <List>
+          <Appear><ListItem>stop separating by technology</ListItem></Appear>
+          <Appear><ListItem>instead, group by responsibility</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              bundle markup generation, style, and behavior together
+              <List style={{marginLeft: 50}}>
+                <Appear><ListItem>Code that changes together should be packaged together</ListItem></Appear>
+                <Appear><ListItem>Improve chances of dead code removal</ListItem></Appear>
+              </List>
+            </ListItem>
+          </Appear>
+        </List>
+      </Slide>
     </Deck>
   );
 }
