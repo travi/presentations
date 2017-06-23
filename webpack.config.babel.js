@@ -131,7 +131,8 @@ export default function (env) {
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'component-library/index'],
         filename: 'component-library/index.html',
-        template: 'src/index.mustache'
+        template: 'src/index.mustache',
+        title: 'Component Library'
       })
     ])
   };
