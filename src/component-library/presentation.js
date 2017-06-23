@@ -31,6 +31,11 @@ const images = {
   atomicDesign: require('../../assets/atomic-design.png')
 };
 
+const storybookExampleLink = 'https://travi.github.io/admin.travi.org-components/?selectedKind=Resource%20List' +
+  '&selectedStory=rides%20list&full=0&down=1&left=1';
+const infoAddonExampleLink = 'https://travi.github.io/admin.travi.org-components/?selectedKind=Resource%20List' +
+  '&selectedStory=rides%20list&full=0&down=1&left=1';
+
 preloader(images);
 
 export default function Presentation() {
@@ -367,6 +372,89 @@ export default function Presentation() {
                 <Appear><ListItem>Code that changes together should be packaged together</ListItem></Appear>
                 <Appear><ListItem>Improve chances of dead code removal</ListItem></Appear>
               </List>
+            </ListItem>
+          </Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Things that change together</Heading>
+        <Heading size={1} fit>should be packaged together</Heading>
+
+        <Appear><CodePane lang="bash" source={require('../../assets/component-tree.example')} /></Appear>
+
+        <List>
+          <Appear><ListItem>far simpler to coordinate changes than when packaged separately</ListItem></Appear>
+          <Appear>
+            <ListItem>Also simplifies removal of dead code (styles) when sunsetting a component</ListItem>
+          </Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit style={{padding: 10}}>Isolate the Components</Heading>
+
+        <Link textColor="#888" target="_blank" href="http://react-components.dwolla.net">
+          http://react-components.dwolla.net
+        </Link>
+
+        <Text textColor="secondary" style={{margin: 50}}>(internal only for now)</Text>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>React Storybook</Heading>
+        <Heading size={3} fit textColor="#888" textFont="primary">
+          Better fit for React components than current state of Pattern Lab
+        </Heading>
+
+        <CodePane lang="jsx" source={require('../../assets/storybook.example')} />
+
+        <Link
+          textColor="#888"
+          target="_blank"
+          href={storybookExampleLink}
+        >
+          Example
+        </Link>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Storybook Addons</Heading>
+        <Heading size={3} textColor="#888" textFont="primary">Info Addon</Heading>
+
+        <CodePane lang="jsx" source={require('../../assets/storybook-info-addon.example')} />
+
+        <Link
+          textColor="#888"
+          target="_blank"
+          href={infoAddonExampleLink}
+        >
+          Example
+        </Link>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Storybook Fit</Heading>
+
+        <List>
+          <Appear><ListItem>Great job demoing components in isolation</ListItem></Appear>
+          <Appear><ListItem>Encourages pure components</ListItem></Appear>
+          <Appear>
+            <ListItem>Provides <Code textColor="#888">linkTo</Code> function for transitioning between states</ListItem>
+          </Appear>
+          <Appear><ListItem>Provides <Code textColor="#888">action</Code> function to log events</ListItem></Appear>
+          <Appear><ListItem>Supports hot-reload for quick development iteration</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              Supports building a&nbsp;
+              <Link textColor="#888" target="_blank" href="https://travi.github.io/admin.travi.org-components/">
+                static site
+              </Link>
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              <S type="bold">GAP</S>: Does not yet support hierarchy, so unable to structure like Atomic Design
             </ListItem>
           </Appear>
         </List>
