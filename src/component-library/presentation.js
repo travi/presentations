@@ -459,6 +459,63 @@ export default function Presentation() {
           </Appear>
         </List>
       </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Contributions</Heading>
+        <Heading size={3} fit textColor="#888" textFont="primary">Promote collective ownership</Heading>
+
+        <List>
+          <Appear>
+            <ListItem>
+              Anyone on the team can open a PR
+              <List style={{marginLeft: 50}}>
+                <Appear>
+                  <ListItem>
+                    Even our lead designer, who had never used git before, is making direct contributions
+                  </ListItem>
+                </Appear>
+              </List>
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              Anyone can provide feedback on a PR
+              <List style={{marginLeft: 50}}>
+                <Appear><ListItem>Engineering practices, code structure, refactoring</ListItem></Appear>
+                <Appear><ListItem>Alignment to design goals</ListItem></Appear>
+              </List>
+            </ListItem>
+          </Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Reviews</Heading>
+
+        <List>
+          <Appear><ListItem>Reviewing code often simple enough through the web interface</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              Design review slightly more involved
+              <List style={{marginLeft: 50}}>
+                <Appear><ListItem><Code textColor="#888">git co (branch) && npm start</Code></ListItem></Appear>
+                <Appear>
+                  <ListItem>
+                    Isolation of components enables viewing and interacting w/o launching the whole system
+                  </ListItem>
+                </Appear>
+              </List>
+            </ListItem>
+          </Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Review Goal</Heading>
+        <Heading size={3} fit textColor="#888" textFont="primary">
+          Everything merged to master should be ready for production
+        </Heading>
+      </Slide>
     </Deck>
   );
 }
