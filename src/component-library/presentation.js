@@ -35,6 +35,8 @@ const storybookExampleLink = 'https://travi.github.io/admin.travi.org-components
   '&selectedStory=rides%20list&full=0&down=1&left=1';
 const infoAddonExampleLink = 'https://travi.github.io/admin.travi.org-components/?selectedKind=Resource%20List' +
   '&selectedStory=rides%20list&full=0&down=1&left=1';
+const npmPublishExampleLink = 'https://github.com/travi/admin.travi.org-components/blob/' +
+  'a9721b06a333715e65d150ef01b273d4195aa6e6/.travis.yml#L11-L18';
 
 preloader(images);
 
@@ -515,6 +517,228 @@ export default function Presentation() {
         <Heading size={3} fit textColor="#888" textFont="primary">
           Everything merged to master should be ready for production
         </Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Publish</Heading>
+        <Heading size={3} fit textColor="#888" textFont="primary">Now we need to get the code into the apps</Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Multiple Consumers</Heading>
+
+        <List>
+          <Appear><ListItem>Prototype</ListItem></Appear>
+          <Appear><ListItem>Production app</ListItem></Appear>
+          <Appear><ListItem>Possible future apps</ListItem></Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Package Management Options</Heading>
+
+        <List>
+          <Appear>
+            <ListItem>
+              We wanted to use <Code textColor="#888">webpack</Code>,
+              so <Code textColor="#888">npm</Code> was the natural fit
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              <Code textColor="#888">bower</Code>, <Code textColor="#888">jspm</Code>,
+              and others could accomplish a similar outcome
+            </ListItem>
+          </Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>npm Registry Options</Heading>
+
+        <Appear style={{textAlign: 'left'}}>
+          <div>
+            <Heading size={3} textColor="#888" textFont="primary" style={{textAlign: 'left'}}>Public</Heading>
+            <List><Appear><ListItem>Main Registry</ListItem></Appear></List>
+          </div>
+        </Appear>
+
+        <Appear style={{textAlign: 'left'}}>
+          <div>
+            <Heading size={3} textColor="#888" textFont="primary" style={{textAlign: 'left'}}>Private</Heading>
+            <List>
+              <Appear><ListItem>Private <Code textColor="#888">npm</Code></ListItem></Appear>
+              <Appear><ListItem>Artifactory</ListItem></Appear>
+              <Appear><ListItem>Nexus</ListItem></Appear>
+              <Appear><ListItem>Git</ListItem></Appear>
+            </List>
+          </div>
+        </Appear>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Scoped Packages</Heading>
+
+        <List>
+          <Appear><ListItem>Don’t pollute the global namespace if you don’t expect broad package use</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              Each scope can be tied to a registry
+              <List style={{marginLeft: 50}}>
+                <Appear>
+                  <ListItem>
+                    specify in <Code textColor="#888">.npmrc</Code> in the project root
+                    <CodePane lang="ini" source={require('../../assets/npmrc.example')} />
+                  </ListItem>
+                </Appear>
+              </List>
+            </ListItem>
+          </Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Our Scopes</Heading>
+
+        <List>
+          <Appear>
+            <ListItem>
+              Current
+              <List style={{marginLeft: 50}}>
+                <Appear><ListItem><Code textColor="#888">@dwolla-internal</Code></ListItem></Appear>
+              </List>
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              Once we release publicly
+              <List style={{marginLeft: 50}}>
+                <Appear><ListItem><Code textColor="#888">@dwolla</Code></ListItem></Appear>
+              </List>
+            </ListItem>
+          </Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Version</Heading>
+
+        <Appear style={{textAlign: 'left'}}>
+          <div>
+            <Heading size={3} textColor="#888" textFont="primary" style={{textAlign: 'left'}}>
+              <Code textColor="#888">npm version</Code>
+            </Heading>
+            <List><Appear><ListItem>provides info about the current version</ListItem></Appear></List>
+          </div>
+        </Appear>
+
+        <Appear style={{textAlign: 'left'}}>
+          <div>
+            <Heading size={3} textColor="#888" textFont="primary" style={{textAlign: 'left'}}>
+              <Code textColor="#888">npm version (major|minor|patch)</Code>
+            </Heading>
+            <List>
+              <Appear><ListItem>Increments version based on semver</ListItem></Appear>
+              <Appear><ListItem>Commits the verion bump</ListItem></Appear>
+              <Appear><ListItem>Tags the commit</ListItem></Appear>
+            </List>
+          </div>
+        </Appear>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Publish</Heading>
+        <Heading size={3} textColor="#888" style={{textAlign: 'left'}}>
+          <Code textColor="#888">npm publish</Code>
+        </Heading>
+
+        <List>
+          <Appear><ListItem>Publishes current version to the registry</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              <S type="bold">Recommendation</S>: Configue CI server to do this step
+              <List style={{marginLeft: 50}}>
+                <Appear>
+                  <ListItem>
+                    Even removes the need to have a token in your <Code textColor="#888">~/.npmrc</Code>
+                    (from <Code textColor="#888">npm login</Code>)
+                  </ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>
+                    <Link textColor="#888" target="_blank" href={npmPublishExampleLink}>Example</Link>
+                  </ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>
+                    <Link textColor="#888" target="_blank" href="https://docs.travis-ci.com/user/deployment/npm">
+                      Travis CI Docs
+                    </Link>
+                  </ListItem>
+                </Appear>
+              </List>
+            </ListItem>
+          </Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Publish Example</Heading>
+        <Heading size={3} textColor="#888" textFont="primary">Travis CI</Heading>
+
+        <CodePane lang="yaml" source={require('../../assets/npm-publish.example')} />
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Automation</Heading>
+        <Heading size={3} fit textColor="#888" textFont="primary">
+          All npm scripts support <Code textColor="#888">pre</Code> and <Code textColor="#888">post</Code> scripts
+        </Heading>
+
+        <Appear style={{textAlign: 'left'}}>
+          <div>
+            <Heading size={3} textColor="#888" textFont="primary" style={{textAlign: 'left'}}>
+              Prevent tagging a bad version
+            </Heading>
+            <List>
+              <Appear>
+                <ListItem>
+                  Use <Code textColor="#888">preversion</Code> to run your tests &amp; other verification
+                </ListItem>
+              </Appear>
+            </List>
+          </div>
+        </Appear>
+
+        <Appear style={{textAlign: 'left'}}>
+          <div>
+            <Heading size={3} textColor="#888" textFont="primary" style={{textAlign: 'left'}}>
+              Build before publishing
+            </Heading>
+            <List>
+              <Appear>
+                <ListItem>
+                  Use <Code textColor="#888">prepublish</Code> to <Code textColor="#888">transpile</Code> and perform
+                  other build steps before publishing
+                  <List style={{marginLeft: 50}}>
+                    <Appear>
+                      <ListItem>
+                        Be mindful of <Code textColor="#888">.gitignore</Code> and
+                        <Code textColor="#888">.npmignore</Code>
+                      </ListItem>
+                    </Appear>
+                  </List>
+                </ListItem>
+              </Appear>
+            </List>
+          </div>
+        </Appear>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Example Scripts</Heading>
+
+        <CodePane lang="json" source={require('../../assets/npm-scripts.example')} />
       </Slide>
     </Deck>
   );
