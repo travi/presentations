@@ -17,6 +17,7 @@ export default function (env) {
     entry: {
       'example/index': './src/example',
       'component-library/index': './src/component-library',
+      'component-library-dsmjs-july-2016/index': './src/component-library-dsmjs-july-2016',
       'continuous-deployment/index': './src/continuous-deployment',
       'continuous-deployment-dsmjs-june-2017/index': './src/continuous-deployment-dsmjs-june-2017',
       vendor: removeEmpty([
@@ -131,6 +132,12 @@ export default function (env) {
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'component-library/index'],
         filename: 'component-library/index.html',
+        template: 'src/index.mustache',
+        title: 'Component Library'
+      }),
+      new HtmlWebpackPlugin({
+        chunks: [...defaultChunks, 'component-library-dsmjs-july-2016/index'],
+        filename: 'component-library-dsmjs-july-2016/index.html',
         template: 'src/index.mustache',
         title: 'Component Library'
       })
