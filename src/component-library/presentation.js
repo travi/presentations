@@ -7,7 +7,10 @@ import {
   Code,
   CodePane,
   Deck,
+  Fill,
   Heading,
+  Image,
+  Layout,
   Link,
   List,
   ListItem,
@@ -814,6 +817,59 @@ export default function Presentation() {
             <ListItem>Even the smallest config change can take significant effort to understand</ListItem>
           </Appear>
         </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1}>Results</Heading>
+        <Heading size={3} fit textColor="#888" textFont="primary">Still a work in progress</Heading>
+
+        <List>
+          <Appear><ListItem>Solved the technical hurdles</ListItem></Appear>
+          <Appear><ListItem>Making good progress on process and collaboration</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              Haven’t rebuilt the prototype yet
+              <List style={{marginLeft: 50}}>
+                <Appear><ListItem>Not sure what pain points will arise with WIP design changes</ListItem></Appear>
+                <Appear>
+                  <ListItem>Confident it will encourage collabaration rather than working in silos</ListItem>
+                </Appear>
+              </List>
+            </ListItem>
+          </Appear>
+          <Appear><ListItem>Hoping to make our component library public</ListItem></Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Matt Travi</Heading>
+
+        <Layout>
+          <Fill>
+            <Image
+              style={{border: '10px solid #e5e5e5'}}
+              src="https://secure.gravatar.com/avatar/552ffda146c8a19730e4e9a27dafb749?size=350"
+            />
+          </Fill>
+          <Fill>
+            <List>
+              <ListItem>
+                <Link textColor="#888" target="_blank" href="https://matt.travi.org">matt.travi.org</Link>
+              </ListItem>
+              <ListItem>
+                <Link textColor="#888" target="_blank" href="https://github.com/travi">github.com/travi</Link>
+              </ListItem>
+              <ListItem>
+                <Link textColor="#888" target="_blank" href="https://twitter.com/mtravi">twitter.com/mtravi</Link>
+              </ListItem>
+              <ListItem>
+                <Link textColor="#888" target="_blank" href="https://presentations.travi.org">
+                  presentation.travi.org
+                </Link>
+              </ListItem>
+            </List>
+          </Fill>
+        </Layout>
       </Slide>
     </Deck>
   );
