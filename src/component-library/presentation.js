@@ -740,6 +740,81 @@ export default function Presentation() {
 
         <CodePane lang="json" source={require('../../assets/npm-scripts.example')} />
       </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Doesn’t this make it harder to see how the</Heading>
+        <Heading size={1} fit>components work in the context of your app?</Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={1}>Yes</Heading>
+        <Heading size={3} textColor="#888" textFont="primary" fit>But we don’t have to be satisfied with that</Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>
+          Depending on versions not in <Code textColor="secondary" textSize="1.66rem">master</Code>
+        </Heading>
+
+        <Appear style={{textAlign: 'left'}}>
+          <div>
+            <Heading size={3} textColor="#888" textFont="primary" style={{textAlign: 'left'}}>Deployed App</Heading>
+            <Heading size={4} textColor="secondary" style={{textAlign: 'left'}}>Depend on a git branch</Heading>
+
+            <CodePane lang="json" source={require('../../assets/git-dependency.example')} />
+          </div>
+        </Appear>
+
+        <Appear style={{textAlign: 'left'}}>
+          <div>
+            <Heading size={3} textColor="#888" textFont="primary" style={{textAlign: 'left'}}>
+              Local Development
+            </Heading>
+            <Heading size={4} textColor="secondary" style={{textAlign: 'left'}}>
+              Use <Code textColor="secondary">npm link</Code>
+            </Heading>
+            <List>
+              <Appear>
+                <ListItem>
+                  From package: <Code textColor="#888">npm link</Code> to make it available for linking
+                </ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>From consumer: <Code textColor="#888">npm link @scope/package-name</Code></ListItem>
+              </Appear>
+              <Appear><ListItem>Enable a watcher to build package when changed</ListItem></Appear>
+              <Appear>
+                <ListItem>
+                  Hot-reloader and <Code textColor="#888">nodemon</Code> need to include
+                  <Code textColor="#888">node_modules/</Code>
+                </ListItem>
+              </Appear>
+            </List>
+          </div>
+        </Appear>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Webpack Gotcha</Heading>
+
+        <List>
+          <Appear><ListItem>npm packages use their own local dependency tree</ListItem></Appear>
+          <Appear><ListItem>webpack loaders get confused w/o additional config</ListItem></Appear>
+        </List>
+
+        <Appear><CodePane lang="js" source={require('../../assets/resolve-loader.example')} /></Appear>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Webpack Painpoint</Heading>
+
+        <List>
+          <Appear><ListItem>Powerful and works well once configured appropriately</ListItem></Appear>
+          <Appear>
+            <ListItem>Even the smallest config change can take significant effort to understand</ListItem>
+          </Appear>
+        </List>
+      </Slide>
     </Deck>
   );
 }
