@@ -15,7 +15,6 @@ export default function (env) {
   return {
     devtool: ifDevelopment('eval-source-map', 'source-map'),
     entry: {
-      'example/index': './src/example',
       'component-library/index': './src/component-library',
       'component-library-dsmjs-july-2016/index': './src/component-library-dsmjs-july-2016',
       'continuous-deployment/index': './src/continuous-deployment',
@@ -111,12 +110,6 @@ export default function (env) {
         }
       })),
       ifProduction(new Visualizer()),
-      new HtmlWebpackPlugin({
-        chunks: [...defaultChunks, 'example/index'],
-        filename: 'example/index.html',
-        template: 'src/index.mustache',
-        title: 'Example'
-      }),
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'continuous-deployment/index'],
         filename: 'continuous-deployment/index.html',
