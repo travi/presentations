@@ -113,25 +113,25 @@ export default function (env) {
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'continuous-deployment/index'],
         filename: 'continuous-deployment/index.html',
-        template: 'src/index.mustache',
+        template: 'src/presentation.mustache',
         title: 'Continuous Deployment'
       }),
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'continuous-deployment-dsmjs-june-2017/index'],
         filename: 'continuous-deployment-dsmjs-june-2017/index.html',
-        template: 'src/index.mustache',
+        template: 'src/presentation.mustache',
         title: 'Continuous Deployment'
       }),
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'component-library/index'],
         filename: 'component-library/index.html',
-        template: 'src/index.mustache',
+        template: 'src/presentation.mustache',
         title: 'Component Library'
       }),
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'component-library-dsmjs-july-2016/index'],
         filename: 'component-library-dsmjs-july-2016/index.html',
-        template: 'src/index.mustache',
+        template: 'src/presentation.mustache',
         title: 'Component Library'
       })
     ])
