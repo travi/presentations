@@ -22,7 +22,7 @@ function Presentations() {
         <ol>
           <li><a href="continuous-deployment/">Latest</a></li>
           <li>
-            <a href="continuous-deploymnet-dsmjs-juune-2017/">
+            <a href="continuous-deployment-dsmjs-june-2017/">
               Continuous Deployment of <code>npm</code> packages
             </a>{' '}
             Given at <a href="https://dsmjs.com">dsmJS</a> in{' '}
