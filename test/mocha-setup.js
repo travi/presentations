@@ -33,6 +33,7 @@ Object.keys(document.defaultView).forEach(property => {
   }
 });
 global.window.matchMedia = () => ({matches: false});
+global.Image = dom.window.Image;
 
 Object.defineProperties(window.HTMLElement.prototype, {
   offsetLeft: {
