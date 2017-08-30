@@ -39,7 +39,7 @@
     "clean-webpack-plugin": "0.1.16",
     "component-emitter": "1.2.1",
     "component-type": "1.2.1",
-    "css-loader": "0.28.6",
+    "css-loader": "0.28.7",
     "cz-conventional-changelog": "2.0.0",
     "ease-component": "1.0.0",
     "enzyme": "2.9.1",
