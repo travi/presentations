@@ -42,7 +42,7 @@
     "css-loader": "0.28.7",
     "cz-conventional-changelog": "2.0.0",
     "ease-component": "1.0.0",
-    "enzyme": "2.9.1",
+    "enzyme": "3.0.0",
     "file-loader": "0.11.2",
     "gh-pages": "1.0.0",
     "globstar": "1.0.0",
