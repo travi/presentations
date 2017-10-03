@@ -52,7 +52,7 @@
     "jsdom": "11.2.0",
     "lodash-webpack-plugin": "0.11.4",
     "markdownlint-cli": "0.3.1",
-    "mocha": "3.5.3",
+    "mocha": "4.0.0",
     "mq-polyfill": "1.1.8",
     "mustache-loader": "1.2.0",
     "npm-run-all": "4.1.1",
