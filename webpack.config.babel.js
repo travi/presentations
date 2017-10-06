@@ -20,6 +20,7 @@ export default function (env) {
       'component-library-dsmjs-july-2016/index': './src/component-library-dsmjs-july-2016',
       'continuous-deployment/index': './src/continuous-deployment',
       'continuous-deployment-dsmjs-june-2017/index': './src/continuous-deployment-dsmjs-june-2017',
+      'react-in-isolation/index': './src/react-in-isolation',
       vendor: removeEmpty([
         // ifDevelopment('webpack-hot-middleware/client'),
         'react',
@@ -139,6 +140,12 @@ export default function (env) {
         filename: 'component-library-dsmjs-july-2016/index.html',
         template: 'src/presentation.mustache',
         title: 'Component Library'
+      }),
+      new HtmlWebpackPlugin({
+        chunks: [...defaultChunks, 'react-in-isolation/index'],
+        filename: 'react-in-isolation/index.html',
+        template: 'src/presentation.mustache',
+        title: 'React in Isolation'
       })
     ])
   };

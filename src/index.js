@@ -30,6 +30,12 @@ function Presentations() {
           </li>
         </ol>
       </li>
+      <li>
+        React in Isolation
+        <ol>
+          <li><a href="react-in-isolation//">Latest</a></li>
+        </ol>
+      </li>
     </ul>
   );
 }
