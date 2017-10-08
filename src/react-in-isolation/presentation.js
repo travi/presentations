@@ -54,6 +54,11 @@ export default function Presentation() {
       </Slide>
 
       <Slide>
+        <Heading size={1} fit>Not an intro to React</Heading>
+        <Heading size={2} fit>Instead, how to learn React</Heading>
+      </Slide>
+
+      <Slide>
         <Heading size={1} fit>How can we isolate React</Heading>
         <Heading size={2} fit>to learn it without the distractions?</Heading>
 
@@ -86,6 +91,55 @@ export default function Presentation() {
             <Appear><Image width={'60%'} src={require('../../assets/chai.svg')} /></Appear>
           </Fill>
         </Layout>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>One-way Data Flow</Heading>
+
+        <List>
+          <Appear><ListItem>Major contributor to React&apos;s simplicity</ListItem></Appear>
+          <Appear><ListItem>State Driven UI</ListItem></Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>createElement</Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>JSX</Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Functional Component</Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Container Component</Heading>
+
+        <List>
+          <Appear><ListItem>State</ListItem></Appear>
+          <Appear><ListItem>Lifecycle Hooks</ListItem></Appear>
+          <Appear><ListItem>Instance Methods</ListItem></Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>State</Heading>
+
+        <List>
+          <Appear><ListItem>Application</ListItem></Appear>
+          <Appear><ListItem>Componet</ListItem></Appear>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Controlled Input</Heading>
+
+        <List>
+          <Appear><ListItem>Application</ListItem></Appear>
+          <Appear><ListItem>Componet</ListItem></Appear>
+        </List>
       </Slide>
     </Deck>
   );
