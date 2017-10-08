@@ -39,33 +39,37 @@ export default function Presentation() {
         </Heading>
 
         <Appear>
-          <List>
-            <ListItem>Babel</ListItem>
-            <ListItem>Webpack</ListItem>
-          </List>
+          <div>
+            <Heading size={2}>Build Tools</Heading>
+
+            <List>
+              <ListItem>Transpilation (Babel)</ListItem>
+              <ListItem>Bundling for the browser (Webpack)</ListItem>
+            </List>
+          </div>
         </Appear>
 
         <Appear>
-          <List>
-            <ListItem>Loading data into the browser</ListItem>
-            <ListItem>State management</ListItem>
-          </List>
-        </Appear>
-      </Slide>
+          <div>
+            <Heading size={2}>Application Wiring</Heading>
 
-      <Slide>
-        <Heading size={1} fit>Not an intro to React</Heading>
-        <Heading size={2} fit>Instead, how to learn React</Heading>
+            <List>
+              <ListItem>Loading data into the browser (Redial, etc)</ListItem>
+              <ListItem>State management (Redux, MobX, etc)</ListItem>
+              <ListItem>Routing (React Router)</ListItem>
+            </List>
+          </div>
+        </Appear>
       </Slide>
 
       <Slide>
         <Heading size={1} fit>How can we isolate React</Heading>
         <Heading size={2} fit>to learn it without the distractions?</Heading>
+      </Slide>
 
-        <List>
-          <Appear><ListItem>Visual</ListItem></Appear>
-          <Appear><ListItem>Tests</ListItem></Appear>
-        </List>
+      <Slide>
+        <Heading size={1} fit>Not an intro to React</Heading>
+        <Heading size={2} fit>Instead, how to learn React</Heading>
       </Slide>
 
       <Slide>
@@ -129,17 +133,12 @@ export default function Presentation() {
 
         <List>
           <Appear><ListItem>Application</ListItem></Appear>
-          <Appear><ListItem>Componet</ListItem></Appear>
+          <Appear><ListItem>Component</ListItem></Appear>
         </List>
       </Slide>
 
       <Slide>
         <Heading size={1} fit>Controlled Input</Heading>
-
-        <List>
-          <Appear><ListItem>Application</ListItem></Appear>
-          <Appear><ListItem>Componet</ListItem></Appear>
-        </List>
       </Slide>
     </Deck>
   );
