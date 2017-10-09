@@ -136,19 +136,24 @@ export default function Presentation() {
           output={[
             <Typist cursor={cursor} key="storybook cli">npm i -g @storybook/cli</Typist>,
             <div key="cli installation">
-              <div />
+              <div style={{color: 'rgb(48, 53, 57)'}}>.</div>
               <div>+ @storybook/cli@3.2.12</div>
               <div>added 379 packages in 93.821s</div>
-              <div />
+              <div style={{color: 'rgb(48, 53, 57)'}}>.</div>
             </div>,
             <Typist cursor={cursor} key="storybook init">getstorybook</Typist>,
             <div key="init results">
-              <div />
-              <div>getstorybook - the simplest way to add a storybook to your project.</div>
-              <div />
-              <div>• Detecting project type. ✓</div>
-              <div>• Adding storybook support to your &quot;React&quot; app. ✓</div>
-              <div>• Preparing to install dependencies. ✓</div>
+              <div style={{color: 'rgb(48, 53, 57)'}}>.</div>
+              <div style={{backgroundColor: 'white', color: 'black'}}>
+                &nbsp;getstorybook - the simplest way to add a storybook to your project.
+              </div>
+              <div style={{color: 'rgb(48, 53, 57)'}}>.</div>
+              <div>&nbsp;• Detecting project type. <span style={{color: '#00ff00'}}>✓</span></div>
+              <div>
+                &nbsp;• Adding storybook support to your &quot;React&quot; app.
+                &nbsp;<span style={{color: '#00ff00'}}>✓</span>
+              </div>
+              <div>&nbsp;• Preparing to install dependencies. <span style={{color: '#00ff00'}}>✓</span></div>
             </div>
           ]}
         />
