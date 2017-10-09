@@ -1,6 +1,6 @@
 import React from 'react';
 import createTheme from 'spectacle/lib/themes/default';
-import {Appear, Deck, Fill, Heading, Image, Layout, Link, List, ListItem, Slide, Text} from 'spectacle';
+import {Appear, Deck, Heading, List, ListItem, Slide, Text} from 'spectacle';
 import preloader from 'spectacle/lib/utils/preloader';
 import Terminal from 'spectacle-terminal';
 import 'normalize.css';
@@ -68,50 +68,14 @@ export default function Presentation() {
         </Appear>
       </Slide>
 
-      <Slide>
-        <Heading size={1} fit>How can we isolate React</Heading>
-        <Heading size={2} fit>to learn it without the distractions?</Heading>
-      </Slide>
-
-      <Slide>
+      <Slide transition={['zoom']}>
         <Heading size={1} fit>Not an intro to React</Heading>
         <Heading size={2} fit>Instead, how to learn React</Heading>
       </Slide>
 
       <Slide>
-        <Heading size={1} fit caps>Visual</Heading>
-      </Slide>
-
-      <Slide>
-        <Link href="https://storybook.js.org/">
-          <Image width={'80%'} src={require('../../assets/storybook.svg')} />
-        </Link>
-      </Slide>
-
-      <Slide>
-        <Heading size={1} fit caps>Tests</Heading>
-      </Slide>
-
-      <Slide>
-        <Layout>
-          <Fill>
-            <Image width={'70%'} src={require('../../assets/airbnb.svg')} />
-            <Appear><Image width={'70%'} src={require('../../assets/mocha.svg')} /></Appear>
-          </Fill>
-          <Fill>
-            <Image width={'70%'} src={images.enzyme.replace('/', '')} />
-            <Appear><Image width={'60%'} src={require('../../assets/chai.svg')} /></Appear>
-          </Fill>
-        </Layout>
-      </Slide>
-
-      <Slide>
-        <Heading size={1} fit>One-way Data Flow</Heading>
-
-        <List>
-          <Appear><ListItem>Major contributor to React&apos;s simplicity</ListItem></Appear>
-          <Appear><ListItem>State Driven UI</ListItem></Appear>
-        </List>
+        <Heading size={1} fit>How can we isolate React</Heading>
+        <Heading size={2} fit>to learn it without the distractions?</Heading>
       </Slide>
 
       <Slide>
@@ -159,6 +123,19 @@ export default function Presentation() {
             </div>
           ]}
         />
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Props</Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>One-way Data Flow</Heading>
+
+        <List>
+          <Appear><ListItem>Major contributor to React&apos;s simplicity</ListItem></Appear>
+          <Appear><ListItem>State Driven UI</ListItem></Appear>
+        </List>
       </Slide>
 
       <Slide>
