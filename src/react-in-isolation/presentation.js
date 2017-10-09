@@ -3,6 +3,7 @@ import createTheme from 'spectacle/lib/themes/default';
 import {Appear, Deck, Heading, Image, Link, List, ListItem, Slide, Text} from 'spectacle';
 import preloader from 'spectacle/lib/utils/preloader';
 import Terminal from 'spectacle-terminal';
+import CodeSlide from 'spectacle-code-slide';
 import 'normalize.css';
 import 'spectacle/lib/themes/default/index.css';
 import Typist from 'react-typist';
@@ -78,21 +79,35 @@ export default function Presentation() {
         <Heading size={1}>Hello World</Heading>
       </Slide>
 
-      <Slide>
-        <Heading size={1} fit>createElement</Heading>
-      </Slide>
+      <CodeSlide
+        lang="js"
+        code={require('../../assets/react-in-isolation/create-element-hello-world.example')}
+        ranges={[{
+          loc: [2, 9],
+          note: 'pure JavaScript component',
+          title: 'createElement'
+        }]}
+      />
 
-      <Slide>
-        <Heading size={1} fit>JSX</Heading>
-      </Slide>
+      <CodeSlide
+        lang="js"
+        code={require('../../assets/react-in-isolation/jsx-hello-world.example')}
+        ranges={[{
+          loc: [2, 5],
+          title: 'JSX'
+        }]}
+      />
 
-      <Slide>
-        <Heading size={1} fit>React 16</Heading>
-        Can return more types
+      <CodeSlide
+        lang="js"
+        code={require('../../assets/react-in-isolation/string-hello-world.example')}
+        ranges={[{
+          loc: [0, 3],
+          note: 'Strings can now be rendered directly',
+          title: 'React 16'
+        }]}
+      />
 
-        String
-        Array
-      </Slide>
 
       <Slide>
         <Link href="https://storybook.js.org/">
@@ -100,7 +115,7 @@ export default function Presentation() {
         </Link>
       </Slide>
 
-      <Slide>
+      <Slide bgColor="#888">
         <Heading size={1} fit>Configuring Storybook</Heading>
 
         <Terminal
