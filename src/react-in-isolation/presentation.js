@@ -1,6 +1,6 @@
 import React from 'react';
 import createTheme from 'spectacle/lib/themes/default';
-import {Appear, Deck, Heading, List, ListItem, Slide, Text} from 'spectacle';
+import {Appear, Deck, Heading, Image, Link, List, ListItem, Slide, Text} from 'spectacle';
 import preloader from 'spectacle/lib/utils/preloader';
 import Terminal from 'spectacle-terminal';
 import 'normalize.css';
@@ -14,7 +14,7 @@ const theme = createTheme({
 });
 
 const images = {
-  enzyme: require('../../assets/enzyme.png')
+  enzyme: require('../../assets/react-in-isolation/enzyme.png')
 };
 preloader(images);
 
@@ -26,7 +26,7 @@ export default function Presentation() {
       <Slide
         transition={['zoom']}
         bgDarken={0.75}
-        bgImage={require('../../assets/react-logo.svg')}
+        bgImage={require('../../assets/react-in-isolation/react-logo.svg')}
       >
         <Heading size={1} fit caps>Learn React</Heading>
         <Heading size={2} fit caps>in Isolation</Heading>
@@ -92,6 +92,12 @@ export default function Presentation() {
 
         String
         Array
+      </Slide>
+
+      <Slide>
+        <Link href="https://storybook.js.org/">
+          <Image width={'80%'} src={require('../../assets/react-in-isolation/storybook.svg')} />
+        </Link>
       </Slide>
 
       <Slide>
