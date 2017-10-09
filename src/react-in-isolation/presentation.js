@@ -34,48 +34,48 @@ export default function Presentation() {
         <Text textColor="#888" textSize="1em" margin="40px 0px 0px" bold>Matt Travi</Text>
       </Slide>
 
-      <Slide>
-        <Heading size={1} fit>React, by itself, can be simple</Heading>
-      </Slide>
-
-      <Slide>
-        <Heading size={1} fit>
-          Unfortunately, that simplicity is clouded in an application by:
-        </Heading>
-
-        <Appear>
-          <div>
-            <Heading size={2}>Build Tools</Heading>
-
-            <List>
-              <ListItem>Transpilation (Babel)</ListItem>
-              <ListItem>Bundling for the browser (Webpack)</ListItem>
-            </List>
-          </div>
-        </Appear>
-
-        <Appear>
-          <div>
-            <Heading size={2}>Application Wiring</Heading>
-
-            <List>
-              <ListItem>Loading data into the browser (Redial, etc)</ListItem>
-              <ListItem>State management (Redux, MobX, etc)</ListItem>
-              <ListItem>Routing (React Router)</ListItem>
-              <ListItem>Server-side Render?</ListItem>
-            </List>
-          </div>
-        </Appear>
-      </Slide>
-
       <Slide transition={['zoom']}>
         <Heading size={1} fit>Not an intro to React</Heading>
         <Heading size={2} fit>Instead, how to learn React</Heading>
       </Slide>
 
       <Slide>
+        <Heading size={1} fit>React, by itself, can be simple</Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>
+          That simplicity is clouded in an application
+        </Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={2} fit>Build Tools</Heading>
+
+        <List>
+          <ListItem>Transpilation (Babel)</ListItem>
+          <ListItem>Bundling for the browser (Webpack)</ListItem>
+        </List>
+      </Slide>
+
+      <Slide>
+        <Heading size={2} fit>Application Wiring</Heading>
+
+        <List>
+          <ListItem>Loading data into the browser (Redial, etc)</ListItem>
+          <ListItem>State management (Redux, MobX, etc)</ListItem>
+          <ListItem>Routing (React Router)</ListItem>
+          <ListItem>Server-side Render?</ListItem>
+        </List>
+      </Slide>
+
+      <Slide>
         <Heading size={1} fit>How can we isolate React</Heading>
         <Heading size={2} fit>to learn it without the distractions?</Heading>
+      </Slide>
+
+      <Slide transition={['zoom']}>
+        <Heading size={1}>Hello World</Heading>
       </Slide>
 
       <Slide>
