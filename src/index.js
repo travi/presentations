@@ -31,7 +31,7 @@ function Presentations() {
         </ol>
       </li>
       <li>
-        React in Isolation
+        Learn React in Isolation
         <ol>
           <li><a href="react-in-isolation//">Latest</a></li>
         </ol>

@@ -24,7 +24,8 @@ export default function Presentation() {
         bgDarken={0.75}
         bgImage={require('../../assets/react-logo.svg')}
       >
-        <Heading size={1} fit caps lineHeight={1}>React in Isolation</Heading>
+        <Heading size={1} fit caps>Learn React</Heading>
+        <Heading size={2} fit caps>in Isolation</Heading>
 
         <Text textColor="#888" textSize="1em" margin="40px 0px 0px" bold>Matt Travi</Text>
       </Slide>
@@ -57,6 +58,7 @@ export default function Presentation() {
               <ListItem>Loading data into the browser (Redial, etc)</ListItem>
               <ListItem>State management (Redux, MobX, etc)</ListItem>
               <ListItem>Routing (React Router)</ListItem>
+              <ListItem>Server-side Render?</ListItem>
             </List>
           </div>
         </Appear>
