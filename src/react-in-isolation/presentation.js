@@ -1,6 +1,6 @@
 import React from 'react';
 import createTheme from 'spectacle/lib/themes/default';
-import {Appear, Deck, Fill, Heading, Image, Layout, List, ListItem, Slide, Text} from 'spectacle';
+import {Appear, Deck, Fill, Heading, Image, Layout, Link, List, ListItem, Slide, Text} from 'spectacle';
 import preloader from 'spectacle/lib/utils/preloader';
 import Terminal from 'spectacle-terminal';
 import 'normalize.css';
@@ -83,7 +83,9 @@ export default function Presentation() {
       </Slide>
 
       <Slide>
-        <Image width={'80%'} src={require('../../assets/storybook.svg')} />
+        <Link href="https://storybook.js.org/">
+          <Image width={'80%'} src={require('../../assets/storybook.svg')} />
+        </Link>
       </Slide>
 
       <Slide>
