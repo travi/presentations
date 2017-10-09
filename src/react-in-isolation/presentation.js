@@ -2,8 +2,10 @@ import React from 'react';
 import createTheme from 'spectacle/lib/themes/default';
 import {Appear, Deck, Fill, Heading, Image, Layout, List, ListItem, Slide, Text} from 'spectacle';
 import preloader from 'spectacle/lib/utils/preloader';
+import Terminal from 'spectacle-terminal';
 import 'normalize.css';
 import 'spectacle/lib/themes/default/index.css';
+import Typist from 'react-typist';
 
 const theme = createTheme({
   primary: '#333',
@@ -15,6 +17,8 @@ const images = {
   enzyme: require('../../assets/enzyme.png')
 };
 preloader(images);
+
+const cursor = {show: false, blink: true, element: '|', hideWhenDone: false, hideWhenDoneDelay: 1000};
 
 export default function Presentation() {
   return (
@@ -114,6 +118,40 @@ export default function Presentation() {
 
       <Slide>
         <Heading size={1} fit>JSX</Heading>
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>React 16</Heading>
+        Can return more types
+
+        String
+        Array
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Configuring Storybook</Heading>
+
+        <Terminal
+          title="~/development/react-in-isolation @ Travi-MBP"
+          output={[
+            <Typist cursor={cursor} key="storybook cli">npm i -g @storybook/cli</Typist>,
+            <div key="cli installation">
+              <div />
+              <div>+ @storybook/cli@3.2.12</div>
+              <div>added 379 packages in 93.821s</div>
+              <div />
+            </div>,
+            <Typist cursor={cursor} key="storybook init">getstorybook</Typist>,
+            <div key="init results">
+              <div />
+              <div>getstorybook - the simplest way to add a storybook to your project.</div>
+              <div />
+              <div>• Detecting project type. ✓</div>
+              <div>• Adding storybook support to your &quot;React&quot; app. ✓</div>
+              <div>• Preparing to install dependencies. ✓</div>
+            </div>
+          ]}
+        />
       </Slide>
 
       <Slide>
