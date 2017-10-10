@@ -167,6 +167,12 @@ export default function Presentation() {
         ]}
       />
 
+      <Slide transition={['zoom']}>
+        <Link href="http://localhost:6006/?selectedKind=Functional" target="_blank">
+          <Heading size={1}>Demo</Heading>
+        </Link>
+      </Slide>
+
       <Slide>
         <Heading size={1} fit>Props</Heading>
       </Slide>
