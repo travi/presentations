@@ -43,11 +43,11 @@ export default function Presentation() {
       </Slide>
 
       <Slide>
-        <Heading size={1} fit>React, by itself, can be simple</Heading>
+        <Heading size={2} fit>React, by itself, can be simple</Heading>
       </Slide>
 
       <Slide>
-        <Heading size={1} fit>
+        <Heading size={2} fit>
           That simplicity is clouded in an application
         </Heading>
       </Slide>
@@ -123,7 +123,7 @@ export default function Presentation() {
       </Slide>
 
       <Slide bgColor="#888">
-        <Heading size={1} fit>Configuring Storybook</Heading>
+        <Heading size={2} fit>Configuring Storybook</Heading>
 
         <Terminal
           title="~/development/react-in-isolation @ Travi-MBP"
@@ -204,7 +204,7 @@ export default function Presentation() {
 
       <Slide>
         <Link href="http://localhost:6006/?selectedKind=Functional" target="_blank">
-          <Heading size={1}>Demo</Heading>
+          <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
 
@@ -236,7 +236,7 @@ export default function Presentation() {
 
       <Slide>
         <Link href="http://localhost:6006/?selectedKind=Props%2FButton" target="_blank">
-          <Heading size={1}>Demo</Heading>
+          <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
 
@@ -259,7 +259,7 @@ export default function Presentation() {
 
       <Slide>
         <Link href="http://localhost:6006/?selectedKind=Handlers%2FButton" target="_blank">
-          <Heading size={1}>Demo</Heading>
+          <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
 
@@ -335,7 +335,7 @@ export default function Presentation() {
 
       <Slide>
         <Link href="http://localhost:6006/?selectedKind=Handlers%2FButton" target="_blank">
-          <Heading size={1}>Demo</Heading>
+          <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
 
@@ -344,19 +344,19 @@ export default function Presentation() {
       </Slide>
 
       <Slide>
-        <Heading size={1} fit>Unidirectional Data Flow</Heading>
+        <Heading size={2} fit>Unidirectional Data Flow</Heading>
 
         <Image src={images.unidirectional.replace('/', '')} />
       </Slide>
 
       <Slide>
-        <Heading size={1} fit>User Action</Heading>
+        <Heading size={2} fit>User Action</Heading>
 
         <Image src={images.userAction.replace('/', '')} />
       </Slide>
 
       <Slide>
-        <Heading size={1} fit>Functional Component</Heading>
+        <Heading size={2} fit>Functional Component</Heading>
       </Slide>
 
       <CodeSlide
@@ -370,7 +370,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Heading size={1} fit>Container Component</Heading>
+        <Heading size={2} fit>Container Component</Heading>
 
         <List>
           <Appear><ListItem>State</ListItem></Appear>
@@ -379,7 +379,7 @@ export default function Presentation() {
         </List>
       </Slide>
 
-      <Slide>
+      <Slide transition={['zoom']}>
         <Heading size={1} fit>State</Heading>
 
         <List>
