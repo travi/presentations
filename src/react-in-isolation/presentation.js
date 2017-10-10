@@ -108,7 +108,6 @@ export default function Presentation() {
         }]}
       />
 
-
       <Slide>
         <Link href="https://storybook.js.org/">
           <Image width={'80%'} src={require('../../assets/react-in-isolation/storybook.svg')} />
@@ -145,6 +144,28 @@ export default function Presentation() {
           ]}
         />
       </Slide>
+
+      <CodeSlide
+        lang="js"
+        code={require('../../assets/react-in-isolation/hello-world-stories.example')}
+        ranges={[
+          {
+            loc: [2, 5],
+            note: 'import the components',
+            title: 'Stories'
+          },
+          {
+            loc: [6, 7],
+            note: 'Define the category',
+            title: 'Stories'
+          },
+          {
+            loc: [7, 10],
+            note: 'Render the stories',
+            title: 'Stories'
+          }
+        ]}
+      />
 
       <Slide>
         <Heading size={1} fit>Props</Heading>
