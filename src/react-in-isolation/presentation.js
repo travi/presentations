@@ -405,17 +405,17 @@ export default function Presentation() {
         code={require('../../assets/react-in-isolation/controlled-input-stories.example')}
         ranges={[
           {
-            loc: [8, 11],
+            loc: [9, 12],
             title: 'Controlled Input',
             note: 'when `value` is set, only React can change the value'
           },
           {
-            loc: [11, 14],
+            loc: [12, 15],
             title: 'Controlled Input',
             note: 'when `value` is set, only React can change the value'
           },
           {
-            loc: [5, 8],
+            loc: [6, 9],
             title: 'Controlled Input',
             note: 'when `value` is not set, React is not controlling the state of the input'
           }
@@ -427,6 +427,44 @@ export default function Presentation() {
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/controlled-input.example')}
+        ranges={[
+          {
+            loc: [2, 3],
+            title: 'Container Component',
+            note: 'an instance needs to be created to maintain state'
+          },
+          {
+            loc: [11, 20],
+            title: 'Container Component',
+            note: 'the `render` function serves the same purpose as a functional component, but has privileged ' +
+                  'access to instance properties'
+          },
+          {
+            loc: [15, 16],
+            title: 'Container Component',
+            note: 'the `value` is controlled using state'
+          },
+          {
+            loc: [3, 4],
+            title: 'Container Component',
+            note: 'state of `value` is initialized to an empty string. this could be initialized to a prop value'
+          },
+          {
+            loc: [5, 10],
+            title: 'Container Component',
+            note: 'the handler passed as `onChange` to the DOM element updates the internal component state'
+          },
+          {
+            loc: [16, 17],
+            title: 'Container Component',
+            note: 'the change-handler is passed to `onChange`'
+          }
+        ]}
+      />
 
       <Slide transition={['zoom']}>
         <Heading size={1} fit>Matt Travi</Heading>

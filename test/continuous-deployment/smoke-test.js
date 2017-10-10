@@ -10,7 +10,7 @@ suite('smoke tests for the continuous-deployment presentation', () => {
     wrapper.unmount();
   });
 
-  test('that the presentation given at dsmjsrenders', () => {
+  test('that the presentation given at dsmjs renders', () => {
     const wrapper = mount(<ContinuousDeploymentDsmJs />);
 
     wrapper.unmount();
