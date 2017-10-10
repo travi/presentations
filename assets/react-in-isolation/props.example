@@ -1,6 +1,7 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 import any from '@travi/any';
+import Button from './button';
 
 const label = any.string();
 
@@ -14,4 +15,10 @@ storiesOf('Props/Button', module)
       value={label}
       disabled
     />
+  ))
+  .add('component', () => (
+    <Button label={label} />
+  ))
+  .add('disabled component', () => (
+    <Button label={label} disabled />
   ));

@@ -188,17 +188,17 @@ export default function Presentation() {
         code={require('../../assets/react-in-isolation/props.example')}
         ranges={[
           {
-            loc: [7, 10],
+            loc: [8, 11],
             note: 'variable passed as a prop',
             title: 'Props'
           },
           {
-            loc: [10, 17],
+            loc: [11, 18],
             note: 'booleans can be passed as a flag',
             title: 'Props'
           },
           {
-            loc: [14, 15],
+            loc: [15, 16],
             note: 'booleans can be passed as a flag',
             title: 'Props'
           }
@@ -216,12 +216,12 @@ export default function Presentation() {
         code={require('../../assets/react-in-isolation/handlers.example')}
         ranges={[
           {
-            loc: [7, 14],
+            loc: [8, 15],
             note: 'functions passed as props',
             title: 'Handlers'
           },
           {
-            loc: [11, 12],
+            loc: [12, 13],
             note: 'functions passed as props',
             title: 'Handlers'
           }
@@ -233,6 +233,76 @@ export default function Presentation() {
           <Heading size={1}>Demo</Heading>
         </Link>
       </Slide>
+
+      <Slide transition={['zoom']}>
+        <Heading size={1}>Encapsulation</Heading>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/button.example')}
+        ranges={[
+          {
+            loc: [2, 7],
+            note: 'props',
+            title: 'Button Component'
+          },
+          {
+            loc: [15, 16],
+            note: 'label prop',
+            title: 'Button Component'
+          },
+          {
+            loc: [9, 10],
+            note: 'disabled prop',
+            title: 'Button Component'
+          },
+          {
+            loc: [13, 14],
+            note: 'click handler',
+            title: 'Button Component'
+          },
+          {
+            loc: [10, 13],
+            note: 'also leverage `disabled` to determine cursor',
+            title: 'Button Component'
+          }
+        ]}
+      />
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/props.example')}
+        ranges={[
+          {
+            loc: [18, 21],
+            note: 'variable passed as a prop',
+            title: 'Props'
+          },
+          {
+            loc: [21, 24],
+            note: 'booleans can be passed as a flag',
+            title: 'Props'
+          }
+        ]}
+      />
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/handlers.example')}
+        ranges={[
+          {
+            loc: [15, 21],
+            note: 'functions passed as props',
+            title: 'Handlers'
+          },
+          {
+            loc: [18, 19],
+            note: 'functions passed as props',
+            title: 'Handlers'
+          }
+        ]}
+      />
 
       <Slide>
         <Heading size={1} fit>One-way Data Flow</Heading>
