@@ -55,7 +55,13 @@ export default function Presentation() {
 
         <List>
           <ListItem>Transpilation (Babel)</ListItem>
-          <ListItem>Bundling for the browser (Webpack)</ListItem>
+          <ListItem>
+            Bundling for the browser (Webpack)
+            <List>
+              <ListItem>Dev Server</ListItem>
+              <ListItem>Hot Reload</ListItem>
+            </List>
+          </ListItem>
         </List>
       </Slide>
 
@@ -80,7 +86,7 @@ export default function Presentation() {
       </Slide>
 
       <CodeSlide
-        lang="js"
+        lang="jsx"
         code={require('../../assets/react-in-isolation/create-element-hello-world.example')}
         ranges={[{
           loc: [2, 9],
@@ -90,7 +96,7 @@ export default function Presentation() {
       />
 
       <CodeSlide
-        lang="js"
+        lang="jsx"
         code={require('../../assets/react-in-isolation/jsx-hello-world.example')}
         ranges={[{
           loc: [2, 5],
@@ -99,7 +105,7 @@ export default function Presentation() {
       />
 
       <CodeSlide
-        lang="js"
+        lang="jsx"
         code={require('../../assets/react-in-isolation/string-hello-world.example')}
         ranges={[{
           loc: [0, 3],
@@ -146,7 +152,7 @@ export default function Presentation() {
       </Slide>
 
       <CodeSlide
-        lang="js"
+        lang="jsx"
         code={require('../../assets/react-in-isolation/hello-world-stories.example')}
         ranges={[
           {
@@ -175,6 +181,57 @@ export default function Presentation() {
 
       <Slide>
         <Heading size={1} fit>Props</Heading>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/props.example')}
+        ranges={[
+          {
+            loc: [7, 10],
+            note: 'variable passed as a prop',
+            title: 'Props'
+          },
+          {
+            loc: [10, 17],
+            note: 'booleans can be passed as a flag',
+            title: 'Props'
+          },
+          {
+            loc: [14, 15],
+            note: 'booleans can be passed as a flag',
+            title: 'Props'
+          }
+        ]}
+      />
+
+      <Slide transition={['zoom']}>
+        <Link href="http://localhost:6006/?selectedKind=Props%2FButton" target="_blank">
+          <Heading size={1}>Demo</Heading>
+        </Link>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/handlers.example')}
+        ranges={[
+          {
+            loc: [7, 14],
+            note: 'functions passed as props',
+            title: 'Handlers'
+          },
+          {
+            loc: [11, 12],
+            note: 'functions passed as props',
+            title: 'Handlers'
+          }
+        ]}
+      />
+
+      <Slide transition={['zoom']}>
+        <Link href="http://localhost:6006/?selectedKind=Handlers%2FButton" target="_blank">
+          <Heading size={1}>Demo</Heading>
+        </Link>
       </Slide>
 
       <Slide>
