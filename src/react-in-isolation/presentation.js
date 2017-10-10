@@ -275,7 +275,7 @@ export default function Presentation() {
             title: 'Button Component'
           },
           {
-            loc: [15, 16],
+            loc: [17, 18],
             note: 'label prop',
             title: 'Button Component'
           },
@@ -285,12 +285,12 @@ export default function Presentation() {
             title: 'Button Component'
           },
           {
-            loc: [13, 14],
+            loc: [15, 16],
             note: 'click handler',
             title: 'Button Component'
           },
           {
-            loc: [10, 13],
+            loc: [10, 15],
             note: 'also leverage `disabled` to determine cursor',
             title: 'Button Component'
           }
