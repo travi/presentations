@@ -90,30 +90,36 @@ export default function Presentation() {
       <CodeSlide
         lang="jsx"
         code={require('../../assets/react-in-isolation/create-element-hello-world.example')}
-        ranges={[{
-          loc: [2, 9],
-          note: 'JavaScript component',
-          title: 'createElement'
-        }]}
+        ranges={[
+          {
+            loc: [2, 9],
+            note: 'JavaScript component',
+            title: 'createElement'
+          }
+        ]}
       />
 
       <CodeSlide
         lang="jsx"
         code={require('../../assets/react-in-isolation/jsx-hello-world.example')}
-        ranges={[{
-          loc: [2, 5],
-          title: 'JSX'
-        }]}
+        ranges={[
+          {
+            loc: [2, 5],
+            title: 'JSX'
+          }
+        ]}
       />
 
       <CodeSlide
         lang="jsx"
         code={require('../../assets/react-in-isolation/string-hello-world.example')}
-        ranges={[{
-          loc: [0, 3],
-          note: 'Strings can now be rendered directly',
-          title: 'React 16'
-        }]}
+        ranges={[
+          {
+            loc: [0, 3],
+            note: 'Strings can now be rendered directly',
+            title: 'React 16'
+          }
+        ]}
       />
 
       <Slide transition={['zoom']}>
@@ -362,11 +368,13 @@ export default function Presentation() {
       <CodeSlide
         lang="jsx"
         code={require('../../assets/react-in-isolation/jsx-hello-world.example')}
-        ranges={[{
-          loc: [2, 5],
-          title: 'Functional Component',
-          note: 'the entire component is just a function call'
-        }]}
+        ranges={[
+          {
+            loc: [2, 5],
+            title: 'Functional Component',
+            note: 'the entire component is just a function call'
+          }
+        ]}
       />
 
       <Slide>
@@ -389,7 +397,35 @@ export default function Presentation() {
       </Slide>
 
       <Slide>
-        <Heading size={1} fit>Controlled Input</Heading>
+        <Heading size={2} fit>Controlled Input</Heading>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/controlled-input-stories.example')}
+        ranges={[
+          {
+            loc: [8, 11],
+            title: 'Controlled Input',
+            note: 'when `value` is set, only React can change the value'
+          },
+          {
+            loc: [11, 14],
+            title: 'Controlled Input',
+            note: 'when `value` is set, only React can change the value'
+          },
+          {
+            loc: [5, 8],
+            title: 'Controlled Input',
+            note: 'when `value` is not set, React is not controlling the state of the input'
+          }
+        ]}
+      />
+
+      <Slide>
+        <Link href="http://localhost:6006/?selectedKind=Inputs" target="_blank">
+          <Heading size={2}>Demo</Heading>
+        </Link>
       </Slide>
 
       <Slide transition={['zoom']}>
