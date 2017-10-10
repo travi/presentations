@@ -1,6 +1,6 @@
 import React from 'react';
 import createTheme from 'spectacle/lib/themes/default';
-import {Appear, Deck, Heading, Image, Link, List, ListItem, Slide, Text} from 'spectacle';
+import {Appear, Deck, Fill, Fit, Heading, Image, Layout, Link, List, ListItem, Slide, Text} from 'spectacle';
 import preloader from 'spectacle/lib/utils/preloader';
 import Terminal from 'spectacle-terminal';
 import CodeSlide from 'spectacle-code-slide';
@@ -212,6 +212,44 @@ export default function Presentation() {
       <Slide>
         <Heading size={1} fit>Controlled Input</Heading>
       </Slide>
+
+      <Slide>
+        <Heading size={1} fit>Matt Travi</Heading>
+
+        <Layout>
+          <Fit style={{paddingRight: 30}}>
+            <Image
+              style={{border: '10px solid #e5e5e5'}}
+              src="https://secure.gravatar.com/avatar/552ffda146c8a19730e4e9a27dafb749?size=250"
+            />
+          </Fit>
+          <Fill>
+            <List>
+              <ListItem>
+                <Link textColor="#888" target="_blank" href="https://matt.travi.org">matt.travi.org</Link>
+              </ListItem>
+              <ListItem>
+                <Link textColor="#888" target="_blank" href="https://twitter.com/mtravi">twitter.com/mtravi</Link>
+              </ListItem>
+              <ListItem>
+                <Link textColor="#888" target="_blank" href="https://github.com/travi/react-in-isolation">
+                  github.com/travi/react-in-isolation
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  textColor="#888"
+                  target="_blank"
+                  href="https://presentations.travi.org/react-in-isolation-dsmjs-oct-2017"
+                >
+                  presentations.travi.org/react-in-isolation-dsmjs-oct-2017
+                </Link>
+              </ListItem>
+            </List>
+          </Fill>
+        </Layout>
+      </Slide>
+
     </Deck>
   );
 }

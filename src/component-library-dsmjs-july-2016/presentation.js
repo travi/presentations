@@ -864,7 +864,7 @@ export default function Presentation() {
               </ListItem>
               <ListItem>
                 <Link textColor="#888" target="_blank" href="https://presentations.travi.org">
-                  presentation.travi.org
+                  presentations.travi.org
                 </Link>
               </ListItem>
             </List>
