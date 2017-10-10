@@ -15,7 +15,9 @@ const theme = createTheme({
 });
 
 const images = {
-  enzyme: require('../../assets/react-in-isolation/enzyme.png')
+  enzyme: require('../../assets/react-in-isolation/enzyme.png'),
+  unidirectional: require('../../assets/react-in-isolation/unidirectional-data-flow.png'),
+  userAction: require('../../assets/react-in-isolation/flux-client-action.png')
 };
 preloader(images);
 
@@ -337,18 +339,35 @@ export default function Presentation() {
         </Link>
       </Slide>
 
-      <Slide>
-        <Heading size={1} fit>One-way Data Flow</Heading>
+      <Slide transition={['zoom']}>
+        <Heading size={1} fit>Flux</Heading>
+      </Slide>
 
-        <List>
-          <Appear><ListItem>Major contributor to React&apos;s simplicity</ListItem></Appear>
-          <Appear><ListItem>State Driven UI</ListItem></Appear>
-        </List>
+      <Slide>
+        <Heading size={1} fit>Unidirectional Data Flow</Heading>
+
+        <Image src={images.unidirectional.replace('/', '')} />
+      </Slide>
+
+      <Slide>
+        <Heading size={1} fit>User Action</Heading>
+
+        <Image src={images.userAction.replace('/', '')} />
       </Slide>
 
       <Slide>
         <Heading size={1} fit>Functional Component</Heading>
       </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/jsx-hello-world.example')}
+        ranges={[{
+          loc: [2, 5],
+          title: 'Functional Component',
+          note: 'the entire component is just a function call'
+        }]}
+      />
 
       <Slide>
         <Heading size={1} fit>Container Component</Heading>
@@ -373,7 +392,7 @@ export default function Presentation() {
         <Heading size={1} fit>Controlled Input</Heading>
       </Slide>
 
-      <Slide>
+      <Slide transition={['zoom']}>
         <Heading size={1} fit>Matt Travi</Heading>
 
         <Layout>
