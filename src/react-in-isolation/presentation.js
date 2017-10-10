@@ -466,6 +466,12 @@ export default function Presentation() {
         ]}
       />
 
+      <Slide>
+        <Link href="http://localhost:6006/?selectedKind=Inputs" target="_blank">
+          <Heading size={2}>Demo</Heading>
+        </Link>
+      </Slide>
+
       <Slide transition={['zoom']}>
         <Heading size={1} fit>Matt Travi</Heading>
 
