@@ -123,7 +123,12 @@ export default function Presentation() {
       />
 
       <Slide transition={['zoom']}>
-        <Link href="https://storybook.js.org/">
+        <Heading size={1} fit>But what do I do with these components</Heading>
+        <Heading size={2} fit>without an application?</Heading>
+      </Slide>
+
+      <Slide transition={['zoom']}>
+        <Link href="https://storybook.js.org/" target="_blank">
           <Image width={'80%'} src={require('../../assets/react-in-isolation/storybook.svg')} />
         </Link>
       </Slide>
@@ -224,6 +229,11 @@ export default function Presentation() {
         ranges={[
           {
             loc: [8, 11],
+            note: 'variable passed as a prop',
+            title: 'Props'
+          },
+          {
+            loc: [5, 6],
             note: 'variable passed as a prop',
             title: 'Props'
           },
@@ -441,7 +451,7 @@ export default function Presentation() {
             loc: [11, 20],
             title: 'Container Component',
             note: 'the `render` function serves the same purpose as a functional component, but has privileged ' +
-                  'access to instance properties'
+            'access to instance properties'
           },
           {
             loc: [15, 16],
