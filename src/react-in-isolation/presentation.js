@@ -152,6 +152,33 @@ export default function Presentation() {
       </Slide>
 
       <CodeSlide
+        lang="json"
+        code={require('../../assets/package.npm.example')}
+        ranges={[
+          {
+            loc: [14, 16],
+            title: 'Storybook',
+            note: 'scripts to run and build are added'
+          }
+        ]}
+      />
+
+      <Slide>
+        <Heading size={2} fit>Build Details Handled by Storybook</Heading>
+
+        <List>
+          <ListItem>Transpilation (Babel)</ListItem>
+          <ListItem>
+            Bundling for the browser (Webpack)
+            <List>
+              <ListItem>Dev Server</ListItem>
+              <ListItem>Hot Reload</ListItem>
+            </List>
+          </ListItem>
+        </List>
+      </Slide>
+
+      <CodeSlide
         lang="jsx"
         code={require('../../assets/react-in-isolation/hello-world-stories.example')}
         ranges={[

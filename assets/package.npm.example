@@ -11,7 +11,9 @@
     "prepublish": "run-s build",
     "sr:pre": "semantic-release pre",
     "sr:post": "semantic-release post",
-    "semantic-release": "run-s sr:pre publish sr:post"
+    "semantic-release": "run-s sr:pre publish sr:post",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "cz-conventional-changelog": "2.0.0",
