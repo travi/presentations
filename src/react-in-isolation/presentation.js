@@ -483,6 +483,91 @@ export default function Presentation() {
       </Slide>
 
       <Slide transition={['zoom']}>
+        <Heading size={1} fit>Next Steps</Heading>
+
+        <List>
+          <Appear>
+            <ListItem>
+              Testing
+
+              <List>
+                <Appear>
+                  <ListItem>
+                    React&apos;s simplicity makes&nbsp;
+                    <Link
+                      href="https://github.com/travi/react-in-isolation/tree/master/test/unit"
+                      target="_blank"
+                      textColor="#888"
+                    >
+                      unit testing
+                    </Link>
+                    &nbsp;straight forward
+                  </ListItem>
+                </Appear>
+              </List>
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              <Link
+                href="https://storybook.js.org/addons/addon-gallery/"
+                target="_blank"
+                textColor="#888"
+              >
+                Storybook Plugins
+              </Link>
+
+              <List>
+                <Appear>
+                  <ListItem>
+                    <Link
+                      href="https://github.com/storybooks/storybook/tree/master/addons/knobs"
+                      target="_blank"
+                      textColor="#888"
+                    >
+                      Knobs
+                    </Link>
+                    <Link
+                      href="https://www.youtube.com/watch?v=kopW6vzs9dg&feature=youtu.be"
+                      target="_blank"
+                      textColor="#888"
+                    >
+                      Demo Video
+                    </Link>
+                  </ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>
+                    <Link href="https://github.com/gvaldambrini/storybook-router" target="_blank" textColor="#888">
+                      Storybook Router
+                    </Link>
+                  </ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>
+                    <Link
+                      href="https://github.com/mthuret/storybook-addon-specifications"
+                      target="_blank"
+                      textColor="#888"
+                    >
+                      Specifications Addon
+                    </Link>
+                  </ListItem>
+                </Appear>
+              </List>
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              <Link href="https://github.com/facebookincubator/create-react-app" target="_blank" textColor="#888">
+                Create React App
+              </Link>
+            </ListItem>
+          </Appear>
+        </List>
+      </Slide>
+
+      <Slide transition={['zoom']}>
         <Heading size={1} fit>Matt Travi</Heading>
 
         <Layout>
