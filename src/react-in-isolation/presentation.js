@@ -76,7 +76,7 @@ export default function Presentation() {
         </List>
       </Slide>
 
-      <Slide>
+      <Slide transition={['zoom']}>
         <Heading size={1} fit>How can we isolate React</Heading>
         <Heading size={2} fit>to learn it without the distractions?</Heading>
       </Slide>
@@ -90,7 +90,7 @@ export default function Presentation() {
         code={require('../../assets/react-in-isolation/create-element-hello-world.example')}
         ranges={[{
           loc: [2, 9],
-          note: 'pure JavaScript component',
+          note: 'JavaScript component',
           title: 'createElement'
         }]}
       />
@@ -114,7 +114,7 @@ export default function Presentation() {
         }]}
       />
 
-      <Slide>
+      <Slide transition={['zoom']}>
         <Link href="https://storybook.js.org/">
           <Image width={'80%'} src={require('../../assets/react-in-isolation/storybook.svg')} />
         </Link>
@@ -173,13 +173,13 @@ export default function Presentation() {
         ]}
       />
 
-      <Slide transition={['zoom']}>
+      <Slide>
         <Link href="http://localhost:6006/?selectedKind=Functional" target="_blank">
           <Heading size={1}>Demo</Heading>
         </Link>
       </Slide>
 
-      <Slide>
+      <Slide transition={['zoom']}>
         <Heading size={1} fit>Props</Heading>
       </Slide>
 
@@ -205,7 +205,7 @@ export default function Presentation() {
         ]}
       />
 
-      <Slide transition={['zoom']}>
+      <Slide>
         <Link href="http://localhost:6006/?selectedKind=Props%2FButton" target="_blank">
           <Heading size={1}>Demo</Heading>
         </Link>
@@ -228,7 +228,7 @@ export default function Presentation() {
         ]}
       />
 
-      <Slide transition={['zoom']}>
+      <Slide>
         <Link href="http://localhost:6006/?selectedKind=Handlers%2FButton" target="_blank">
           <Heading size={1}>Demo</Heading>
         </Link>
@@ -303,6 +303,12 @@ export default function Presentation() {
           }
         ]}
       />
+
+      <Slide>
+        <Link href="http://localhost:6006/?selectedKind=Handlers%2FButton" target="_blank">
+          <Heading size={1}>Demo</Heading>
+        </Link>
+      </Slide>
 
       <Slide>
         <Heading size={1} fit>One-way Data Flow</Heading>
