@@ -214,7 +214,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="http://localhost:6006/?selectedKind=Functional" target="_blank">
+        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Functional" target="_blank">
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -251,7 +251,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="http://localhost:6006/?selectedKind=Props%2FButton" target="_blank">
+        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Props%2FButton" target="_blank">
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -274,7 +274,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="http://localhost:6006/?selectedKind=Handlers%2FButton" target="_blank">
+        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Handlers%2FButton" target="_blank">
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -350,7 +350,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="http://localhost:6006/?selectedKind=Handlers%2FButton" target="_blank">
+        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Handlers%2FButton" target="_blank">
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -433,7 +433,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="http://localhost:6006/?selectedKind=Inputs" target="_blank">
+        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Inputs" target="_blank">
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
@@ -477,7 +477,7 @@ export default function Presentation() {
       />
 
       <Slide>
-        <Link href="http://localhost:6006/?selectedKind=Inputs" target="_blank">
+        <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Inputs" target="_blank">
           <Heading size={2}>Demo</Heading>
         </Link>
       </Slide>
