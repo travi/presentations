@@ -586,7 +586,11 @@ export default function Presentation() {
                 <Link textColor="#888" target="_blank" href="https://twitter.com/mtravi">twitter.com/mtravi</Link>
               </ListItem>
               <ListItem>
-                <Link textColor="#888" target="_blank" href="https://github.com/travi/react-in-isolation">
+                <Link
+                  textColor="#888"
+                  target="_blank"
+                  href="https://github.com/travi/react-in-isolation/tree/dsmjs-oct-2017"
+                >
                   github.com/travi/react-in-isolation
                 </Link>
               </ListItem>
