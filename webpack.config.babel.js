@@ -21,6 +21,7 @@ export default function (env) {
       'continuous-deployment/index': './src/continuous-deployment',
       'continuous-deployment-dsmjs-june-2017/index': './src/continuous-deployment-dsmjs-june-2017',
       'react-in-isolation/index': './src/react-in-isolation',
+      'react-in-isolation-dsmjs-oct-2017/index': './src/react-in-isolation-dsmjs-oct-2017',
       vendor: removeEmpty([
         // ifDevelopment('webpack-hot-middleware/client'),
         'react',
@@ -144,6 +145,12 @@ export default function (env) {
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'react-in-isolation/index'],
         filename: 'react-in-isolation/index.html',
+        template: 'src/presentation.mustache',
+        title: 'React in Isolation'
+      }),
+      new HtmlWebpackPlugin({
+        chunks: [...defaultChunks, 'react-in-isolation-dsmjs-oct-2017/index'],
+        filename: 'react-in-isolation-dsmjs-oct-2017/index.html',
         template: 'src/presentation.mustache',
         title: 'React in Isolation'
       })
