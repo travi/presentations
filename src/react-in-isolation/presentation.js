@@ -129,7 +129,7 @@ export default function Presentation() {
 
       <Slide transition={['zoom']}>
         <Link href="https://storybook.js.org/" target="_blank">
-          <Image width={'80%'} src={require('../../assets/react-in-isolation/storybook.svg')} />
+          <Image width="80%" src={require('../../assets/react-in-isolation/storybook.svg')} />
         </Link>
       </Slide>
 

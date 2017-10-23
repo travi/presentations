@@ -112,12 +112,14 @@ export default function Presentation() {
           <Appear><ListItem>Why our best attempts often fail</ListItem></Appear>
           <Appear><ListItem>Early problems in our new app at Dwolla</ListItem></Appear>
           <Appear><ListItem>Rallying around components</ListItem></Appear>
-          <Appear><ListItem>
-            Shared codebase
-            <List style={{marginLeft: 50}}>
-              <Appear><ListItem>How to publish and distribute</ListItem></Appear>
-            </List>
-          </ListItem></Appear>
+          <Appear>
+            <ListItem>
+              Shared codebase
+              <List style={{marginLeft: 50}}>
+                <Appear><ListItem>How to publish and distribute</ListItem></Appear>
+              </List>
+            </ListItem>
+          </Appear>
         </List>
       </Slide>
 
