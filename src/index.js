@@ -37,7 +37,7 @@ function Presentations() {
           <li>
             <a href="react-in-isolation-dsmjs-oct-2017/">Learn React in Isolation</a>{' '}
             Given at <a href="https://dsmjs.com">dsmJS</a> in{' '}
-            <a href="https://dsmjs.com/2017/10/10/meeting.html"><time dateTime="2017-10-10">June, 2017</time></a>
+            <a href="https://dsmjs.com/2017/10/10/meeting.html"><time dateTime="2017-10-10">October, 2017</time></a>
           </li>
 
         </ol>
