@@ -116,43 +116,50 @@ export default function (env) {
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'index'],
         filename: 'index.html',
-        template: 'src/index.mustache'
+        template: 'src/index.mustache',
+        ...'production' === env && {gaKey: 'UA-2890413-13'}
       }),
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'continuous-deployment/index'],
         filename: 'continuous-deployment/index.html',
         template: 'src/presentation.mustache',
-        title: 'Continuous Deployment'
+        title: 'Continuous Deployment',
+        ...'production' === env && {gaKey: 'UA-2890413-13'}
       }),
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'continuous-deployment-dsmjs-june-2017/index'],
         filename: 'continuous-deployment-dsmjs-june-2017/index.html',
         template: 'src/presentation.mustache',
-        title: 'Continuous Deployment'
+        title: 'Continuous Deployment',
+        ...'production' === env && {gaKey: 'UA-2890413-13'}
       }),
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'component-library/index'],
         filename: 'component-library/index.html',
         template: 'src/presentation.mustache',
-        title: 'Component Library'
+        title: 'Component Library',
+        ...'production' === env && {gaKey: 'UA-2890413-13'}
       }),
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'component-library-dsmjs-july-2016/index'],
         filename: 'component-library-dsmjs-july-2016/index.html',
         template: 'src/presentation.mustache',
-        title: 'Component Library'
+        title: 'Component Library',
+        ...'production' === env && {gaKey: 'UA-2890413-13'}
       }),
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'react-in-isolation/index'],
         filename: 'react-in-isolation/index.html',
         template: 'src/presentation.mustache',
-        title: 'React in Isolation'
+        title: 'React in Isolation',
+        ...'production' === env && {gaKey: 'UA-2890413-13'}
       }),
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'react-in-isolation-dsmjs-oct-2017/index'],
         filename: 'react-in-isolation-dsmjs-oct-2017/index.html',
         template: 'src/presentation.mustache',
-        title: 'React in Isolation'
+        title: 'React in Isolation',
+        ...'production' === env && {gaKey: 'UA-2890413-13'}
       })
     ])
   };
