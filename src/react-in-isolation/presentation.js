@@ -337,12 +337,12 @@ export default function Presentation() {
         code={require('../../assets/react-in-isolation/handlers.example')}
         ranges={[
           {
-            loc: [15, 21],
+            loc: [22, 28],
             note: 'functions passed as props',
             title: 'Handlers'
           },
           {
-            loc: [18, 19],
+            loc: [25, 26],
             note: 'functions passed as props',
             title: 'Handlers'
           }
