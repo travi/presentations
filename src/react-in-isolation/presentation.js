@@ -448,13 +448,13 @@ export default function Presentation() {
             note: 'an instance needs to be created to maintain state'
           },
           {
-            loc: [11, 20],
+            loc: [12, 21],
             title: 'Container Component',
             note: 'the `render` function serves the same purpose as a functional component, but has privileged ' +
             'access to instance properties'
           },
           {
-            loc: [15, 16],
+            loc: [16, 17],
             title: 'Container Component',
             note: 'the `value` is controlled using state'
           },
@@ -464,12 +464,12 @@ export default function Presentation() {
             note: 'state of `value` is initialized to an empty string. this could be initialized to a prop value'
           },
           {
-            loc: [5, 10],
+            loc: [5, 11],
             title: 'Container Component',
             note: 'the handler passed as `onChange` to the DOM element updates the internal component state'
           },
           {
-            loc: [16, 17],
+            loc: [17, 18],
             title: 'Container Component',
             note: 'the change-handler is passed to `onChange`'
           }
