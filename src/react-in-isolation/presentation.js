@@ -38,7 +38,7 @@ export default function Presentation() {
       </Slide>
 
       <Slide transition={['zoom']}>
-        <Heading size={1} fit>Not an intro to React</Heading>
+        <Heading size={1} fit>Less of an intro to React</Heading>
         <Heading size={2} fit>Instead, how to learn React</Heading>
       </Slide>
 
@@ -52,30 +52,12 @@ export default function Presentation() {
         </Heading>
       </Slide>
 
-      <Slide>
+      <Slide notes="Transpilation, Bundling for the Browser, Auto rebuild when developing, Hot-reload">
         <Heading size={2} fit>Build Tools</Heading>
-
-        <List>
-          <ListItem>Transpilation (Babel)</ListItem>
-          <ListItem>
-            Bundling for the browser (Webpack)
-            <List>
-              <ListItem>Dev Server</ListItem>
-              <ListItem>Hot Reload</ListItem>
-            </List>
-          </ListItem>
-        </List>
       </Slide>
 
-      <Slide>
+      <Slide notes="Loading data to the browser, State management, Routing, SSR">
         <Heading size={2} fit>Application Wiring</Heading>
-
-        <List>
-          <ListItem>Loading data into the browser (Redial, etc)</ListItem>
-          <ListItem>State management (Redux, MobX, etc)</ListItem>
-          <ListItem>Routing (React Router)</ListItem>
-          <ListItem>Server-side Render?</ListItem>
-        </List>
       </Slide>
 
       <Slide transition={['zoom']}>
