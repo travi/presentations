@@ -483,6 +483,67 @@ export default function Presentation() {
       </Slide>
 
       <Slide transition={['zoom']}>
+        <Heading size={1} fit>Navigation</Heading>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/navigation.example')}
+        ranges={[
+          {
+            loc: [2, 3],
+            title: 'Navigation with linkTo',
+            note: 'import the linkTo function'
+          },
+          {
+            loc: [17, 27],
+            title: 'Navigation with linkTo',
+            note: 'define onClick handlers to navigate'
+          },
+          {
+            loc: [19, 23],
+            title: 'Navigation with linkTo',
+            note: 'define onClick handlers to navigate'
+          },
+          {
+            loc: [33, 37],
+            title: 'Navigation with linkTo',
+            note: 'define onClick handlers to navigate'
+          },
+          {
+            loc: [43, 47],
+            title: 'Navigation with linkTo',
+            note: 'define onClick handlers to navigate'
+          },
+          {
+            loc: [57, 61],
+            title: 'Navigation with linkTo',
+            note: 'define onClick handlers to navigate'
+          },
+          {
+            loc: [20, 21],
+            title: 'Navigation with linkTo',
+            note: 'define the category that you want to navigate to'
+          },
+          {
+            loc: [13, 14],
+            title: 'Navigation with linkTo',
+            note: 'define the category that you want to navigate to'
+          },
+          {
+            loc: [21, 22],
+            title: 'Navigation with linkTo',
+            note: 'and the story name'
+          },
+          {
+            loc: [29, 30],
+            title: 'Navigation with linkTo',
+            note: 'and the story name'
+          }
+        ]}
+      />
+
+      <Slide transition={['zoom']}>
         <Heading size={1} fit>Next Steps</Heading>
 
         <List>
