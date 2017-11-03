@@ -668,27 +668,6 @@ export default function Presentation() {
         <List>
           <Appear>
             <ListItem>
-              Testing
-
-              <List>
-                <Appear>
-                  <ListItem>
-                    React&apos;s simplicity makes&nbsp;
-                    <Link
-                      href="https://github.com/travi/react-in-isolation/tree/master/test/unit"
-                      target="_blank"
-                      textColor="#888"
-                    >
-                      unit testing
-                    </Link>
-                    &nbsp;straight forward
-                  </ListItem>
-                </Appear>
-              </List>
-            </ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>
               <Link
                 href="https://storybook.js.org/addons/addon-gallery/"
                 target="_blank"
@@ -698,35 +677,32 @@ export default function Presentation() {
               </Link>
 
               <List>
-                <Appear>
-                  <ListItem>
-                    <Link
-                      href="https://github.com/storybooks/storybook/tree/master/addons/knobs"
-                      target="_blank"
-                      textColor="#888"
-                    >
-                      Knobs
-                    </Link>
-                    <Link
-                      href="https://www.youtube.com/watch?v=kopW6vzs9dg&feature=youtu.be"
-                      target="_blank"
-                      textColor="#888"
-                    >
-                      Demo Video
-                    </Link>
-                  </ListItem>
-                </Appear>
-                <Appear>
-                  <ListItem>
-                    <Link
-                      href="https://github.com/mthuret/storybook-addon-specifications"
-                      target="_blank"
-                      textColor="#888"
-                    >
-                      Specifications Addon
-                    </Link>
-                  </ListItem>
-                </Appear>
+                <ListItem>
+                  <Link
+                    href="https://github.com/storybooks/storybook/tree/master/addons/knobs"
+                    target="_blank"
+                    textColor="#888"
+                  >
+                    Knobs
+                  </Link>
+                  {' - '}
+                  <Link
+                    href="https://www.youtube.com/watch?v=kopW6vzs9dg&feature=youtu.be"
+                    target="_blank"
+                    textColor="#888"
+                  >
+                    Demo Video
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link
+                    href="https://github.com/mthuret/storybook-addon-specifications"
+                    target="_blank"
+                    textColor="#888"
+                  >
+                    Specifications Addon
+                  </Link>
+                </ListItem>
               </List>
             </ListItem>
           </Appear>
@@ -734,6 +710,13 @@ export default function Presentation() {
             <ListItem>
               <Link href="https://github.com/facebookincubator/create-react-app" target="_blank" textColor="#888">
                 Create React App
+              </Link>
+            </ListItem>
+          </Appear>
+          <Appear>
+            <ListItem>
+              <Link href="https://presentations.travi.org/component-library/" target="_blank" textColor="#888">
+                Build an Interactive Component Library
               </Link>
             </ListItem>
           </Appear>
@@ -773,7 +756,7 @@ export default function Presentation() {
                   target="_blank"
                   href="https://presentations.travi.org/react-in-isolation-icc-nov-2017"
                 >
-                  presentations.travi.org/react-in-isolation-dsmjs-oct-2017
+                  presentations.travi.org/react-in-isolation-icc-nov-2017
                 </Link>
               </ListItem>
             </List>
