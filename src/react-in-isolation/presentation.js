@@ -530,6 +530,52 @@ export default function Presentation() {
         ]}
       />
 
+      <Slide transition={['zoom']}>
+        <Heading size={2} fit>Unit Tests</Heading>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/input-test.example')}
+        ranges={[
+          {
+            loc: [9, 10],
+            title: 'Unit Testing with Enzyme',
+            note: 'render the <Input />'
+          },
+          {
+            loc: [10, 14],
+            title: 'Unit Testing with Enzyme',
+            note: 'verify that the type is set correctly and that the value defaults to empty'
+          },
+          {
+            loc: [22, 26],
+            title: 'Unit Testing with Enzyme',
+            note: 'simulate a value change'
+          },
+          {
+            loc: [27, 31],
+            title: 'Unit Testing with Enzyme',
+            note: 'verify that the state was updated and flows down to the <input />'
+          },
+          {
+            loc: [37, 40],
+            title: 'Unit Testing with Enzyme',
+            note: 'provide an external change handler'
+          },
+          {
+            loc: [41, 48],
+            title: 'Unit Testing with Enzyme',
+            note: 'simulate a value change'
+          },
+          {
+            loc: [49, 55],
+            title: 'Unit Testing with Enzyme',
+            note: 'being explicit about boolean flags (even when true) helps clarify the intent of the test'
+          }
+        ]}
+      />
+
       <Slide>
         <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Inputs" target="_blank">
           <Heading size={2}>Demo</Heading>
