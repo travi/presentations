@@ -105,6 +105,32 @@ export default function Presentation() {
       />
 
       <Slide transition={['zoom']}>
+        <Heading size={2} fit>Unit Tests</Heading>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/hello-world-test.example')}
+        ranges={[
+          {
+            loc: [1, 2],
+            title: 'Unit Testing with Enzyme',
+            note: 'enzyme simplifies testing components'
+          },
+          {
+            loc: [7, 10],
+            title: 'Unit Testing with Enzyme',
+            note: 'render the component with shallow()'
+          },
+          {
+            loc: [11, 15],
+            title: 'Unit Testing with Enzyme',
+            note: 'verify the behavior'
+          }
+        ]}
+      />
+
+      <Slide transition={['zoom']}>
         <Heading size={1} fit>But what do I do with these components</Heading>
         <Heading size={2} fit>without an application?</Heading>
       </Slide>
