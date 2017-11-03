@@ -69,9 +69,18 @@ storiesOf('Navigation/Pagination/linkTo', module)
 
 storiesOf('Navigation/Pagination/router', module)
   .addDecorator(storyRouter({
-    '/first': linkTo('Navigation/Pagination/router', 'first page'),
-    '/middle': linkTo('Navigation/Pagination/router', 'middle page'),
-    '/last': linkTo('Navigation/Pagination/router', 'last page')
+    '/first': linkTo(
+      'Navigation/Pagination/router',
+      'first page'
+    ),
+    '/middle': linkTo(
+      'Navigation/Pagination/router',
+      'middle page'
+    ),
+    '/last': linkTo(
+      'Navigation/Pagination/router',
+      'last page'
+    )
   }))
   .add('first page', () => (
     <ol style={paginationContainerStyles}>
@@ -81,13 +90,17 @@ storiesOf('Navigation/Pagination/router', module)
   ))
   .add('middle page', () => (
     <ol style={paginationContainerStyles}>
-      <li><Link to="/first">Previous</Link></li>
+      <li>
+        <Link to="/first">Previous</Link>
+      </li>
       <li><Link to="/last">Next</Link></li>
     </ol>
   ))
   .add('last page', () => (
     <ol style={paginationContainerStyles}>
-      <li><Link to="/middle">Previous</Link></li>
+      <li>
+        <Link to="/middle">Previous</Link>
+      </li>
       <li>&nbsp;</li>
     </ol>
   ));

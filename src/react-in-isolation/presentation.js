@@ -543,6 +543,71 @@ export default function Presentation() {
         ]}
       />
 
+      <Slide>
+        <Link
+          href="https://travi.github.io/react-in-isolation/?selectedKind=Navigation%2FPagination%2FlinkTo"
+          target="_blank"
+        >
+          <Heading size={2}>Demo</Heading>
+        </Link>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/navigation.example')}
+        ranges={[
+          {
+            loc: [4, 5],
+            title: 'Navigation with storybook-router',
+            note: 'import the storybook-router'
+          },
+          {
+            loc: [84, 90],
+            title: 'Navigation with storybook-router',
+            note: 'define <Link>s to navigate'
+          },
+          {
+            loc: [90, 98],
+            title: 'Navigation with storybook-router',
+            note: 'define <Link>s to navigate'
+          },
+          {
+            loc: [98, 106],
+            title: 'Navigation with storybook-router',
+            note: 'define <Link>s to navigate'
+          },
+          {
+            loc: [70, 71],
+            title: 'Navigation with storybook-router',
+            note: 'add a decorator to define routes. storybook decorators are applied to each story'
+          },
+          {
+            loc: [71, 75],
+            title: 'Navigation with storybook-router',
+            note: 'map each route to a linkTo function'
+          },
+          {
+            loc: [75, 79],
+            title: 'Navigation with storybook-router',
+            note: 'map each route to a linkTo function'
+          },
+          {
+            loc: [79, 83],
+            title: 'Navigation with storybook-router',
+            note: 'map each route to a linkTo function'
+          }
+        ]}
+      />
+
+      <Slide>
+        <Link
+          href="https://travi.github.io/react-in-isolation/?selectedKind=Navigation%2FPagination%2Frouter"
+          target="_blank"
+        >
+          <Heading size={2}>Demo</Heading>
+        </Link>
+      </Slide>
+
       <Slide transition={['zoom']}>
         <Heading size={1} fit>Next Steps</Heading>
 
@@ -599,13 +664,6 @@ export default function Presentation() {
                 </Appear>
                 <Appear>
                   <ListItem>
-                    <Link href="https://github.com/gvaldambrini/storybook-router" target="_blank" textColor="#888">
-                      Storybook Router
-                    </Link>
-                  </ListItem>
-                </Appear>
-                <Appear>
-                  <ListItem>
                     <Link
                       href="https://github.com/mthuret/storybook-addon-specifications"
                       target="_blank"
@@ -650,7 +708,7 @@ export default function Presentation() {
                 <Link
                   textColor="#888"
                   target="_blank"
-                  href="https://github.com/travi/react-in-isolation/tree/dsmjs-oct-2017"
+                  href="https://github.com/travi/react-in-isolation/tree/icc-nov-2017"
                 >
                   github.com/travi/react-in-isolation
                 </Link>
@@ -659,7 +717,7 @@ export default function Presentation() {
                 <Link
                   textColor="#888"
                   target="_blank"
-                  href="https://presentations.travi.org/react-in-isolation-dsmjs-oct-2017"
+                  href="https://presentations.travi.org/react-in-isolation-icc-nov-2017"
                 >
                   presentations.travi.org/react-in-isolation-dsmjs-oct-2017
                 </Link>
