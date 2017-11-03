@@ -108,6 +108,29 @@ export default function Presentation() {
         <Heading size={2} fit>Unit Tests</Heading>
       </Slide>
 
+      <Slide>
+        <Layout>
+          <Fill>
+            <Image width="70%" src={require('../../assets/react-in-isolation/airbnb.svg')} />
+            <Appear>
+              <Link href="https://mochajs.org/" target="_blank">
+                <Image width="70%" src={require('../../assets/react-in-isolation/mocha.svg')} />
+              </Link>
+            </Appear>
+          </Fill>
+          <Fill>
+            <Link href="http://airbnb.io/enzyme/" target="_blank">
+              <Image width="70%" src={images.enzyme.replace('/', '')} />
+            </Link>
+            <Appear>
+              <Link href="http://chaijs.com/" target="_blank">
+                <Image width="60%" src={require('../../assets/react-in-isolation/chai.svg')} />
+              </Link>
+            </Appear>
+          </Fill>
+        </Layout>
+      </Slide>
+
       <CodeSlide
         lang="jsx"
         code={require('../../assets/react-in-isolation/hello-world-test.example')}
