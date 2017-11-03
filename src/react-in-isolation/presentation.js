@@ -357,6 +357,52 @@ export default function Presentation() {
         ]}
       />
 
+      <Slide transition={['zoom']}>
+        <Heading size={2} fit>Unit Tests</Heading>
+      </Slide>
+
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/button-test.example')}
+        ranges={[
+          {
+            loc: [13, 20],
+            title: 'Unit Testing with Enzyme',
+            note: 'pass props to the button'
+          },
+          {
+            loc: [20, 21],
+            title: 'Unit Testing with Enzyme',
+            note: 'select the DOM <button/> within the wrapper'
+          },
+          {
+            loc: [21, 31],
+            title: 'Unit Testing with Enzyme',
+            note: 'verify that the props were passed down to the <button/>'
+          },
+          {
+            loc: [42, 46],
+            title: 'Unit Testing with Enzyme',
+            note: 'verify that the pointer is used as the cursor when the button is enabled'
+          },
+          {
+            loc: [34, 40],
+            title: 'Unit Testing with Enzyme',
+            note: 'being explicit about boolean flags (especially when false) helps clarify the intent of the test'
+          },
+          {
+            loc: [57, 61],
+            title: 'Unit Testing with Enzyme',
+            note: 'verify that not-allowed is used as the cursor when the button is enabled'
+          },
+          {
+            loc: [49, 55],
+            title: 'Unit Testing with Enzyme',
+            note: 'being explicit about boolean flags (even when true) helps clarify the intent of the test'
+          }
+        ]}
+      />
+
       <Slide>
         <Link href="https://travi.github.io/react-in-isolation/?selectedKind=Handlers%2FButton" target="_blank">
           <Heading size={2}>Demo</Heading>
