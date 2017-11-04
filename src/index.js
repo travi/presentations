@@ -39,7 +39,11 @@ function Presentations() {
             Given at <a href="https://dsmjs.com">dsmJS</a> in{' '}
             <a href="https://dsmjs.com/2017/10/10/meeting.html"><time dateTime="2017-10-10">October, 2017</time></a>
           </li>
-
+          <li>
+            <a href="react-in-isolation-icc-nov-2017/">Learn React in Isolation</a>{' '}
+            Given at <a href="http://iowacodecamp.com/">Iowa Code Camp</a> in{' '}
+            <time dateTime="2017-11-04">November, 2017</time>
+          </li>
         </ol>
       </li>
     </ul>
