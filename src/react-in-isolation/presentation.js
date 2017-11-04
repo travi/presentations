@@ -474,6 +474,18 @@ export default function Presentation() {
         </List>
       </Slide>
 
+      <CodeSlide
+        lang="jsx"
+        code={require('../../assets/react-in-isolation/simple-container.example')}
+        ranges={[
+          {
+            loc: [1, 8],
+            title: 'Container Component',
+            note: 'maintains an instance'
+          }
+        ]}
+      />
+
       <Slide transition={['zoom']}>
         <Heading size={1} fit>State</Heading>
 
