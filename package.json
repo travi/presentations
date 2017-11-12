@@ -61,6 +61,7 @@
     "npm-run-all": "4.1.2",
     "quibble": "0.5.1",
     "raw-loader": "0.5.1",
+    "react-test-renderer": "16.1.0",
     "style-loader": "0.19.0",
     "url-loader": "0.6.2",
     "validate-commit-msg": "2.14.0",
