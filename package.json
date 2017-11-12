@@ -15,7 +15,9 @@
     "start": "babel-node webpack-dev-server.js",
     "deploy": "gh-pages -r \"https://$GH_TOKEN@github.com/travi/presentations.git\" -a -d lib/",
     "commitmsg": "validate-commit-msg",
-    "precommit": "npm test"
+    "precommit": "npm test",
+    "greenkeeper:update-lockfile": "greenkeeper-lockfile-update",
+    "greenkeeper:upload-lockfile": "greenkeeper-lockfile-upload"
   },
   "config": {
     "commitizen": {
@@ -46,6 +48,7 @@
     "file-loader": "0.11.2",
     "gh-pages": "1.0.0",
     "globstar": "1.0.0",
+    "greenkeeper-lockfile": "1.12.0",
     "html-webpack-plugin": "2.30.1",
     "husky": "0.14.3",
     "img-loader": "2.0.0",
