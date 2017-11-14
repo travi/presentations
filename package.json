@@ -76,7 +76,7 @@
     "react-dom": "15.6.2",
     "react-emojione": "5.0.0",
     "react-typist": "2.0.4",
-    "spectacle": "2.2.2",
+    "spectacle": "4.0.3",
     "spectacle-code-slide": "0.5.1",
     "spectacle-image-slide": "1.0.1",
     "spectacle-terminal": "0.3.0"
