@@ -46,7 +46,7 @@
     "ease-component": "1.0.0",
     "enzyme": "2.9.1",
     "file-loader": "0.11.2",
-    "gh-pages": "1.0.0",
+    "gh-pages": "1.1.0",
     "globstar": "1.0.0",
     "greenkeeper-lockfile": "1.12.0",
     "html-webpack-plugin": "2.30.1",
