@@ -62,7 +62,7 @@
     "quibble": "0.5.3",
     "raw-loader": "0.5.1",
     "react-test-renderer": "16.2.0",
-    "style-loader": "0.19.1",
+    "style-loader": "0.20.0",
     "url-loader": "0.6.2",
     "validate-commit-msg": "2.14.0",
     "webpack": "3.10.0",
