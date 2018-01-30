@@ -2,12 +2,12 @@ language: node_js
 dist: trusty
 notifications:
   email: false
+before_script: npm run greenkeeper:update-lockfile
+after_script: npm run greenkeeper:upload-lockfile
 before_deploy:
-  - npm run greenkeeper:update-lockfile
   - npm run build
   - git config --global user.name "$GIT_USER"
   - git config --global user.email "$GIT_EMAIL"
-after_script: npm run greenkeeper:upload-lockfile
 deploy:
   provider: script
   skip_cleanup: true
