@@ -75,7 +75,7 @@
     "webpack-visualizer-plugin": "0.1.11"
   },
   "dependencies": {
-    "normalize.css": "7.0.0",
+    "normalize.css": "8.0.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-emojione": "5.0.0",
