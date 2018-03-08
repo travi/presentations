@@ -40,7 +40,7 @@
     "babel-preset-react": "6.24.1",
     "babel-register": "6.26.0",
     "chai": "4.1.2",
-    "clean-webpack-plugin": "0.1.18",
+    "clean-webpack-plugin": "0.1.19",
     "component-emitter": "1.2.1",
     "component-type": "1.2.1",
     "css-loader": "0.28.10",
