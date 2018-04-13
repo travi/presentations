@@ -56,7 +56,7 @@
     "husky": "0.15.0-rc.3",
     "img-loader": "2.0.1",
     "jsdom": "11.7.0",
-    "lodash-webpack-plugin": "0.11.4",
+    "lodash-webpack-plugin": "0.11.5",
     "markdownlint-cli": "0.8.1",
     "mocha": "5.1.0",
     "mq-polyfill": "1.1.8",
