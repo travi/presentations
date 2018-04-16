@@ -77,7 +77,7 @@
   "dependencies": {
     "normalize.css": "8.0.0",
     "react": "16.3.2",
-    "react-dom": "16.3.1",
+    "react-dom": "16.3.2",
     "react-emojione": "5.0.0",
     "react-typist": "2.0.4",
     "spectacle": "3.0.0",
