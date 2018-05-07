@@ -46,6 +46,12 @@ function Presentations() {
           </li>
         </ol>
       </li>
+      <li>
+        Avoiding the Monorepo
+        <ol>
+          <li><a href="avoiding-the-monorepo/">Latest</a></li>
+        </ol>
+      </li>
     </ul>
   );
 }
