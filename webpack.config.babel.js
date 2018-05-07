@@ -23,6 +23,7 @@ export default function (env) {
       'react-in-isolation/index': './src/react-in-isolation',
       'react-in-isolation-dsmjs-oct-2017/index': './src/react-in-isolation-dsmjs-oct-2017',
       'react-in-isolation-icc-nov-2017/index': './src/react-in-isolation-icc-nov-2017',
+      'avoiding-the-monorepo/index': './src/avoiding-the-monorepo',
       vendor: removeEmpty([
         // ifDevelopment('webpack-hot-middleware/client'),
         'react',
@@ -167,6 +168,13 @@ export default function (env) {
         filename: 'react-in-isolation-icc-nov-2017/index.html',
         template: 'src/presentation.mustache',
         title: 'React in Isolation',
+        ...'production' === env && {gaKey: 'UA-2890413-13'}
+      }),
+      new HtmlWebpackPlugin({
+        chunks: [...defaultChunks, 'avoiding-the-monorepo/index'],
+        filename: 'avoiding-the-monorepo/index.html',
+        template: 'src/presentation.mustache',
+        title: 'Avoiding the Monorepo',
         ...'production' === env && {gaKey: 'UA-2890413-13'}
       })
     ])
