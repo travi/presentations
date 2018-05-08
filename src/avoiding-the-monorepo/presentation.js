@@ -1,5 +1,5 @@
 import React from 'react';
-import {Deck, Heading, Image, Slide, Text, Typeface} from 'spectacle';
+import {Appear, Deck, Heading, Image, Link, List, ListItem, Slide, Text, Typeface} from 'spectacle';
 import createTheme from 'spectacle/lib/themes/default/index';
 import preloader from 'spectacle/lib/utils/preloader';
 
@@ -24,6 +24,34 @@ export default function Presentation() {
           Avoiding the Monorepo
         </Heading>
         <Text textSize="1em" margin="40px 0px 0px" bold>Matt Travi</Text>
+      </Slide>
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={1} fit>Monolith vs Modularity</Heading>
+      </Slide>
+      <Slide bgColor="white">
+        <Heading size={3} textColor="black" textFont="primary" caps fit>Splitting the Monolith</Heading>
+        <List>
+          <Appear><ListItem>Important to understand trade-offs</ListItem></Appear>
+          <Appear><ListItem>Undeniable benefits</ListItem></Appear>
+          <Appear><ListItem>Account for costs when splitting</ListItem></Appear>
+        </List>
+      </Slide>
+      <Slide bgColor="white">
+        <Heading size={3} textColor="black" textFont="primary" caps fit>Costs of Modularity</Heading>
+        <List>
+          <Appear><ListItem>Unpublished changes</ListItem></Appear>
+          <Appear><ListItem>Published versions not yet consumed</ListItem></Appear>
+          <Appear><ListItem>Duplication of decisions/implementations</ListItem></Appear>
+        </List>
+      </Slide>
+      <Slide bgColor="white">
+        <Heading size={3} textColor="black" textFont="primary" caps fit>Management Options</Heading>
+        <List>
+          <Appear><ListItem>node.js/npm are well suited for extreme modularity</ListItem></Appear>
+          <Appear><ListItem>Repositories 1:1 for npm packages</ListItem></Appear>
+          <Appear><ListItem>Monorepos that version many npm packages</ListItem></Appear>
+          <Appear><ListItem>I consider monorepos to be a symptom</ListItem></Appear>
+        </List>
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={1} fit>Continuous Deployment</Heading>
@@ -56,6 +84,28 @@ export default function Presentation() {
           <Heading size={3} textColor="black" textFont="primary" caps fit>Yeoman</Heading>
         </Typeface>
         <Image src={images.yeoman.replace('/', '')} width="50%" />
+      </Slide>
+      <Slide bgColor="white">
+        <Typeface googleFont="Roboto Slab">
+          <Heading size={3} textColor="black" textFont="primary" caps fit>Yeoman</Heading>
+        </Typeface>
+        <List>
+          <Appear><ListItem>De facto standard generator for JavaScript projects</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              <Link textColor="black" href="http://yeoman.io/generators/">
+                Lots of generators already available
+              </Link>
+            </ListItem>
+          </Appear>
+          <Appear><ListItem>Ended up not fitting how I wanted to compose generators</ListItem></Appear>
+          <Appear>
+            <ListItem>
+              So, I&apos;m now building&nbsp;
+              <Link textColor="black" href="https://github.com/travi/project-scaffolder">my own scaffolding tool</Link>
+            </ListItem>
+          </Appear>
+        </List>
       </Slide>
     </Deck>
   );
