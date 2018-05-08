@@ -107,6 +107,56 @@ export default function Presentation() {
           </Appear>
         </List>
       </Slide>
+      <Slide bgColor="white">
+        <Heading size={3} textColor="black" textFont="primary" caps fit>Foundational Decisions</Heading>
+        <List>
+          <Appear><ListItem>git configuration</ListItem></Appear>
+          <Appear><ListItem>Public/Private</ListItem></Appear>
+          <Appear><ListItem>License</ListItem></Appear>
+          <Appear><ListItem>Build (CI) service</ListItem></Appear>
+        </List>
+      </Slide>
+      <Slide bgColor="white">
+        <Heading size={3} textColor="black" textFont="primary" caps fit>Language Decisions</Heading>
+        <List>
+          <Appear><ListItem>Deployment Strategy</ListItem></Appear>
+          <Appear><ListItem>Testing Strategy</ListItem></Appear>
+          <Appear><ListItem>Build Automation</ListItem></Appear>
+          <Appear><ListItem>License</ListItem></Appear>
+          <Appear><ListItem>Commit Conventions</ListItem></Appear>
+          <Appear><ListItem>Version</ListItem></Appear>
+        </List>
+      </Slide>
+      <Slide transition={['zoom']}>
+        <Heading size={1} fit>Matt Travi</Heading>
+
+        <List>
+          <ListItem>
+            <Link textColor="white" target="_blank" href="https://matt.travi.org">matt.travi.org</Link>
+          </ListItem>
+          <ListItem>
+            <Link textColor="white" target="_blank" href="https://twitter.com/mtravi">twitter.com/mtravi</Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              textColor="white"
+              target="_blank"
+              href="https://github.com/travi/project-scaffolder/tree/dsmjs-may-2018"
+            >
+              github.com/travi/project-scaffolder
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              textColor="white"
+              target="_blank"
+              href="https://presentations.travi.org/avoid-the-monolith-icc-may-2018"
+            >
+              presentations.travi.org/avoid-the-monolith-icc-may-2018
+            </Link>
+          </ListItem>
+        </List>
+      </Slide>
     </Deck>
   );
 }
