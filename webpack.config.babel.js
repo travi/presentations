@@ -24,6 +24,7 @@ export default function (env) {
       'react-in-isolation-dsmjs-oct-2017/index': './src/react-in-isolation-dsmjs-oct-2017',
       'react-in-isolation-icc-nov-2017/index': './src/react-in-isolation-icc-nov-2017',
       'avoiding-the-monorepo/index': './src/avoiding-the-monorepo',
+      'avoiding-the-monorepo-dsmjs-may-2018/index': './src/avoiding-the-monorepo-dsmjs-may-2018',
       vendor: removeEmpty([
         // ifDevelopment('webpack-hot-middleware/client'),
         'react',
@@ -173,6 +174,13 @@ export default function (env) {
       new HtmlWebpackPlugin({
         chunks: [...defaultChunks, 'avoiding-the-monorepo/index'],
         filename: 'avoiding-the-monorepo/index.html',
+        template: 'src/presentation.mustache',
+        title: 'Avoiding the Monorepo',
+        ...'production' === env && {gaKey: 'UA-2890413-13'}
+      }),
+      new HtmlWebpackPlugin({
+        chunks: [...defaultChunks, 'avoiding-the-monorepo-dsmjs-may-2018/index'],
+        filename: 'avoiding-the-monorepo-dsmjs-may-2018/index.html',
         template: 'src/presentation.mustache',
         title: 'Avoiding the Monorepo',
         ...'production' === env && {gaKey: 'UA-2890413-13'}
