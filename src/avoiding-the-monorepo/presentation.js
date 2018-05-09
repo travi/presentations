@@ -129,6 +129,18 @@ export default function Presentation() {
           <Appear><ListItem>Version</ListItem></Appear>
         </List>
       </Slide>
+      <Slide bgColor="black" transition={['slide']}>
+        <Heading size={1} fit>Scaffolder Demo</Heading>
+      </Slide>
+      <Slide bgColor="white">
+        <Heading size={3} textColor="black" textFont="primary" caps fit>Summary</Heading>
+        <List>
+          <Appear><ListItem>Automate Publishing</ListItem></Appear>
+          <Appear><ListItem>Isolate Updates</ListItem></Appear>
+          <Appear><ListItem>Automate Updates (if you have enough confidence)</ListItem></Appear>
+          <Appear><ListItem>Codify Decisions</ListItem></Appear>
+        </List>
+      </Slide>
       <Slide transition={['zoom']}>
         <Heading size={1} fit>Matt Travi</Heading>
 
