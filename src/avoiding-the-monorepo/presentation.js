@@ -124,7 +124,6 @@ export default function Presentation() {
           <Appear><ListItem>Deployment Strategy</ListItem></Appear>
           <Appear><ListItem>Testing Strategy</ListItem></Appear>
           <Appear><ListItem>Build Automation</ListItem></Appear>
-          <Appear><ListItem>License</ListItem></Appear>
           <Appear><ListItem>Commit Conventions</ListItem></Appear>
           <Appear><ListItem>Version</ListItem></Appear>
         </List>

@@ -50,6 +50,11 @@ function Presentations() {
         Avoiding the Monorepo
         <ol>
           <li><a href="avoiding-the-monorepo/">Latest</a></li>
+          <li>
+            <a href="avoiding-the-monorepo-dsmjs-may-2018/">Avoiding the Monorepo</a>{' '}
+            Given at <a href="https://dsmjs.com">dsmJS</a> in{' '}
+            <a href="https://dsmjs.com/2018/05/08/meeting.html"><time dateTime="2018-05-08">May, 2018</time></a>
+          </li>
         </ol>
       </li>
     </ul>
