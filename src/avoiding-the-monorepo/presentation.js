@@ -55,6 +55,7 @@ export default function Presentation() {
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={1} fit>Continuous Deployment</Heading>
+        <Heading size={2} textColor="primary" fit>Automate Publishing and Updating</Heading>
       </Slide>
       <Slide bgColor="white">
         <Heading size={3} textColor="black" textFont="primary" caps fit>Semantic Release</Heading>
@@ -78,6 +79,7 @@ export default function Presentation() {
       </Slide>
       <Slide bgColor="black" transition={['slide']}>
         <Heading size={1} fit>Project Scaffolding</Heading>
+        <Heading size={2} textColor="primary" fit>Codify Your Decisions</Heading>
       </Slide>
       <Slide bgColor="white">
         <Typeface googleFont="Roboto Slab">
