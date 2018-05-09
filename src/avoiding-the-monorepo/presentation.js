@@ -151,21 +151,13 @@ export default function Presentation() {
             <Link textColor="white" target="_blank" href="https://twitter.com/mtravi">twitter.com/mtravi</Link>
           </ListItem>
           <ListItem>
-            <Link
-              textColor="white"
-              target="_blank"
-              href="https://github.com/travi/project-scaffolder/tree/dsmjs-may-2018"
-            >
+            <Link textColor="white" target="_blank" href="https://github.com/travi/project-scaffolder">
               github.com/travi/project-scaffolder
             </Link>
           </ListItem>
           <ListItem>
-            <Link
-              textColor="white"
-              target="_blank"
-              href="https://presentations.travi.org/avoid-the-monolith-icc-may-2018"
-            >
-              presentations.travi.org/avoid-the-monolith-icc-may-2018
+            <Link textColor="white" target="_blank" href="https://presentations.travi.org/avoiding-the-monorepo">
+              presentations.travi.org/avoiding-the-monorepo
             </Link>
           </ListItem>
         </List>
