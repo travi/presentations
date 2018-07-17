@@ -72,7 +72,7 @@
     "webpack": "3.11.0",
     "webpack-config-utils": "2.3.0",
     "webpack-dev-server": "2.11.2",
-    "webpack-hot-middleware": "2.22.2",
+    "webpack-hot-middleware": "2.22.3",
     "webpack-visualizer-plugin": "0.1.11"
   },
   "dependencies": {
