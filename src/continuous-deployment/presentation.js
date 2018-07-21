@@ -293,11 +293,11 @@ export default function Presentation() {
         code={require('../../assets/package.npm.example')}
         ranges={[
           {
-            loc: [16, 17],
+            loc: [15, 16],
             title: 'commitizen'
           },
           {
-            loc: [27, 30],
+            loc: [26, 29],
             note: 'provides a wizard to simplify matching the expected commit pattern',
             title: 'commitizen'
           }
@@ -486,7 +486,7 @@ export default function Presentation() {
         code={require('../../assets/package.npm.example')}
         ranges={[
           {
-            loc: [17, 18],
+            loc: [16, 17],
             note: 'husky can be used for more git hooks',
             title: 'husky'
           },
@@ -523,14 +523,14 @@ export default function Presentation() {
         />
       </Slide>
       <Slide transition={['slide']}>
-        <Heading size={1} fit>Start the commit message with <Code>WIP</Code> to skip validation</Heading>
+        <Heading size={1} fit>Start the commit message with <Code>wip</Code> to skip validation</Heading>
       </Slide>
       <CodeSlide
         lang="yaml"
         code={require('../../assets/travis.npm.example')}
         ranges={[
           {
-            loc: [1, 2],
+            loc: [1, 5],
             title: 'Publish',
             note: 'The semantic-release task bumps the version, publishes, and compiles release notes'
           }
@@ -542,32 +542,22 @@ export default function Presentation() {
         code={require('../../assets/package.npm.example')}
         ranges={[
           {
-            loc: [13, 14],
-            note: 'The semantic-release task bumps the version, publishes, and compiles release notes',
-            title: 'Release'
-          },
-          {
-            loc: [11, 12],
-            title: 'Pre',
-            note: 'The pre task bumps the version based on the last release and the commit messages since'
-          },
-          {
-            loc: [20, 21],
+            loc: [19, 20],
             title: 'Version',
             note: 'Only defined to prevent a cli warning. It is overwritten by semantic-release before publishing'
           },
           {
             loc: [10, 11],
-            title: 'Pre-publish',
-            note: 'Any npm script can have a pre or post script. This script builds the bundled modules before publish'
+            title: 'Pre-pack',
+            note: 'Any npm script can have a pre or post script. This script builds the bundled modules before pack, ' +
+            'which happens before publish'
           },
           {loc: [7, 8], title: 'Rollup', note: 'Build bundles for distribution'},
           {
-            loc: [21, 23],
+            loc: [20, 22],
             title: 'Bundles',
             note: '`main` defines the common-js bundle. `module` defines the es module'
-          },
-          {loc: [12, 13], title: 'Post', note: 'The post task pushes the tag and release notes to GitHub'}
+          }
         ]}
       />
       <Slide bgColor="black" transition={['slide']}>
