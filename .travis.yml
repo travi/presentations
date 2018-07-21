@@ -2,6 +2,7 @@ language: node_js
 dist: trusty
 notifications:
   email: false
+install: case $TRAVIS_BRANCH in greenkeeper*) npm i;; *) npm ci;; esac;
 before_script: npm run greenkeeper:update-lockfile
 after_script: npm run greenkeeper:upload-lockfile
 before_deploy:
