@@ -29,7 +29,7 @@
     "@travi/eslint-config-travi": "1.6.15",
     "assets-webpack-plugin": "4.0.0",
     "babel-cli": "6.26.0",
-    "babel-loader": "7.1.5",
+    "babel-loader": "8.0.2",
     "babel-plugin-lodash": "3.3.4",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-plugin-transform-react-jsx-source": "6.22.0",
