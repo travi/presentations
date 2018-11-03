@@ -78,12 +78,12 @@ June, 2017
         Learn React in Isolation
         <ol>
           <li>
-            <a href="react-in-isolation/">
+            <a href="https://react-in-isolation.netlify.com/">
 Latest
             </a>
           </li>
           <li>
-            <a href="react-in-isolation-dsmjs-oct-2017/">
+            <a href="https://dsmjs-oct-2017--react-in-isolation.netlify.com/">
 Learn React in Isolation
             </a>
             {' '}
@@ -102,7 +102,7 @@ October, 2017
             </a>
           </li>
           <li>
-            <a href="react-in-isolation-icc-nov-2017/">
+            <a href="https://icc-nov-2017--react-in-isolation.netlify.com/">
 Learn React in Isolation
             </a>
             {' '}
