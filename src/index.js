@@ -124,12 +124,12 @@ November, 2017
         Avoiding the Monorepo
         <ol>
           <li>
-            <a href="avoiding-the-monorepo/">
+            <a href="https://avoiding-the-monorepo.netlify.com/">
 Latest
             </a>
           </li>
           <li>
-            <a href="avoiding-the-monorepo-dsmjs-may-2018/">
+            <a href="https://dsmjs-may-2018--avoiding-the-monorepo.netlify.com/">
 Avoiding the Monorepo
             </a>
             {' '}
