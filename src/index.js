@@ -78,7 +78,7 @@ June, 2017
         Learn React in Isolation
         <ol>
           <li>
-            <a href="https://react-in-isolation.netlify.com/">
+            <a href="https://react-in-isolation.travi.org/">
 Latest
             </a>
           </li>
@@ -124,7 +124,7 @@ November, 2017
         Avoiding the Monorepo
         <ol>
           <li>
-            <a href="https://avoiding-the-monorepo.netlify.com/">
+            <a href="https://avoiding-the-monorepo.travi.org/">
 Latest
             </a>
           </li>
@@ -146,6 +146,33 @@ in
 May, 2018
               </time>
             </a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        CI and CD Compatibility
+        <ol>
+          <li>
+            <a href="https://ci-vs-cd.travi.org/">
+Latest
+            </a>
+          </li>
+          <li>
+            <a href="https://icc-dec-2018--ci-vs-cd.netlify.com/">
+CI vs CD: The Unexpected Conflict
+            </a>
+            {' '}
+            Given at
+            {' '}
+            <a href="http://iowacodecamp.com/">
+Iowa Code Camp
+            </a>
+            {' '}
+in
+            {' '}
+            <time dateTime="2018-12-08">
+December, 2018
+            </time>
           </li>
         </ol>
       </li>
