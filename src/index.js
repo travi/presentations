@@ -9,7 +9,7 @@ function Presentations() {
         <ol>
           <li>
             <a href="component-library/">
-Latest
+              Latest
             </a>
           </li>
           <li>
@@ -17,23 +17,23 @@ Latest
               Collaborating through a
               {' '}
               <em>
-shared
+                shared
               </em>
               {' '}
-component library
+              component library
             </a>
             {' '}
             Given at
             {' '}
             <a href="https://dsmjs.com">
-dsmJS
+              dsmJS
             </a>
             {' '}
-in
+            in
             {' '}
             <a href="https://dsmjs.com/2016/07/12/meeting.html">
               <time dateTime="2016-07-12">
-July, 2016
+                July, 2016
               </time>
             </a>
           </li>
@@ -44,7 +44,7 @@ July, 2016
         <ol>
           <li>
             <a href="continuous-deployment/">
-Latest
+              Latest
             </a>
           </li>
           <li>
@@ -52,23 +52,23 @@ Latest
               Continuous Deployment of
               {' '}
               <code>
-npm
+                npm
               </code>
               {' '}
-packages
+              packages
             </a>
             {' '}
             Given at
             {' '}
             <a href="https://dsmjs.com">
-dsmJS
+              dsmJS
             </a>
             {' '}
-in
+            in
             {' '}
             <a href="https://dsmjs.com/2017/06/13/meeting.html">
               <time dateTime="2017-06-13">
-June, 2017
+                June, 2017
               </time>
             </a>
           </li>
@@ -79,44 +79,63 @@ June, 2017
         <ol>
           <li>
             <a href="https://react-in-isolation.travi.org/">
-Latest
+              Latest
             </a>
           </li>
           <li>
             <a href="https://dsmjs-oct-2017--react-in-isolation.netlify.com/">
-Learn React in Isolation
+              Learn React in Isolation
             </a>
             {' '}
             Given at
             {' '}
             <a href="https://dsmjs.com">
-dsmJS
+              dsmJS
             </a>
             {' '}
-in
+            in
             {' '}
             <a href="https://dsmjs.com/2017/10/10/meeting.html">
               <time dateTime="2017-10-10">
-October, 2017
+                October, 2017
               </time>
             </a>
           </li>
           <li>
             <a href="https://icc-nov-2017--react-in-isolation.netlify.com/">
-Learn React in Isolation
+              Learn React in Isolation
             </a>
             {' '}
             Given at
             {' '}
             <a href="http://iowacodecamp.com/">
-Iowa Code Camp
+              Iowa Code Camp
             </a>
             {' '}
-in
+            in
             {' '}
             <time dateTime="2017-11-04">
-November, 2017
+              November, 2017
             </time>
+          </li>
+          <li>
+            <a href="https://webgeeks-dec-2018--react-in-isolation.netlify.com/">
+              Learn React in Isolation
+            </a>
+            {' '}
+            Given at
+            {' '}
+            <a href="https://www.dsmwebgeeks.com/">
+              DSM Web Geeks
+            </a>
+            {' '}
+            in
+            {' '}
+            <a href="https://www.dsmwebgeeks.com/wg_events/learning-react-in-isolation/">
+              <time dateTime="2018-12-12">
+                December, 2018
+              </time>
+            </a>
           </li>
         </ol>
       </li>
@@ -125,25 +144,25 @@ November, 2017
         <ol>
           <li>
             <a href="https://avoiding-the-monorepo.travi.org/">
-Latest
+              Latest
             </a>
           </li>
           <li>
             <a href="https://dsmjs-may-2018--avoiding-the-monorepo.netlify.com/">
-Avoiding the Monorepo
+              Avoiding the Monorepo
             </a>
             {' '}
             Given at
             {' '}
             <a href="https://dsmjs.com">
-dsmJS
+              dsmJS
             </a>
             {' '}
-in
+            in
             {' '}
             <a href="https://dsmjs.com/2018/05/08/meeting.html">
               <time dateTime="2018-05-08">
-May, 2018
+                May, 2018
               </time>
             </a>
           </li>
@@ -154,24 +173,24 @@ May, 2018
         <ol>
           <li>
             <a href="https://ci-vs-cd.travi.org/">
-Latest
+              Latest
             </a>
           </li>
           <li>
             <a href="https://icc-dec-2018--ci-vs-cd.netlify.com/">
-CI vs CD: The Unexpected Conflict
+              CI vs CD: The Unexpected Conflict
             </a>
             {' '}
             Given at
             {' '}
             <a href="http://iowacodecamp.com/">
-Iowa Code Camp
+              Iowa Code Camp
             </a>
             {' '}
-in
+            in
             {' '}
             <time dateTime="2018-12-08">
-December, 2018
+              December, 2018
             </time>
           </li>
         </ol>
