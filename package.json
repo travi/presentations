@@ -50,7 +50,7 @@
     "ease-component": "1.0.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
-    "file-loader": "2.0.0",
+    "file-loader": "3.0.1",
     "gh-pages": "2.0.1",
     "globstar": "1.0.0",
     "greenkeeper-lockfile": "1.15.1",
