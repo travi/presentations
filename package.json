@@ -25,7 +25,7 @@
     }
   },
   "devDependencies": {
-    "@travi/any": "1.8.5",
+    "@travi/any": "1.8.6",
     "@travi/eslint-config-travi": "^1.6.18",
     "assets-webpack-plugin": "4.0.0",
     "babel-cli": "6.26.0",
