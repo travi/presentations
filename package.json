@@ -42,7 +42,7 @@
     "babel-register": "6.26.0",
     "chai": "^4.2.0",
     "clean-webpack-plugin": "1.0.1",
-    "commitlint-config-travi": "1.2.42",
+    "commitlint-config-travi": "1.2.43",
     "component-emitter": "1.3.0",
     "component-type": "1.2.1",
     "css-loader": "0.28.11",
